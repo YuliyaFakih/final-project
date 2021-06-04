@@ -5,30 +5,8 @@ import SignUpSucces from './SignUpSucces'
 
 export default () => {
 
-    const [values, setValues] = useState ({
-        name:"",
-        surname: "",
-        email: "",
-        phone:"",
-        company:"",
-        region:"",
-        link:"",
-        password:""
-    })
-
+    let users = JSON.parse(localStorage.getItem('users')) || []
     
-    const handleChange = (event) => {
-        setValues({
-            ...values,
-            [event.target.name]: event.target.value
-        })
-        
-    }
-
-    
-    let users = []
-    
-
     const formSubmit = (event) => {
         event.preventDefault()
         const userName = document.querySelectorAll('form input')[0].value;
@@ -42,13 +20,10 @@ export default () => {
         users.push({userName, userSurname, userEmail, userPhone, userCompany, userRegion, userLink, userPassword})
         console.log(userName, userSurname, userEmail, userPhone, userCompany, userRegion, userLink, userPassword)
         let addUser = localStorage.setItem('users', JSON.stringify(users))
-        return (
-            <SignUpSucces />
-        )
+        return alert(`Account created with succes, please log in`)      
+        
     }
     
-    
-
     return (
         <div>
             <Nav />
@@ -56,21 +31,21 @@ export default () => {
                 <form>
                 <h3>Create account</h3>
                     <label>Enter first name</label> 
-                    <input type="text" placeholder="name" name="name" value={values.name} onChange={handleChange} required/>
+                    <input type="text" placeholder="name" required/>
                     <label>Enter last name</label>  
-                    <input type="text" placeholder="surname" name="surname" value={values.surname} onChange={handleChange} required/>
+                    <input type="text" placeholder="surname" required/>
                     <label>Enter email address</label>  
-                    <input type="email" placeholder="email" name="email" value={values.email} onChange={handleChange} required/>
+                    <input type="email" placeholder="email" required/>
                     <label>Enter phone number</label>  
-                    <input type="tel" placeholder="phone number" name="phone" value={values.phone} onChange={handleChange} required/>
+                    <input type="tel" placeholder="phone number" required/>
                     <label>Enter company name</label>
-                    <input type="text" placeholder="company name" name="company" value={values.company} onChange={handleChange} required/>
+                    <input type="text" placeholder="company name" required/>
                     <label>Enter region</label>
-                    <input type="text" placeholder="region" name="region" value={values.region} onChange={handleChange} required/>
+                    <input type="text" placeholder="region" required/>
                     <label>Enter site link</label> 
-                    <input type="url" placeholder="link to your site" name="link" value={values.link} onChange={handleChange}/>
+                    <input type="url" placeholder="link to your site" />
                     <label>Enter password</label> 
-                    <input type="password" placeholder="password" name="password" value={values.password} onChange={handleChange}/>
+                    <input type="password" placeholder="password" required/>
                     <input type="submit" value="Sign up" onClick={formSubmit} />
 	                <input type="reset" value="Reset"/>
                 </form>

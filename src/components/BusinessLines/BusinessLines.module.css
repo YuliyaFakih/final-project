@@ -1,0 +1,60 @@
+ .block1 {
+    background-image: url('../../assets/img/businessLines.jpg');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+ }
+
+.grid {
+    position: relative;
+    width: 50%;
+    margin-left: auto;
+    height: inherit;
+}
+
+.grid > div {
+    overflow: hidden!important;
+}
+
+.grid svg:nth-child(1) {
+    position: absolute;
+    right: 0;
+    top: -260px;
+    min-height: 400px;
+}
+
+.grid svg:nth-child(2) {
+    position: absolute;
+    right: 0;
+    height: 417px;
+    z-index: 1;
+}
+
+.block1Border {
+    position: absolute;
+    bottom: -6px;
+    width: 100%;
+}
+
+.block1Text {
+    width: 30%;
+    margin-left: 17%;
+    margin-top: 3%;
+    text-align: left;
+    color: #f4f4f4;
+    text-shadow: 0 0 2px rgb(0 0 0 / 60%);
+}
+
+.block1Text h1 {
+    font-size: 68px;
+    line-height: 61px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.block1Text h2 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 400;
+}

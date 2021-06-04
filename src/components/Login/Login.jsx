@@ -3,16 +3,27 @@ import React from 'react'
 import Nav from '../Expertise/Nav'
 import { NavLink } from 'react-router-dom'
 
-const Login = () => {
+
+const Login = ({isLoggedIn, setIsLoggedIn}) => {
+    function hashChange () {
+        window.location.assign('/#/home')
+    }
+
     const dataCheck = (event) => {
         event.preventDefault()
         let users = JSON.parse(localStorage.getItem('users'))
-        const loginEmail = document.querySelectorAll('form input')[0].value;
-        if(users.filter(address => loginEmail === userEmail)){
-            return `You've logged in`
+        console.log(users)
+        let loginEmail = document.querySelectorAll('form input')[0].value;
+        let loginPass = document.querySelectorAll('form input')[1].value;
+        document.cookie = "login=" + loginEmail;
+        if(users.find(user => loginEmail === user.userEmail && loginPass === user.userPassword )){
+            hashChange()
+            setIsLoggedIn(true)
+            return alert(`You've logged in`)
+            
         } else {
-            return `Data incorrect, please verify it`
-        }
+            return alert(`Data incorrect, please verify it`)
+        } 
     }
     return(
         <div className={styles.loginForm}>
@@ -33,3 +44,4 @@ const Login = () => {
 }
 
 export default Login
+

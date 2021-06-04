@@ -11,7 +11,7 @@ import Modal from '@material-ui/core/Modal';
 import close from '../../assets/img/close.png'
 import SignUpEmployer from '../SignUp/SignUpAsEmployer'
 
-const Nav = () => {
+const Nav = ({isLoggedIn, setIsLoggedIn}) => {
     const [open, setOpen] = React.useState(false);
     const showList = () => {
         document.querySelector('.selector').style.display = 'block'
@@ -19,6 +19,10 @@ const Nav = () => {
 
     const hideList = () => {
         document.querySelector('.selector').style.display = 'none'
+    }
+
+    const logOut = () => {
+        setIsLoggedIn(false)
     }
 
     return (
@@ -70,10 +74,10 @@ const Nav = () => {
             <div className={styles.block}>
                 <img src={logo} alt="Modis"/>
                 <div className={styles.blockList}>
-                    <NavLink to='/'>
+                    <NavLink to='/home'>
                         Our expertise
                         <ul className={styles.sectionsList}>
-                            <NavLink to='/'> Our Vision </NavLink>
+                            <NavLink to='/home'> Our Vision </NavLink>
                             <NavLink to='/client-services/what-we-do/'> Business Lines </NavLink>
                             <NavLink to='/client-services/technology-practices/'> Technology Practices </NavLink>
                             <NavLink to='/client-services/industries/'> Key Industries </NavLink>
@@ -95,13 +99,16 @@ const Nav = () => {
                     <NavLink to='/locations/usa'>
                         Locations
                     </NavLink>
-                    <NavLink to='/home' onClick={() => setOpen(true)}>
-                        Sign up
-                    </NavLink>
-                    <NavLink to='/log-in'>
-                        Log in
-                    </NavLink>
-                    
+                    {isLoggedIn ? 
+                    <div>
+                        <NavLink to='/account' onClick={() => setIsLoggedIn(true)}> My account </NavLink> 
+                        <NavLink to='/home' onClick={() => logOut()}> Log out </NavLink>
+                    </div> :
+                    <div>
+                        <NavLink to='/home' onClick={() => setOpen(true)}> Sign up </NavLink>
+                        <NavLink to='/log-in'> Log in </NavLink>
+                    </div>
+                    }
                     <div className={styles.globe} onClick={() => showList()} >
                         <img src={iconGlobe} alt="icon-globe" />
                         <div> USA </div>

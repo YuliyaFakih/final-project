@@ -2,6 +2,8 @@
     width: 100%;
     background: #262626;
     position: sticky;
+    z-index: 1;
+
 }
 
 .block {

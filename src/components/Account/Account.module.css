@@ -1,0 +1,23 @@
+.profile {
+    background: rgb(244 244 244);
+    padding: 30px;
+}
+
+.card {
+    box-shadow: -1px 2px 16px 2px rgb(255 184 28);
+    width: 35%;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    font-size: 17px;
+    line-height: 1.8;
+    text-shadow: 0 0 2px hsl(0deg 0% 100% / 60%);
+    color: #000;
+    font-family: Roboto,sans-serif;
+    font-weight: 300;
+}
+
+.cardText {
+    text-align: left;
+    margin: 20px;
+}
