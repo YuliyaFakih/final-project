@@ -1,0 +1,10 @@
+.fillForm, .loginForm {
+    background: #f4f4f4;
+}
+
+.fillForm form, .loginForm form {
+    display: grid;
+    width: 30%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
