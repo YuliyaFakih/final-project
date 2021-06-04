@@ -1,8 +1,12 @@
 import styles from './BusinessLines.module.css'
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 import Nav from '../Expertise/Nav'
+import engineering from '../../assets/img/engineering.svg'
+import tech from '../../assets/img/tech.svg'
 
 const BusinessLines = () => {
+
     return (
         <div>
             <Nav />
@@ -72,6 +76,84 @@ const BusinessLines = () => {
                     <div className={styles.block1Text}>
                         <h1>Our Business Lines</h1>
                         <h2>Tech Consulting | Tech Talent Services | Tech Academy</h2>
+                    </div>
+                </div>
+                <div className={styles.block2}>
+                    <div className={styles.block2Text}>
+                        <hr/>
+                        <p>Modis offers end-to-end services and a complete line of Smart Industry offerings by delivering cross-industry expertise in technology and digital engineering consulting, talent services, and skilling. We support our clients by providing talent and technology at every stage of the Smart Industry implementation.</p>
+                        <hr />
+                        <h2>Tech Consulting</h2>
+                        <p>
+                        Modis delivers value added end-to-end solutions by leveraging technology and digital engineering expertise across industries with a deep understanding of our clients’ businesses.
+                        </p>
+                        <NavLink to='/client-services/what-we-do/consulting/' className={styles.links}> Learn more </NavLink>
+                        <hr/>
+                        <h2>Tech Talent Services</h2>
+                        <p>Modis delivers flexible and scalable talent services to help clients realize their mission-critical technology and digital engineering projects.</p>
+                        <NavLink to='/client-services/what-we-do/staffing-services/' className={styles.links}> Learn more </NavLink>
+                        <hr/>
+                        <h2>Tech Academy</h2>
+                        <p>Modis closes the essential skills gap by delivering cutting edge up-skilling and re-skilling to progress digital transformation, future-proof organizations’ talent, and drive performance.</p>
+                        <NavLink to='/client-services/modis-academy/' className={styles.links}> Learn more </NavLink>
+                    </div>
+                </div>
+                <div className={styles.block3}>
+                    <div className={styles.block3Border}>
+                        <svg width="100%" viewBox="0 0 1600 147" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
+                            <g><path id="wedge" d="m0,0 l 0,87 l 1600,-87 l -1600,0z" stroke="" fill="#f4f4f4"></path></g>
+                        </svg>
+                    </div>
+                    <div className={styles.block3Text}>
+                        <h3>More about our services</h3>
+                        <div className={styles.block3Description}>
+                            <div>
+                                <ul>
+                                <li>Tech Consulting</li>
+                                <li>Tech Talent Services</li>
+                                <li>Tech Academy</li>
+                                </ul>
+                            </div>
+                            
+                            <div className={styles.description}>
+                                <h3>Tech Consulting</h3>
+                                <p>Regardless of size or industry type, the rate at which digital disruptions are transforming the technology landscape and the complexity of business operations is rapidly expanding. Successful organizations are looking to adopt fail fast and fail early approach in their journey to outpace competition. Modis combines technology and digital expertise across industries with a deep understanding of clients’ businesses to deliver end-to-end projects and solutions from ideation to realization at an exponentially rapid pace.</p>
+                                <h3>Tech Talent Services</h3>
+                                <p>The rise of vertical talent pools, fast-growing startups, and gig economy are creating barriers in finding the right skilled engineers and consultants for their Smart Industry requirements. Modis with its expertise in technical temporary staffing, right-to-hire, and staff augmentation services across the globe to fulfill our customers technology talent requirements. Our Talent Services offer extensive network of specialists with combination of technical expertise and industry knowledge in the Smart Industry / Digital fields.</p>
+                                <h3>Tech Academy</h3>
+                                <p>The types of skills needed are quite different from those we have today. Modis Academy established with a mandate to advance employment opportunities, build talent pools in areas of skills scarcity, and support candidates to the next level of their careers. Through Modis academy we upskill and reskill candidates in STEM and Smart Industry related fields to increase talent availability and employability and to create a supply of in-demand candidates for our clients.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.block3BorderBottom}>
+                        <svg width="100%" viewBox="0 0 1600 137" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg" >
+                            <g>
+                                <path id="wedge" d="m0,50 l 1600,87 l -1600,0 l 0,-87z" stroke="" fill="#FFFFFF"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div className={styles.block4Bg}> 
+                    <div className={styles.block4}>
+                        <h3>Explore our sectors</h3>
+                        <div className={styles.block4Cards}>
+                            <div>
+                                <img src={engineering} alt="#" />
+                                <h4>Engineering</h4>
+                                <span></span>
+                                <h6>Innovate. Develop. Manufacture.</h6>
+                                <p>We're there throughout your entire product lifecycle—from innovation to prototyping and manufacturing. Our network of over 18,000 consultants with expertise covering all engineering domains, are here to help you innovate, disrupt, design and produce the goods and services of the future.</p>
+                                <NavLink to='/client-services/what-we-do/engineering/'>Learn more </NavLink>
+                            </div>
+                            <div>
+                                <img src={tech} alt="#" />
+                                <h4>Information Technology</h4>
+                                <span></span>
+                                <h6>Design. Develop. Optimize</h6>
+                                <p>Let's embrace this digitally-transformed world together—by connecting talent and technology to deliver optimized IT processes, best-in-class digital solutions and true innovation.</p>
+                                <NavLink to='/client-services/what-we-do/information-technology/'> Learn more </NavLink>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

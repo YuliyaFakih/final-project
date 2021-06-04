@@ -58,3 +58,230 @@
     line-height: 28px;
     font-weight: 400;
 }
+
+.block2 {
+    background: #f4f4f4;
+    padding: 10px 0;
+}
+
+.block2Text {
+    width: 65%;
+    margin: 30px auto;
+}
+
+.block2Text p {
+    font-size: 17px;
+    line-height: 1.8;
+    text-shadow: 0 0 2px hsl(0deg 0% 100% / 60%);
+    text-align: left;
+    font-family: Roboto,sans-serif;
+    font-weight: 300;
+    margin: 35px 0;
+}
+
+.block2Text h2 {
+    transition: opacity .5s ease-out 0s;
+    font-size: 19px;
+    font-family: roboto,serif;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: left;
+}
+
+.block2Text .links::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 1px solid #ffb81c;
+    border-left: 0;
+    border-bottom: 0;
+    top: -1px;
+    right: -1px;
+    bottom: 0;
+    width: 40px;
+    background: #ffb81c;
+    transform-origin: bottom left;
+    transform: skew(-25deg);
+    z-index: 0;
+    transition: background .5s linear,border-color .5s linear;
+}
+
+.block2Text .links::before {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 5px solid #000;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid transparent;
+    right: 4px;
+    top: 50%;
+    margin-top: -5px;
+    transition: right .2s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: 1;
+}
+
+.block2Text .links {
+    background: #ffb81c;
+    transition-duration: .25s;
+    color: #373a36;
+    display: inline-block;
+    text-align: left;
+    width: 218px;
+    border: 1px solid #ffb81c;
+    border-right: 0;
+    padding: 15px 25px 15px 18px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    box-sizing: border-box;
+    transition: background .5s linear,border-color .5s ease-in-out,padding-left .5s ease-in-out,color .5s linear;
+    text-decoration: none;
+    position: relative;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.block3 {
+    background-image: url('../../assets//img/block3.jpg');
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1500px;
+}
+
+.block3Text {
+    width: 60%;
+    margin: 20px auto;
+}
+
+.block3Description {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 250px 1fr;
+    text-shadow: 0 0 2px rgb(0 0 0 / 60%);
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: left;
+    color: #f4f4f4;
+    font-family: Roboto,sans-serif;
+    font-weight: 300;
+}
+
+.block3Description ul li {
+    list-style: none;
+}
+.description {
+    width: 80%;
+    margin-left: auto;
+}
+
+.block3Description div:nth-child(1) {
+    border-right: 2px solid white;
+}
+
+.block3BorderBottom {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+}
+
+.block4 {
+    width: 60%;
+    margin: 40px auto;
+    
+}
+
+.block4Bg {
+    background: linear-gradient(0deg, rgba(244 244 244) 35%, rgba(255,255,255,1) 100%);
+    padding-bottom: 20px;
+}
+
+.block4Cards {
+    display: grid;
+    grid-auto-flow: column;
+    text-align: left;
+    column-gap: 20px;
+    justify-items: center;
+}
+
+.block4Cards > div {
+    width: 80%;
+    padding: 20px;
+    box-shadow: 2px 4px 16px 6px rgb(0 0 0 / 73%);
+}
+
+.block4Cards > div img {
+    width: 55px;
+    height: 60px;
+}
+
+.block4Cards h4 {
+    transition: opacity .5s ease-out 0s;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: roboto,serif;
+    color: #373a36;
+    font-weight: 300;
+}
+
+.block4Cards h6 {
+    font-weight: 300;
+    line-height: 23px;
+    color: #373a36;
+    font-size: 15px;
+    font-family: Roboto,sans-serif;
+}
+
+.block4Cards p {
+    line-height: 23px;
+    color: #373a36;
+    font-size: 16px;
+    font-family: Roboto,sans-serif;
+    font-weight: 300;
+}
+
+.block4Cards a {
+    border-bottom: 1px solid #c7c8ca!important;
+    font-weight: 400;
+    padding: 6px 0;
+    margin: 0;
+    max-width: 100%!important;
+    color: #373a36;
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: left;
+    display: block;
+
+}
+
+.block4 h3 {
+    font-size: 21px;
+    font-family: roboto,serif;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.block4Cards a:hover {
+    background: transparent;
+    color: #373a36!important;
+}
+
+.block4Cards > div span {
+    background: #8a75d1!important;
+    display: block;
+    width: 43px;
+    height: 4px;
+    transition: background-color .25s ease-in-out,opacity .25s linear;
+}
+
+.block4Cards div span:hover {
+    opacity: .2;
+}

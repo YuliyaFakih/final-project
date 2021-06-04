@@ -103,6 +103,10 @@
     display: block;
 }
 
+.blockHelp svg {
+    width: 100%;
+}
+
 .blockMap a {
     color: #f4f4f4;
     border-bottom: 1px solid hsla(0,0%,100%,.25);
