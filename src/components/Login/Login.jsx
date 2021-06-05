@@ -11,12 +11,13 @@ const Login = ({isLoggedIn, setIsLoggedIn}) => {
 
     const dataCheck = (event) => {
         event.preventDefault()
-        let users = JSON.parse(localStorage.getItem('users'))
-        console.log(users)
+        let employers = JSON.parse(localStorage.getItem('employers'))
+        let jobSeekers = JSON.parse(localStorage.getItem('jobSeekers'))
+        console.log(employers, jobSeekers)
         let loginEmail = document.querySelectorAll('form input')[0].value;
         let loginPass = document.querySelectorAll('form input')[1].value;
         document.cookie = "login=" + loginEmail;
-        if(users.find(user => loginEmail === user.userEmail && loginPass === user.userPassword )){
+        if(employers.find(user => loginEmail === user.userEmail && loginPass === user.userPassword ) || jobSeekers.find(user => loginEmail === user.userEmail && loginPass === user.userPassword )){
             hashChange()
             setIsLoggedIn(true)
             return alert(`You've logged in`)

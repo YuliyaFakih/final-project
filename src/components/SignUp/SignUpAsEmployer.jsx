@@ -5,7 +5,7 @@ import SignUpSucces from './SignUpSucces'
 
 export default () => {
 
-    let users = JSON.parse(localStorage.getItem('users')) || []
+    let employers = JSON.parse(localStorage.getItem('employers')) || []
     
     const formSubmit = (event) => {
         event.preventDefault()
@@ -17,11 +17,11 @@ export default () => {
         const userRegion = document.querySelectorAll('form input')[5].value;
         const userLink = document.querySelectorAll('form input')[6].value;
         const userPassword = document.querySelectorAll('form input')[7].value;
-        users.push({userName, userSurname, userEmail, userPhone, userCompany, userRegion, userLink, userPassword})
+        employers.push({userName, userSurname, userEmail, userPhone, userCompany, userRegion, userLink, userPassword})
         console.log(userName, userSurname, userEmail, userPhone, userCompany, userRegion, userLink, userPassword)
-        let addUser = localStorage.setItem('users', JSON.stringify(users))
+        let addEmployer = localStorage.setItem('employers', JSON.stringify(employers))
         return alert(`Account created with succes, please log in`)      
-        
+        document.querySelectorAll('input').innerHTML = ''
     }
     
     return (
