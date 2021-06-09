@@ -37,11 +37,13 @@ export default () => {
                     <label>Enter region</label>
                     <input type="text" placeholder="region" required/>
                     <label> Add your CVV </label> 
-                    <input type="text" placeholder="add CVV" />
+                    <input type="file" placeholder="add CVV" />
                     <label>Enter password</label> 
                     <input type="password" placeholder="password" required/>
-                    <input type="submit" value="Sign up" onClick={formSubmit} />
-	                <input type="reset" value="Reset"/>
+                    <div className={styles.buttons2}>
+                        <button type="submit" onClick={formSubmit}> Sign up </button>
+	                    <button type="reset"> Reset </button>
+                    </div>
                 </form>
             </div>
         </div>

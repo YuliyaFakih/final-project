@@ -28,15 +28,17 @@ const Login = ({isLoggedIn, setIsLoggedIn}) => {
     }
     return(
         <div className={styles.loginForm}>
-            <Nav />
+            <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             <form>
                 <h3>Sign in</h3>
                 <label>Enter email address</label>  
                 <input type="email" placeholder="email" required/>
                 <label>Enter password</label> 
-                <input type="password" placeholder="password" name="password"/>
-                <input type="submit" value="Sign in" onClick={dataCheck} />
-	            <input type="reset" value="Reset"/>
+                <input type="password" placeholder="password" name="password" required/>
+                <div className={styles.buttons2}>
+                    <button type="submit" onClick={dataCheck}> Sign in </button>
+	                <button type="reset"> Reset </button>
+                </div>
             </form>
         </div>
         

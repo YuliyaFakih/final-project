@@ -1,0 +1,104 @@
+.block1 {
+    background-image: url('../../assets/img/techPrBg.jpg');
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+}
+
+.block1Border {
+    position: absolute;
+    bottom: -6px;
+    width: 100%;
+}
+
+.block1Grid {
+    transform: scaleX(-1);
+    transform-origin: 50% 50%;
+    position: relative;
+    width: 40%;
+    margin-right: auto;
+    height: inherit;
+}
+
+.block1Grid svg:nth-child(1) {
+    top: -78px;
+    left: -49px;
+    position: absolute;
+}
+
+.block1Text {
+    position: absolute;
+    top: 25%;
+    right: 8%;
+    width: 40%;
+}
+
+.block1Text h1 {
+    text-shadow: 0 0 2px rgb(0 0 0 / 60%);
+    font-size: 67px;
+    line-height: 68px;
+    font-weight: 300;
+    text-align: left;
+    color: #f4f4f4;
+    margin-bottom: 28px;
+}
+
+.block1Text h2 {
+    text-shadow: 0 0 2px rgb(0 0 0 / 60%);
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+    text-align: left;
+    color: #f4f4f4;
+}
+
+.block2 {
+    width: 65%;
+    margin: 50px auto;
+}
+
+.block2 h3, .block3 h2, .card h3 {
+    font-size: 20px;
+    font-family: roboto,serif;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: left;
+    font-weight: 400;
+}
+
+.block2 p, .block2 li, .card p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-shadow: 0 0 2px hsl(0deg 0% 100% / 60%);
+    text-align: left;
+    font-family: Roboto,sans-serif;
+    font-weight: 300;
+}
+
+.block3 {
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.card {
+    display: grid;
+    grid-auto-flow: row;
+    width: 50%;
+    height: fit-content;
+    padding: 20px;
+    margin: 15px auto;
+}
+
+.block3 button:hover {
+    background-color: #ffb81c;
+}
+
+.block3 h2 {
+    text-align: center!important;
+    font-size: 22px !important;
+}
+
+.card h3, .card p {
+    text-align: center!important;
+}

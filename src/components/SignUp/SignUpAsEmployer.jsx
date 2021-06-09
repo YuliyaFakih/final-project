@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import Nav from '../Expertise/Nav'
 import styles from './SignUp.module.css'
-import SignUpSucces from './SignUpSucces'
 
 export default () => {
 
@@ -46,8 +45,11 @@ export default () => {
                     <input type="url" placeholder="link to your site" />
                     <label>Enter password</label> 
                     <input type="password" placeholder="password" required/>
-                    <input type="submit" value="Sign up" onClick={formSubmit} />
-	                <input type="reset" value="Reset"/>
+                    <div className={styles.buttons}>
+                        <button type="submit" onClick={formSubmit}> Sign up </button>
+	                    <button type="reset"> Reset </button>
+                    </div>
+                    
                 </form>
             </div>
         </div>

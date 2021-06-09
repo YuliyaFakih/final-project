@@ -1,10 +1,106 @@
 .fillForm, .loginForm {
     background: #f4f4f4;
+    padding: 30px 0;
+}
+
+.loginForm {
+    padding-top: 0!important;
 }
 
 .fillForm form, .loginForm form {
     display: grid;
-    width: 30%;
-    margin: 0 auto;
-    padding: 50px 0;
+    width: 35%;
+    background: white!important;
+    box-shadow: 0px 1px 21px 4px #ffb81c;
+    padding: 30px;
+    margin: 30px auto;
+}
+
+.fillForm input {
+    height: 38px;
+}
+
+.buttons, .buttons2 {
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 40px;
+    column-gap: 20px;
+    justify-items: center;
+}
+
+.buttons button, .buttons2 button, input [type="file"] {
+    background: #ffb81c;
+    transition-duration: .25s;
+    color: #373a36;
+    display: inline-block;
+    text-align: left;
+    width: 150px;
+    border: 1px solid #ffb81c;
+    border-right: 0;
+    padding: 6px 25px 15px 18px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.5;
+    box-sizing: border-box;
+    transition: background .5s linear,border-color .5s ease-in-out,padding-left .5s ease-in-out,color .5s linear;
+    position: relative;
+
+}
+
+.buttons button::before, .buttons2 button::before{
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 5px solid #000;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid transparent;
+    right: 4px;
+    top: 50%;
+    margin-top: -5px;
+    transition: right .2s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: 1;
+}
+
+.buttons button::after, .buttons2 button::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 1px solid #ffb81c;
+    border-left: 0;
+    border-bottom: 0;
+    top: -2px;
+    right: -1px;
+    bottom: 0;
+    width: 40px;
+    background: #ffb81c;
+    transform-origin: bottom left;
+    transform: skew(-25deg);
+    z-index: 0;
+    transition: background .5s linear,border-color .5s linear;
+}
+
+.buttons2 button::after {
+    top: -1px!important;
+}
+
+.buttons button:hover, .buttons2 button:hover {
+    color: #fff!important;
+}
+
+.fillForm label, .fillForm label, .loginForm label {
+    font-size: 17px;
+    line-height: 1.8;
+    text-shadow: 0 0 2px hsl(0deg 0% 100% / 60%);
+    text-align: left;
+    font-family: Roboto,sans-serif;
+    font-weight: 300;
+    margin: 18px 0;
+}
+
+form h3 {
+    text-transform: uppercase;
+    font-size: 22px;
 }
