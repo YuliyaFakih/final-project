@@ -71,7 +71,7 @@
 
 }
 
-.blockList > a:nth-child(1)::after {
+.blockList > a:nth-child(2)::after {
     content: "";
     width: 0;
     height: 0;
@@ -84,7 +84,7 @@
     top: 31px;
 }
 
-.blockList > a:nth-child(1):focus {
+.blockList > a:nth-child(2):focus {
     background: #262626;
 }
 

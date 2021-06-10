@@ -17,7 +17,7 @@ const Login = ({isLoggedIn, setIsLoggedIn}) => {
         let loginEmail = document.querySelectorAll('form input')[0].value;
         let loginPass = document.querySelectorAll('form input')[1].value;
         document.cookie = "login=" + loginEmail;
-        if(employers.find(user => loginEmail === user.userEmail && loginPass === user.userPassword ) || jobSeekers.find(user => loginEmail === user.userEmail && loginPass === user.userPassword )){
+        if(employers && employers.find(user => loginEmail === user.userEmail && loginPass === user.userPassword ) || jobSeekers && jobSeekers.find(user => loginEmail === user.userEmail && loginPass === user.userPassword )){
             hashChange()
             setIsLoggedIn(true)
             return alert(`You've logged in`)

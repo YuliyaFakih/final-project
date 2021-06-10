@@ -10,6 +10,7 @@ import BusinessLines from './components/BusinessLines/BusinessLines'
 import Account from './components/Account/Account'
 import TechnologyPractices from './components/TechnologyPractices/TechnologyPractices'
 import JobSeekers from './components/JobSeekers/Jobseekers'
+import SearchJobs from './components/SearchJobs/SearchJobs'
 import uuid from 'react-uuid'
 
 function App() {
@@ -79,13 +80,17 @@ function App() {
         <Route path='/account'>
             <Account isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
         </Route>  
-        <Route path='/client-services/technology-practices/'>
+        <Route path='/client-services/technology-practices'>
             <TechnologyPractices isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
         </Route>  
-        <Route path='/job-seekers/'>
+        <Route path='/job-seekers'>
             <JobSeekers isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
         </Route>  
-        
+        <Route path='/search-jobs'>
+            <SearchJobs isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route>  
+
+
         <Footer />
     </div>
   );
