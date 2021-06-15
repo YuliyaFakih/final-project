@@ -5,7 +5,7 @@ import styles from './SearchJobs.module.css'
 import star from './../../assets/img/icon-star.svg'
 
 
-export default ({isLoggedIn, setIsLoggedIn}) => {
+export default ({isLoggedIn, setIsLoggedIn, setAddedState, addedState}) => {
     const jobOffers = JSON.parse(localStorage.getItem('jobOffers')) || [];
     console.log(jobOffers)
     const [jobData, setJobData] = React.useState(jobOffers)
@@ -32,11 +32,13 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
     const favoriteJobs = []
     const AddToFavorites = (id) => {
         if (isLoggedIn) {
+            
             if(!favoriteJobs.find(item => item.id === id)){
                 favoriteJobs.push(jobOffers.find(item => item.id === id))
                 console.log(favoriteJobs)
                 localStorage.setItem('favoriteJobs', JSON.stringify(favoriteJobs))
                 alert('Added to favorite list, you can view it in My account')
+                setAddedState(true)
             } else if (favoriteJobs.find(item => item.id === id)) {
                 alert(`You've already added this offer to the favorite list`)
             }
@@ -119,7 +121,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
             </div>
 
             <div className={styles.jobList}>
-                    {jobData.map((item) => (
+                    {jobData && jobData.map((item) => (
                         <div className={styles.jobDescription}>
                             <div>
                                 <p> Category: {item.position}</p>
@@ -131,7 +133,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                                 <p> {item.company}</p>
                             </div>
                             <p>{item.description}</p>
-                            <img class="star" src={star} alt="star" onClick={() => AddToFavorites (item.id)}/>
+                            <img class="star" src={star} alt="star" onClick={() => AddToFavorites(item.id)} style={{backgroundColor: addedState ? '#ffb81c' : 'none'}}/>
                         </div>
                     ))}
                  </div>

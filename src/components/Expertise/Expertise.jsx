@@ -137,7 +137,7 @@ const Expertise = ({isLoggedIn, setIsLoggedIn}) => {
                         <h4>Find your next job</h4>
                         <h2>Opportunities are waiting.</h2>
                         <p>With new jobs added daily, Modis is the number one location to take your career to the next level.</p>
-                        <a role="button" href="/job-seekers/search-jobs/">Job search</a>
+                        <a role="button" href="/search-jobs">Job search</a>
                     </div>
                     <div className={styles.block3BorderBottom}>
                         <svg width="100%" viewBox="0 0 1600 118" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">

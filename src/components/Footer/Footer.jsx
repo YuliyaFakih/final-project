@@ -32,7 +32,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className={styles.blockBorderBottom}>
-                        <svg width="1600" viewBox="0 0 1600 90" preserveAspectRatio="xMaxYMax meet" xmlns="http://www.w3.org/2000/svg"><g><path id="wedge" d="m0,90 l 0, -3 l 1600,-87 l 0,90 l -1600,0z" stroke="" fill="#262626"></path></g></svg>
+                        <svg width="100%" viewBox="0 0 1600 90" preserveAspectRatio="xMaxYMax meet" xmlns="http://www.w3.org/2000/svg"><g><path id="wedge" d="m0,90 l 0, -3 l 1600,-87 l 0,90 l -1600,0z" stroke="" fill="#262626"></path></g></svg>
                     </div>
             </div>
             <div className={styles.links}>
@@ -44,7 +44,6 @@ const Footer = () => {
                             <NavLink to='/client-services/what-we-do/'>Business Lines</NavLink>
                             <NavLink to='/client-services/technology-practices/'>Technology Practices</NavLink>
                             <NavLink to='/client-services/industries/'>Key Industries</NavLink>
-                            <NavLink to='/client-services/global-delivery-centers/'>Global Delivery Centers</NavLink>
                         </ul>
                     </div>
                     <div>
@@ -52,7 +51,6 @@ const Footer = () => {
                         <ul>
                             <NavLink to='/job-seekers/'>Overview</NavLink>
                             <NavLink to='/job-seekers/search-jobs/'>Search Jobs</NavLink>
-                            <NavLink to='/job-seekers/submit-resume/'>Submit Resume</NavLink>
                             <NavLink to='/about-modis/internal-careers/'>Internal Careers</NavLink>
                             <NavLink to='/job-seekers/modis-academy-program/'>Modis Academy Program</NavLink>
                         </ul>
@@ -99,28 +97,13 @@ const Footer = () => {
                         <NavLink to='/locations/usa/'>Locations</NavLink> <span> &#124; </span>
                     </li>
                     <li>
-                        <NavLink to='/about-modis/press-room/'>Press</NavLink> <span> &#124; </span>
-                    </li>
-                    <li>
                         <a href='https://www.adomyinfo.com/_layouts/15/AP/login.aspx?b=modis'>My Info</a> <span> &#124; </span>
                     </li>
                     <li>
                         <NavLink to='/terms/'>Terms of Use</NavLink> <span> &#124; </span>
                     </li>
                     <li>
-                        <NavLink to='/privacy-policy/'>Privacy Policy</NavLink> <span> &#124; </span>
-                    </li>
-                    <li>
-                        <NavLink to='/cookies-policy/'>Cookies Policy</NavLink> <span> &#124; </span>
-                    </li>
-                    <li>
-                        <NavLink to='/candidates-security-phishing/'>Candidates’ Security and Phishing</NavLink> <span> &#124; </span>
-                    </li>
-                    <li>
-                        <a href='https://www.adeccogroupna.com/eeo-statement-and-legal-notices/'>EEO Statement and Legal Notices</a> <span> &#124; </span>
-                    </li>
-                    <li>
-                        <NavLink to='/sitemap/'>Sitemap</NavLink> 
+                        <a href='https://www.adeccogroupna.com/eeo-statement-and-legal-notices/'>EEO Statement and Legal Notices</a> 
                     </li>
                 </ul>
             

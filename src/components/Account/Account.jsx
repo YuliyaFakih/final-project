@@ -4,10 +4,10 @@ import styles from './Account.module.css'
 import star from './../../assets/img/icon-star.svg'
 
 
-const Account = ({isLoggedIn, setIsLoggedIn}) => {
+const Account = ({isLoggedIn, setIsLoggedIn, setAddedState, addedState}) => {
     
-    let employers = JSON.parse(localStorage.getItem('employers'))
-    let jobSeekers = JSON.parse(localStorage.getItem('jobSeekers'))
+    let employers = JSON.parse(localStorage.getItem('employers')) || []
+    let jobSeekers = JSON.parse(localStorage.getItem('jobSeekers')) || []
     //let email = document.cookie.match('login')[1];
     function getCookie(name) {
         let matches = document.cookie.match(new RegExp(
@@ -18,16 +18,18 @@ const Account = ({isLoggedIn, setIsLoggedIn}) => {
     let email = getCookie('login');
     let employer = employers.find(user => email === user.userEmail)
     let jobseeker = jobSeekers.find(user => email === user.userEmail)
-    let favoriteJobs = JSON.parse(localStorage.getItem('favoriteJobs'))
+    let favoriteJobs = JSON.parse(localStorage.getItem('favoriteJobs')) || []
     const [stateJobs, setStateJobs] = React.useState(favoriteJobs) 
-
+    let submitedOffers = JSON.parse(localStorage.getItem('submitedOffers')) || []
     
 
     const DeleteFromList = (id) => {
+        setAddedState(false)
         favoriteJobs = favoriteJobs.filter(item => item.id !== id);
         setStateJobs(favoriteJobs)
         //return favoriteJobs.filter(item => item.id !== id)
          localStorage.setItem('favoriteJobs', JSON.stringify(favoriteJobs))
+         
     }
  
     if(employer && !jobseeker) {
@@ -70,7 +72,7 @@ const Account = ({isLoggedIn, setIsLoggedIn}) => {
                             </div>         
                         </div>
                 </div>
-                <div>
+                <div className={styles.jobList}>
                     <h2> Number of favorite offers: {favoriteJobs && favoriteJobs.length || 0}</h2>
                     {favoriteJobs && favoriteJobs.map((item) => (
                         <div className={styles.jobDescription}>
@@ -84,11 +86,28 @@ const Account = ({isLoggedIn, setIsLoggedIn}) => {
                                 <p> {item.company}</p>
                             </div>
                             <p>{item.description}</p>
-                            <img src={star} alt="star" onClick={() => DeleteFromList(item.id)}/>
+                            <img src={star} alt="star" onClick={() => DeleteFromList(item.id)} style={{backgroundColor: addedState ? '#ffb81c' : 'none'}}/>
                         </div>
                     ))}
                 </div>
-                
+                <div className={styles.jobList}>
+                <h2> Number of submitted offers: {submitedOffers && submitedOffers.length || 0}</h2>
+                    {submitedOffers && submitedOffers.map((item) => (
+                        <div className={styles.jobDescription}>
+                            <div>
+                                <p> Category: {item.position}</p>
+                                <h2> {item.title} </h2>
+                            </div>
+                            <div>
+                                <p> <b> {item.salary} </b></p>
+                                <p> {item.city}</p>
+                                <p> {item.company}</p>
+                            </div>
+                            <p>{item.description}</p>
+                            
+                        </div>
+                    ))}
+                </div>
                 </div>
         )
         } else if (jobseeker && !employer) {
@@ -120,8 +139,8 @@ const Account = ({isLoggedIn, setIsLoggedIn}) => {
                                         <span>{jobseeker.userRegion}</span>
                                     </div>
                                     <div>
-                                        <span> Your CVV: </span>
-                                        <span>{jobseeker.userCVV}</span>
+                                        <span> Your CV: </span>
+                                        <span>{jobseeker.userCV}</span>
                                     </div>
                                 </div>         
                             </div>
@@ -140,7 +159,7 @@ const Account = ({isLoggedIn, setIsLoggedIn}) => {
                                         <p> {item.company}</p>
                                     </div>
                                     <p>{item.description}</p>
-                                    <img src={star} alt="star" onClick={() => DeleteFromList(item.id)}/>
+                                    <img src={star} alt="star" onClick={() => DeleteFromList(item.id)} style={{backgroundColor: addedState ? '#ffb81c' : 'none'}}/>
                                 </div>
                             ))}
                         </div>

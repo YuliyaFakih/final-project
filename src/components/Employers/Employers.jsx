@@ -1,43 +1,21 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
 import Nav from './Nav'
-import styles from './Jobseekers.module.css' 
-import star from './../../assets/img/icon-star.svg'
-import {NavLink} from 'react-router-dom'
-import { style } from '@material-ui/system'
-
+import styles from './Employers.module.css'
+import { NavLink } from 'react-router-dom'
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
-    const jobOffersArray = JSON.parse(localStorage.getItem('jobOffers'))
-    const favoriteJobs = []
-    const AddToFavorites = (id) => {
-        if (isLoggedIn) {
-            if(!favoriteJobs.find(item => item.id === id)){
-                favoriteJobs.push(jobOffersArray.find(item => item.id === id))
-                console.log(favoriteJobs)
-                localStorage.setItem('favoriteJobs', JSON.stringify(favoriteJobs))
-                alert('Added to favorite list, you can view it in My account')
-                document.querySelector('.star').style.background = '#ffb81cab';
-            } else if (favoriteJobs.find(item => item.id === id)) {
-                alert(`You've already added this offer to the favorite list`)
-            }
-            
-        } else {
-            alert('You should sign in to be able to add favorite offers to the list')
-        }
-        
-    }
-
-    return(
+    
+    return (
         <div>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
-            <div className={styles.blockSearch}>
-                <div className={styles.blockSearchBorder}>
-                    <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#FFFFFF"></path>
-                        </g>
-                    </svg>
+            <div className={styles.blockOverview}>
+                <div className={styles.blockOverviewBorder}>
+                <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#f4f4f4"></path>
+                </g>
+            </svg>
                 </div>
                 <div className={styles.blockImg}>
                     <svg class="header-banner__path-svg" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="655" height="689" viewBox="0 0 655 689">
@@ -92,61 +70,19 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                     </svg>
                  </div>
                  <div className={styles.blockText}>
-                     <p> Job seekers</p>
-                    <h1>Career Minded</h1>
-                    <h2>Get the intel you need to work smarter and outperform your career expectations.</h2>
+                     <p> Employers</p>
+                    <h1>Working Intelligence - Resources for Employers</h1>
+                    <h2>Discover the insights you need to build smarter, more efficient and more agile teams.</h2>
                  </div>
-                
-                
             </div>
-            <div className={styles.textContainer}>
-                <div className={styles.blockText1Container}>
-                    <hr />
-                    <p>Make a smarter career move.</p>
-                    <h1>Connect with our international IT and engineering network.</h1>
-                    <div className={styles.blockText1}>
-                        <p><strong>Are you driven to outperform?</strong></p>
-                        <p>At Modis, we offer careers that span countless domains, projects and challenges across IT and engineering. Our focus is on developing a diverse team of people who want to excel in those roles.</p>
-                        <p>We expect you to be ambitious. That’s why we'll entrust you with responsibility, and encourage you to apply your learnings from one discipline to another, so we can innovate together and unlock new ways of working.</p>
-                        <p><strong>Do you want to tackle real business challenges?</strong></p>
-                        <p>Professional sectors are no longer siloed. So neither are we. At Modis, we're about new perspectives, cross-vertical thinking, and smarter connections—in markets and industries all around the world.</p>
-                        <p>We encourage you to experience a wide range of projects with the world’s leading companies, and gain a multi-disciplined perspective on problem solving.</p>
-                        <p>And we expect you to apply these perspectives to your day-to-day work, understanding business challenges and bringing innovative solutions to the table.</p>
-                        <p><strong>How would you like to join a community of the world’s smartest minds?</strong></p>
-                        <p>We’re proud to have built an environment fueled by a diverse group of industry and market specialists, who learn from each other, develop skills through collaboration, and create ideas that propel us all forward.</p>
-                        <p>Our Centers of Excellence and Delivery Centers boost these connections. They act as campuses for the community, where engineers, data scientists, designers, developers, technicians, chemists, to name a few, all work together to research, innovate and explore new solutions for our clients.</p>
-                        <p>*All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, or protected veteran status and will not be discriminated against on the basis of disability. Equal Opportunity Employer/Veterans/Disabled.</p>
-                    </div>
-                         
-                </div>
-                <div className={styles.blockText2}>
-                        <p>Find your next job</p>
-                        <h2> Opportunities are waiting. </h2>
-                        <h3>With new jobs added daily, Modis is the number one location to take your career to the next level.</h3>
-                        <NavLink to='/search-jobs'>Job search</NavLink>
-                </div>
-            </div> 
-            <div className={styles.blockLocations}>
-                <div>
-                    <svg width="100%" viewBox="0 0 1600 126" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                        <g><path id="wedge" d="m0,66 l 421,-66 l  1179,106 l 0, -106 l -1600,0z" stroke="" fill="#f4f4f4"></path></g>
-                    </svg>
-                </div>
-                <div className={styles.blockLocationsText}>
-                    <p>Locations</p>
-                    <h2>Find your local office.</h2>
-                    <p>Modis has over 100 offices in the United States, Canada and Europe. With both industry and location-specific expertise, our people know their area and their labor market and can find the right position for you.</p>
-                    <NavLink to='/locations/usa/'> Locations </NavLink>
-                </div>
-                
-                <div className={styles.borderBottom}>
-                    <svg width="100%" viewBox="0 0 1600 127" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                            <g>
-                                <path id="wedge" d="m1600,40 l -1600,87 l 1600,0 l 0,-87z" stroke="" fill="#f4f4f4"></path>
-                            </g>
-                        </svg>
+            <div className={styles.block2}>
+                <div className={styles.block2Text}>
+                    <p>know what to pay top talent</p>
+                    <h3>Get the most up-to-date salary data and job descriptions in our Salary Guide.</h3>
+                    <NavLink to='/salary-guide'>Request your free IT & Engineering Salary Guide</NavLink>
                 </div>
             </div>
+            
         </div>
     )
 }

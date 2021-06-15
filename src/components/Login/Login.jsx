@@ -31,12 +31,12 @@ const Login = ({isLoggedIn, setIsLoggedIn}) => {
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             <form>
                 <h3>Sign in</h3>
-                <label>Enter email address</label>  
+                <label>Enter email address*</label>  
                 <input type="email" placeholder="email" required/>
-                <label>Enter password</label> 
+                <label>Enter password*</label> 
                 <input type="password" placeholder="password" name="password" required/>
                 <div className={styles.buttons2}>
-                    <button type="submit" onClick={dataCheck}> Sign in </button>
+                    <button type="submit" onClick={(event) => dataCheck(event)}> Sign in </button>
 	                <button type="reset"> Reset </button>
                 </div>
             </form>

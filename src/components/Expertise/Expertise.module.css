@@ -103,6 +103,7 @@ a:hover {
     top: 76px;
     left: 7px;
     display: flex;
+    gap: 25px;
 }
 
 .modal {
@@ -178,6 +179,9 @@ a:hover {
     text-transform: uppercase;
     color: black;
 }
+.covid p {
+    margin: 0;
+}
 .covid a:hover {
     background: transparent;
 }
@@ -250,23 +254,28 @@ a:hover {
 }
 
 .block1Text {
+    width: 35%;
+    position: absolute;    
+    right: 16%;
+    top: 19%;
+}
+
+.block1Text h1 {
     font-family: Open Sans,serif;
-    width: 30%;
     color: #f4f4f4;
     line-height: 1.5;
     text-shadow: 0 0 2px rgb(0 0 0 / 60%);
-    font-size: 31px;
-    position: absolute;
-    right: 20%;
+    font-size: 63px;
+    line-height: 68px;
     font-weight: smaller;
-    top: 7%;
 }
+
 
 .video {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 65px 0;
     background-color: #f4f4f4;
 }
 
@@ -607,3 +616,145 @@ a:hover {
     transform: translateX(-50%)
 }
 
+.blockOverview {
+    background-image: url('../../assets/img/industriesBg.jpg');
+    min-height: 450px;
+    position: relative;
+}
+
+.blockOverviewBorder {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.blockImg svg:nth-child(2) {
+    position: absolute;
+    width: 30%;
+    left: 0;
+    top: 0;
+    height: auto;
+    transform: scaleX(-1);
+    transform-origin: 50% 50%;
+}
+
+.blockImg svg:nth-child(1) {
+    position: absolute;
+    width: auto;
+    left: 0;
+    top: -200px;
+    transform: scaleX(-1);
+    transform-origin: 50% 50%;
+}
+
+.blockTextKey {
+    width: 40%;
+    position: absolute;
+    top: 21%;
+    right: 8%;
+    text-align: left;
+}
+
+.blockTextKey h1 {
+    text-shadow: 0 0 2px rgb(0 0 0 / 60%);
+    font-size: 59px;
+    line-height: 53px;
+    font-weight: 300;
+    text-align: left;
+    color: #f4f4f4;
+    margin: 0 0 28px;
+}
+
+.blockTextKey p, .block3Container > div:nth-child(1) p {
+    color: #ffb81c;
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+    font-family: 'Cinzel';
+    text-align: left;
+    font-weight: bold;
+}
+
+.blockText h2 {
+    text-shadow: 0 0 2px hsl(0deg 0% 100% / 50%);
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #f4f4f4;
+    text-align: left;
+}
+
+.block2Container {
+    background: #f4f4f4;
+    padding: 50px 0;
+}
+
+.block2 {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.block2 h3 {
+    font-family: roboto,serif;
+    font-weight: 400;
+    margin: 30px 0 35px;
+    font-size: 34px;
+    line-height: 42px;
+}
+
+.block2 p, .block3Container p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0 0 30px;
+    text-shadow: 0 0 2px hsl(0deg 0% 100% / 60%);
+    font-family: Roboto,sans-serif;
+    font-weight: 300;
+}
+
+.block3Container {
+    width: 80%;
+    margin: 70px auto;
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    text-align: left;
+    grid-template-columns: 1fr 2fr;
+}
+
+.block3Container > div:nth-child(1) {
+    border-right: 2px solid #ffb81c;
+    padding-right: 30px;
+}
+
+.block3Container > div:nth-child(1) ul {
+    list-style: none;
+    padding-left: 0;
+}
+.block3Container div {
+    width: 80%;
+}
+
+.block3Container li:hover {
+    color: #222;
+}
+
+.block3Container li {
+    font-weight: 400;
+    padding: 0 0 5px;
+    margin: 0 0 17px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #373a36;
+    text-decoration: none;
+    font-family: Roboto,sans-serif;
+}
+
+.block3Container h2 {
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0 0 42px;
+    font-family: Roboto;
+    font-weight: 500;
+}

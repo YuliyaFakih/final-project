@@ -1,43 +1,19 @@
-/* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
+import styles from './Expertise.module.css'
 import Nav from './Nav'
-import styles from './Jobseekers.module.css' 
-import star from './../../assets/img/icon-star.svg'
-import {NavLink} from 'react-router-dom'
-import { style } from '@material-ui/system'
-
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
-    const jobOffersArray = JSON.parse(localStorage.getItem('jobOffers'))
-    const favoriteJobs = []
-    const AddToFavorites = (id) => {
-        if (isLoggedIn) {
-            if(!favoriteJobs.find(item => item.id === id)){
-                favoriteJobs.push(jobOffersArray.find(item => item.id === id))
-                console.log(favoriteJobs)
-                localStorage.setItem('favoriteJobs', JSON.stringify(favoriteJobs))
-                alert('Added to favorite list, you can view it in My account')
-                document.querySelector('.star').style.background = '#ffb81cab';
-            } else if (favoriteJobs.find(item => item.id === id)) {
-                alert(`You've already added this offer to the favorite list`)
-            }
-            
-        } else {
-            alert('You should sign in to be able to add favorite offers to the list')
-        }
-        
-    }
-
-    return(
+    return (
         <div>
-            <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
-            <div className={styles.blockSearch}>
-                <div className={styles.blockSearchBorder}>
-                    <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#FFFFFF"></path>
-                        </g>
-                    </svg>
+            <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            <div>
+            <div className={styles.blockOverview}>
+                <div className={styles.blockOverviewBorder}>
+                <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#f4f4f4"></path>
+                </g>
+            </svg>
                 </div>
                 <div className={styles.blockImg}>
                     <svg class="header-banner__path-svg" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="655" height="689" viewBox="0 0 655 689">
@@ -91,61 +67,51 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                         </g>
                     </svg>
                  </div>
-                 <div className={styles.blockText}>
-                     <p> Job seekers</p>
-                    <h1>Career Minded</h1>
-                    <h2>Get the intel you need to work smarter and outperform your career expectations.</h2>
+                 <div className={styles.blockTextKey}>
+                     <p> Innovation. Global. Agile. </p>
+                    <h1>Key Industries</h1>
+                    <h2>Delivering Solutions to your industry needs.</h2>
                  </div>
-                
-                
             </div>
-            <div className={styles.textContainer}>
-                <div className={styles.blockText1Container}>
+            <div className={styles.block2Container}>
+                <div className={styles.block2}>
                     <hr />
-                    <p>Make a smarter career move.</p>
-                    <h1>Connect with our international IT and engineering network.</h1>
-                    <div className={styles.blockText1}>
-                        <p><strong>Are you driven to outperform?</strong></p>
-                        <p>At Modis, we offer careers that span countless domains, projects and challenges across IT and engineering. Our focus is on developing a diverse team of people who want to excel in those roles.</p>
-                        <p>We expect you to be ambitious. That’s why we'll entrust you with responsibility, and encourage you to apply your learnings from one discipline to another, so we can innovate together and unlock new ways of working.</p>
-                        <p><strong>Do you want to tackle real business challenges?</strong></p>
-                        <p>Professional sectors are no longer siloed. So neither are we. At Modis, we're about new perspectives, cross-vertical thinking, and smarter connections—in markets and industries all around the world.</p>
-                        <p>We encourage you to experience a wide range of projects with the world’s leading companies, and gain a multi-disciplined perspective on problem solving.</p>
-                        <p>And we expect you to apply these perspectives to your day-to-day work, understanding business challenges and bringing innovative solutions to the table.</p>
-                        <p><strong>How would you like to join a community of the world’s smartest minds?</strong></p>
-                        <p>We’re proud to have built an environment fueled by a diverse group of industry and market specialists, who learn from each other, develop skills through collaboration, and create ideas that propel us all forward.</p>
-                        <p>Our Centers of Excellence and Delivery Centers boost these connections. They act as campuses for the community, where engineers, data scientists, designers, developers, technicians, chemists, to name a few, all work together to research, innovate and explore new solutions for our clients.</p>
-                        <p>*All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, or protected veteran status and will not be discriminated against on the basis of disability. Equal Opportunity Employer/Veterans/Disabled.</p>
-                    </div>
-                         
+                    <h3>An expanding global focus on smart industries.</h3>
+                    <p>As the worlds of IT and Engineering converge, digital disruptors across various industry value chains are creating the new Smart Industry.</p>
+                    <p>Modis has built a deep expertise and understanding of the industries we serve for over 30 years, becoming the most trusted technology and digital engineering partner to our clients. We help our clients transform, build and changes according to the customer needs.</p>
+                    <p>Today, we see the impact of the new Smart Industry in nearly every sector we serve, especially in industries such as Automotive & Transportation, Industrial Manufacturing, Software, Internet & Communication, Financial Services, and Environmental & Energy.</p>
+                    <p>Drawing on our deep industry knowledge and our multidisciplinary technology expertise, we strategize and build the solutions our clients need to transform into smarter organizations, driving sustainable growth.</p>
                 </div>
-                <div className={styles.blockText2}>
-                        <p>Find your next job</p>
-                        <h2> Opportunities are waiting. </h2>
-                        <h3>With new jobs added daily, Modis is the number one location to take your career to the next level.</h3>
-                        <NavLink to='/search-jobs'>Job search</NavLink>
-                </div>
-            </div> 
-            <div className={styles.blockLocations}>
+            </div>
+            <div className={styles.block3Container}>
                 <div>
-                    <svg width="100%" viewBox="0 0 1600 126" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                        <g><path id="wedge" d="m0,66 l 421,-66 l  1179,106 l 0, -106 l -1600,0z" stroke="" fill="#f4f4f4"></path></g>
-                    </svg>
+                    <p> Our Key Industries </p>
+                    <ul>
+                        <li>Automotive & Transportation</li>
+                        <li>Industrial & Manufacturing</li>
+                        <li>Software, Internet & Communications</li>
+                        <li>Environmental & Energy</li>
+                        <li>Financial Services</li>
+                        <li>Healthcare & Pharmaceutical</li>
+                    </ul>
                 </div>
-                <div className={styles.blockLocationsText}>
-                    <p>Locations</p>
-                    <h2>Find your local office.</h2>
-                    <p>Modis has over 100 offices in the United States, Canada and Europe. With both industry and location-specific expertise, our people know their area and their labor market and can find the right position for you.</p>
-                    <NavLink to='/locations/usa/'> Locations </NavLink>
+                <div>
+                    <h2>Automotive & Transportation</h2>
+                    <p>Automotive & Transportation industry is experiencing challenges posed by disruptive technologies, rapidly changing customer expectations, new business models (mobility-as-a-service), new-age automobile manufacturers and an increasing pressure from government regulations.</p>
+                    <h2>Industrial & Manufacturing</h2>
+                    <p>Digital technologies are reshaping how industrial companies operate. Massive disruption in supply chains, low business visibility and plateauing margins are pushing the manufacturing industry to accelerate the adoption of digital technologies. </p>
+                    <h2>Software, Internet & Communications</h2>
+                    <p>The pace of innovation and change in the Software, Internet and Communication is unparalleled. Evolving customer demands, increasing technological complexities and shortening product lifecycles are a big challenge for enterprise leaders. </p>
+                    <h2>Environmental & Energy</h2>
+                    <p>Downturns and unpredictability in the Energy / Oil & Gas industry couples with the push towards renewables has put tremendous pressure on companies to increase efficiencies, control production, reduce costs and explore energy efficient alternatives</p>
+                    <h2>Financial Services</h2>
+                    <p>The Financial Services industry is at the forefront of the digital revolution as most traditional banks and financial institutions are being challenged by new-age Fintech companies, digital banks, alternate currencies etc. </p>
+                    <h2>Healthcare & Pharmaceutical</h2>
+                    <p>The reduction in global poverty and increase in average life expectancy is challenging the global healthcare industry to innovate. New digitization methods are changing the way health information is accessed, and patients are diagnosed and treated, while also feeding into large-scale research. </p>
+                    
                 </div>
-                
-                <div className={styles.borderBottom}>
-                    <svg width="100%" viewBox="0 0 1600 127" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                            <g>
-                                <path id="wedge" d="m1600,40 l -1600,87 l 1600,0 l 0,-87z" stroke="" fill="#f4f4f4"></path>
-                            </g>
-                        </svg>
-                </div>
+            </div>
+
             </div>
         </div>
     )

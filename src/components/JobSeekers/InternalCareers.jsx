@@ -1,37 +1,12 @@
-/* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
 import Nav from './Nav'
 import styles from './Jobseekers.module.css' 
-import star from './../../assets/img/icon-star.svg'
-import {NavLink} from 'react-router-dom'
-import { style } from '@material-ui/system'
-
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
-    const jobOffersArray = JSON.parse(localStorage.getItem('jobOffers'))
-    const favoriteJobs = []
-    const AddToFavorites = (id) => {
-        if (isLoggedIn) {
-            if(!favoriteJobs.find(item => item.id === id)){
-                favoriteJobs.push(jobOffersArray.find(item => item.id === id))
-                console.log(favoriteJobs)
-                localStorage.setItem('favoriteJobs', JSON.stringify(favoriteJobs))
-                alert('Added to favorite list, you can view it in My account')
-                document.querySelector('.star').style.background = '#ffb81cab';
-            } else if (favoriteJobs.find(item => item.id === id)) {
-                alert(`You've already added this offer to the favorite list`)
-            }
-            
-        } else {
-            alert('You should sign in to be able to add favorite offers to the list')
-        }
-        
-    }
-
-    return(
+    return (
         <div>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
-            <div className={styles.blockSearch}>
+            <div className={styles.blockCareers}>
                 <div className={styles.blockSearchBorder}>
                     <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
                         <g>
@@ -91,61 +66,71 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                         </g>
                     </svg>
                  </div>
-                 <div className={styles.blockText}>
-                     <p> Job seekers</p>
-                    <h1>Career Minded</h1>
-                    <h2>Get the intel you need to work smarter and outperform your career expectations.</h2>
+                 <div className={styles.blockCareersText}>
+                     <p> Join our team </p>
+                    <h1>Internal Careers</h1>
+                    <h2> Make a career out of making connections.</h2>
                  </div>
-                
-                
             </div>
-            <div className={styles.textContainer}>
-                <div className={styles.blockText1Container}>
-                    <hr />
-                    <p>Make a smarter career move.</p>
-                    <h1>Connect with our international IT and engineering network.</h1>
-                    <div className={styles.blockText1}>
-                        <p><strong>Are you driven to outperform?</strong></p>
-                        <p>At Modis, we offer careers that span countless domains, projects and challenges across IT and engineering. Our focus is on developing a diverse team of people who want to excel in those roles.</p>
-                        <p>We expect you to be ambitious. That’s why we'll entrust you with responsibility, and encourage you to apply your learnings from one discipline to another, so we can innovate together and unlock new ways of working.</p>
-                        <p><strong>Do you want to tackle real business challenges?</strong></p>
-                        <p>Professional sectors are no longer siloed. So neither are we. At Modis, we're about new perspectives, cross-vertical thinking, and smarter connections—in markets and industries all around the world.</p>
-                        <p>We encourage you to experience a wide range of projects with the world’s leading companies, and gain a multi-disciplined perspective on problem solving.</p>
-                        <p>And we expect you to apply these perspectives to your day-to-day work, understanding business challenges and bringing innovative solutions to the table.</p>
-                        <p><strong>How would you like to join a community of the world’s smartest minds?</strong></p>
-                        <p>We’re proud to have built an environment fueled by a diverse group of industry and market specialists, who learn from each other, develop skills through collaboration, and create ideas that propel us all forward.</p>
-                        <p>Our Centers of Excellence and Delivery Centers boost these connections. They act as campuses for the community, where engineers, data scientists, designers, developers, technicians, chemists, to name a few, all work together to research, innovate and explore new solutions for our clients.</p>
-                        <p>*All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, or protected veteran status and will not be discriminated against on the basis of disability. Equal Opportunity Employer/Veterans/Disabled.</p>
-                    </div>
-                         
-                </div>
-                <div className={styles.blockText2}>
-                        <p>Find your next job</p>
-                        <h2> Opportunities are waiting. </h2>
-                        <h3>With new jobs added daily, Modis is the number one location to take your career to the next level.</h3>
-                        <NavLink to='/search-jobs'>Job search</NavLink>
-                </div>
-            </div> 
-            <div className={styles.blockLocations}>
-                <div>
-                    <svg width="100%" viewBox="0 0 1600 126" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                        <g><path id="wedge" d="m0,66 l 421,-66 l  1179,106 l 0, -106 l -1600,0z" stroke="" fill="#f4f4f4"></path></g>
+            <div className={styles.block2Careers}>
+                <hr/>
+                <h2>Internal careers</h2>
+                <h3>Every day at Modis, you’ll connect the smartest IT and engineering people with the brightest businesses. You’ll collaborate with incredible colleagues and a global network of specialists. And you’ll explore new opportunities to thrive.</h3>
+                <p>And, because it’s important to have a rewarding work/life balance, we make sure you have access to benefits that include:</p>
+                <ul>
+                    <li>Major medical coverage</li>
+                    <li>Vision & dental insurance</li>
+                    <li>Ample paid time off</li>
+                    <li>401(k) matching</li>
+                    <li>Yearly incentive trips for top-performing recruiters & sales professionals</li>
+                    <li>Recognition programs</li>
+                    <li>Sales contests</li>
+                    <li>Theme days & holiday celebrations</li>
+                </ul>
+                <p>We also believe in connecting you with the training and development opportunities you need to grow and excel. That's why, from the moment you become a Modis colleague, you’ll be entered into one of the most comprehensive training programs in the industry.</p>
+                <p>We also believe in connecting you with the training and development opportunities you need to grow and excel. That's why, from the moment you become a Modis colleague, you’ll be entered into one of the most comprehensive training programs in the industry.</p>
+            </div>
+            <div className={styles.block3CareersContainer}>
+                <div className={styles.block3BorderTop}>
+                    <svg width="100%" viewBox="0 0 1600 167" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
+                        <g><path id="wedge" d="m0,0 l 0,87 l 1600,-87 l -1600,0z" stroke="" fill="#FFFFFF"></path></g>
                     </svg>
                 </div>
-                <div className={styles.blockLocationsText}>
-                    <p>Locations</p>
-                    <h2>Find your local office.</h2>
-                    <p>Modis has over 100 offices in the United States, Canada and Europe. With both industry and location-specific expertise, our people know their area and their labor market and can find the right position for you.</p>
-                    <NavLink to='/locations/usa/'> Locations </NavLink>
+                <div className={styles.block3Careers}> 
+                    <h3>More than a company. A community.</h3>
+                    <p>At Modis, you’ll have opportunities to explore new roles, new markets and even different countries as you move your career forward. In addition, you’ll also have opportunities to dedicate your time to causes that matter in our local and global communities.</p>
+                    <ul>
+                        <li><strong>Win4Youth</strong> - Win4Youth is a social responsibility initiative in which all employees, clients and associates have the opportunity to engage in physical activities and local sporting events to raise funds that support the education and integration of young people living in underprivileged communities into the labor market. The ultimate goal is to help these young people enhance their quality of life and gain meaningful employment.</li>
+                        <li><strong>High </strong> - The Modis High Five initiative is a localized program meant to encourage hands-on, action-oriented annual service projects.</li>
+                        <li><strong>Paid Day of Service</strong> - Every year, we support a different local cause and our teams will take one paid day off to volunteer. Through these efforts, we’ve been fortunate enough to work with:<br/>
+                        - Habitat for Humanity<br/>
+                        - The American Cancer Society<br/>
+                        - Mobile Loaves and Fishes<br/>
+                        - ALS Association<br/>
+                        - Desmoid Tumor Research Foundation<br/>
+                        </li>
+                    </ul>
+                    <p>Get more than a new position. Get a renewed sense of purpose. Partner with a team that you can be proud of. Start a new career at Modis!</p>
                 </div>
-                
-                <div className={styles.borderBottom}>
-                    <svg width="100%" viewBox="0 0 1600 127" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                            <g>
-                                <path id="wedge" d="m1600,40 l -1600,87 l 1600,0 l 0,-87z" stroke="" fill="#f4f4f4"></path>
-                            </g>
-                        </svg>
+                <div className={styles.block3BorderBottom}>
+                    <svg width="100%" viewBox="0 0 1600 132" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path id="wedge" d="m0,0 l 391,132 l 870,-55 l 339, 55 l -1600,0 l 0,-132z" stroke="" fill="#FFFFFF"></path>
+                        </g>
+                    </svg>
                 </div>
+            </div>
+            <div className={styles.block4Careers}>
+                <hr/>
+                <h2>Internal Careers</h2>
+                <h1>Make a smart career move.</h1>
+                <p>Connect with us today to find out how you can thrive in our global network.</p>
+                <a href="https://jobs-modis.icims.com/jobs/search?ss=1&hashed=124490313&mobile=false&width=535&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240">Explore our internal careers now </a>
+                <hr/>
+                <h2>Training & Development</h2>
+                <h1>We empower our colleagues to take control of their career development.</h1>
+                <p>Our programs, camps and ongoing training resources give you the tools you need to thrive in the fast-paced world of technology and engineering recruitment.</p>
+                <a href="/modis-academy-program">Explore our programs</a>
             </div>
         </div>
     )

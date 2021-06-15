@@ -82,13 +82,12 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
                         <ul className={styles.sectionsList}>
                             <NavLink to='/job-seekers'> Overview</NavLink>
                             <NavLink to='/search-jobs'> Search jobs </NavLink>
-                            <NavLink to='/submit-resume'> Submit resume </NavLink>
                             <NavLink to='/internal-careers'> Internal careers </NavLink>
                             <NavLink to='/modis-academy-program'> Modis Academy Program </NavLink>
                         </ul>
                     </NavLink>
-                    <NavLink to='/resources'>
-                        Resources
+                    <NavLink to='/employers'>
+                        Employers
                     </NavLink>
                     <NavLink to='/about-modis'>
                         About Modis

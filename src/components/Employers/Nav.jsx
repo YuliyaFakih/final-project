@@ -2,8 +2,8 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 import logo from '../../assets/img/logo.svg'
 import iconGlobe from '../../assets/img/iconGlobe.svg'
-import styles from './Expertise.module.css'
-import classes from './style.css'
+import styles from './Employers.module.css'
+
 
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
@@ -76,18 +76,18 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
                 <div className={styles.blockList}>
                     <NavLink to='/home'>
                         Our expertise
-                        <ul className={styles.sectionsList}>
-                            <NavLink to='/home'> Our Vision </NavLink>
-                            <NavLink to='/client-services/what-we-do/'> Business Lines </NavLink>
-                            <NavLink to='/client-services/technology-practices/'> Technology Practices </NavLink>
-                            <NavLink to='/client-services/industries/'> Key Industries </NavLink>
-                        </ul>
                     </NavLink>
                     <NavLink to='/job-seekers'>
                         Job seekers
                     </NavLink>
                     <NavLink to='/employers'>
                         Employers
+                        <ul className={styles.sectionsList}>
+                            <NavLink to='/employers'> Overview</NavLink>
+                            <NavLink to='/submit-offer'> Submit job offer </NavLink>
+                            <NavLink to='/salary-guide'> Salary Guide </NavLink>
+                            <NavLink to='/modis-academy-program'> Modis Academy Program </NavLink>
+                        </ul>
                     </NavLink>
                     <NavLink to='/about-modis'>
                         About Modis

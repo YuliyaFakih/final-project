@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React, {useState} from 'react'
 import Nav from '../Expertise/Nav'
 import styles from './SignUp.module.css'
@@ -18,9 +19,8 @@ export default () => {
         const userPassword = document.querySelectorAll('form input')[7].value;
         employers.push({userName, userSurname, userEmail, userPhone, userCompany, userRegion, userLink, userPassword})
         console.log(userName, userSurname, userEmail, userPhone, userCompany, userRegion, userLink, userPassword)
-        let addEmployer = localStorage.setItem('employers', JSON.stringify(employers))
-        return alert(`Account created with succes, please log in`)      
-        document.querySelectorAll('input').innerHTML = ''
+        localStorage.setItem('employers', JSON.stringify(employers))
+        return alert(`Account created with succes, please log in`) 
     }
     
     return (
@@ -29,24 +29,24 @@ export default () => {
             <div className={styles.fillForm}>
                 <form>
                 <h3>Create account</h3>
-                    <label>Enter first name</label> 
+                    <label>Enter first name*</label> 
                     <input type="text" placeholder="name" required/>
-                    <label>Enter last name</label>  
+                    <label>Enter last name*</label>  
                     <input type="text" placeholder="surname" required/>
-                    <label>Enter email address</label>  
+                    <label>Enter email address*</label>  
                     <input type="email" placeholder="email" required/>
-                    <label>Enter phone number</label>  
+                    <label>Enter phone number*</label>  
                     <input type="tel" placeholder="phone number" required/>
-                    <label>Enter company name</label>
+                    <label>Enter company name*</label>
                     <input type="text" placeholder="company name" required/>
-                    <label>Enter region</label>
+                    <label>Enter region*</label>
                     <input type="text" placeholder="region" required/>
                     <label>Enter site link</label> 
                     <input type="url" placeholder="link to your site" />
-                    <label>Enter password</label> 
+                    <label>Enter password*</label> 
                     <input type="password" placeholder="password" required/>
                     <div className={styles.buttons}>
-                        <button type="submit" onClick={formSubmit}> Sign up </button>
+                        <button type="submit" onClick={(event) => formSubmit(event)}> Sign up </button>
 	                    <button type="reset"> Reset </button>
                     </div>
                     
