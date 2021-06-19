@@ -12,9 +12,13 @@ import Account from './components/Account/Account'
 import TechnologyPractices from './components/TechnologyPractices/TechnologyPractices'
 import JobSeekers from './components/JobSeekers/Jobseekers'
 import InternalCareers from './components/JobSeekers/InternalCareers'
+import AcademyProgram from './components/JobSeekers/AcademyProgram'
 import SearchJobs from './components/SearchJobs/SearchJobs'
 import Employers from './components/Employers/Employers'
 import SubmitOffer from './components/Employers/SubmitOffer'
+import Leadership from './components/About/Leadership'
+import About from './components/About/About'
+import SalaryGuide from './components/Employers/SalaryGuide'
 import uuid from 'react-uuid'
 
 function App() {
@@ -78,8 +82,10 @@ function App() {
           <Expertise isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
         </Route> 
         <Route path='/sign-up-as-employer' component={SignUpAsEmployer} />
-        <Route path='/sign-up-as-job-seeker' component={SignUpAsJobSeeker} />  
-        <Route path='/client-services/what-we-do/' component={BusinessLines} />  
+        <Route path='/sign-up-as-job-seeker' component={SignUpAsJobSeeker} /> 
+        <Route path='/client-services/what-we-do/'>
+            <BusinessLines isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route> 
         <Route path='/log-in'>
             <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
         </Route>
@@ -107,7 +113,18 @@ function App() {
         <Route path='/internal-careers'>
             <InternalCareers isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
         </Route> 
-        
+        <Route path='/modis-academy-program'>
+            <AcademyProgram isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route> 
+        <Route path='/leadership'>
+            <Leadership isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route>
+        <Route path='/about-modis'>
+            <About isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route>  
+        <Route path='/salary-guide'>
+            <SalaryGuide isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route> 
         <Footer />
     </div>
   );

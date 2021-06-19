@@ -1,21 +1,19 @@
-/* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
 import Nav from './Nav'
-import styles from './Employers.module.css'
-import { NavLink } from 'react-router-dom'
+import styles from './About.module.css'
+import {NavLink} from 'react-router-dom'
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
-    
     return (
         <div>
-            <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
-            <div className={styles.blockOverview}>
-                <div className={styles.blockOverviewBorder}>
-                <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                    <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#f4f4f4"></path>
-                </g>
-                </svg>
+            <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            <div className={styles.blockAboutContainer}>
+                <div className={styles.blockAboutBorder}>
+                    <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#FFFFFF"></path>
+                        </g>
+                    </svg>
                 </div>
                 <div className={styles.blockImg}>
                     <svg class="header-banner__path-svg" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="655" height="689" viewBox="0 0 655 689">
@@ -69,20 +67,44 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                         </g>
                     </svg>
                  </div>
-                 <div className={styles.blockText}>
-                     <p> Employers</p>
-                    <h1>Working Intelligence - Resources for Employers</h1>
-                    <h2>Discover the insights you need to build smarter, more efficient and more agile teams.</h2>
+                 <div className={styles.blockAboutText}>
+                    <h1>It's about connecting smarter.</h1>
+                    <p>Technology is perhaps the biggest influencer in our jobs and our lives. But we believe that the power of human connections is what drives technological opportunities.</p>
                  </div>
             </div>
-            <div className={styles.block2}>
-                <div className={styles.block2Text}>
-                    <p>know what to pay top talent</p>
-                    <h3>Get the most up-to-date salary data and job descriptions in our Salary Guide.</h3>
-                    <NavLink to='/salary-guide'>Request your free IT & Engineering Salary Guide</NavLink>
+            <div className={styles.block2About}>
+                <hr/>
+                <h3>About Modis</h3>
+                <h1>We all live in a world where technology drives constant change. To thrive in this world, we need to help the right people work together in the right ways to achieve smarter outcomes.</h1>
+                <div className={styles.block2AboutDescription}>
+                    <p>This can't be done in traditional silos. The best way to unlock true innovation is through cross-domain thinking. As a global community of specialists, we connect the smartest people and brightest businesses to the opportunities they need to thrive.</p><br/>
+                    <p>This is how we help companies adapt, explore and seize opportunities to outperform. And how we guide, prepare and place our specialists in roles and projects that will further their careers. Our strength stems from our colleagues. They allow us to rapidly place experts in the right roles and assemble agile teams for our clients’ key projects. They also know how to recognize a candidate’s ambitions and work side-by-side to get them there.</p><br/>
+                    <p>In addition, they form the backbone of our industry-leading Centers of Excellence and Delivery Centers. These Centers provide our clients with everything from specialized talent to focused teams to fully-managed projects—from conception to delivery—with the local expertise and global scale they need.</p><br/>
+                    <p>Driving innovation. Inspiring transformation. Fueling collaboration. As the global leader in IT and engineering, we believe tomorrow is infinitely brighter when individuals and teams, companies and cultures, services and sectors are connected. We are Modis.</p>
+                </div>
+                <hr/>
+                <div>
+                    <h1>Our Leadership</h1>
+                    <p>Our leadership team at Modis believes that human connection is the key driver of innovation and company transformation. Meet and connect with our team of leaders dedicated to helping the right people work together in the right ways to achieve smarter outcomes.</p>
+                    <NavLink to='/leadership'>Meet them now</NavLink>
+                </div>
+                <hr/>
+                <div>
+                    <h3>Join our team</h3>
+                    <h1>Careers at Modis</h1>
+                    <p>Connect the smartest IT and engineering people with the brightest businesses while exploring opportunities to thrive as the global leader in IT and engineering staffing and services.  </p>
+                    <NavLink to='/internal-careers/'>Learn more about joining our team</NavLink>
+                </div>
+                <hr/>
+                <div>
+                    <h3>Diversity & Inclusion</h3>
+                    <h1>We believe diversity fuels Innovation, and we're doing more than ever to achieve it.</h1>
+                    <p>A diverse workforce isn't a luxury - it's a necessity. That's why we're doing more than ever to partner with leading diversity partners to recruit, hire and source more diverse talent pipelines. </p>
+                    <NavLink to='/diversity-and-inclusion'>Learn about our diversity initiatives</NavLink>
                 </div>
             </div>
-            
+
         </div>
+        
     )
 }

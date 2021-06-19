@@ -1,21 +1,18 @@
-/* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
 import Nav from './Nav'
-import styles from './Employers.module.css'
-import { NavLink } from 'react-router-dom'
+import styles from './Jobseekers.module.css' 
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
-    
     return (
         <div>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
-            <div className={styles.blockOverview}>
-                <div className={styles.blockOverviewBorder}>
-                <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                    <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#f4f4f4"></path>
-                </g>
-                </svg>
+            <div className={styles.blockAcademy}>
+                <div className={styles.blockSearchBorder}>
+                    <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#FFFFFF"></path>
+                        </g>
+                    </svg>
                 </div>
                 <div className={styles.blockImg}>
                     <svg class="header-banner__path-svg" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="655" height="689" viewBox="0 0 655 689">
@@ -69,20 +66,36 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                         </g>
                     </svg>
                  </div>
-                 <div className={styles.blockText}>
-                     <p> Employers</p>
-                    <h1>Working Intelligence - Resources for Employers</h1>
-                    <h2>Discover the insights you need to build smarter, more efficient and more agile teams.</h2>
+                 <div className={styles.blockAcademyText}>
+                    <p> Modis Academy Program </p>
+                    <h1>Advance your potential with Modis Academy.</h1>
+                    <h3> Through our alliance with industry-leading training partners, Modis Academy offers our Modis associates and new candidates the opportunity expand their skillsets.</h3>
                  </div>
             </div>
-            <div className={styles.block2}>
-                <div className={styles.block2Text}>
-                    <p>know what to pay top talent</p>
-                    <h3>Get the most up-to-date salary data and job descriptions in our Salary Guide.</h3>
-                    <NavLink to='/salary-guide'>Request your free IT & Engineering Salary Guide</NavLink>
+            <div className={styles.block2Academy}>
+                <div>
+                    <h4>What’s Modis Academy?</h4>
+                    <p>Modis Academy is a reskilling and upskilling program focused on providing education to IT and Engineering Professionals through leveraging skill specific education and certifications. Our goal is to provide educational and employment advancement opportunities that help launch our candidates career to the next level. Modis Academy has joined forces with industry-leading training partners to offer flexible training solutions tailored to fit your specific needs. Our training can be delivered in a variety of formats including self-paced learning paths, instructor-led online and campus sessions. Course structures include bootcamps, part-time courses, and fulltime immersive. Our Upskilling and Reskilling programs are structed to provide training opportunities no matter where you are in your career journey.</p>
+                </div>
+                
+                <div className={styles.block2AcademyBorder}>
+                        <svg width="100%" viewBox="0 0 1600 117" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path id="wedge" d="m1600,30 l -1600,87 l 1600,0 l 0,-87z" stroke="" fill="#f4f4f4"></path>
+                            </g>
+                        </svg>
+                    </div>
+            </div>
+            <div className={styles.block3AcademyContainer}>
+                <div className={styles.block3Academy}>
+                    <h3>Learn while you earn with the Upskilling program</h3>
+                    <p>For associates that are already on assignment with Modis, we offer the opportunity to add new or complementary skillsets through part-time and on-demand learning paths. As an added bonus, we advance the payment of the training for those selected – so you don’t have to worry about the financial costs associated with your career ambitions.</p>
+                    <p>If admitted to Modis Academy, our students can take full advantage of training opportunities while continuing to work in (and be paid for) their current role. As a result of the training, we hope to present you with an opportunity to remain in your existing role or fulfill a new assignment requiring your new skills.</p>
+                    <h3>Hit the ground running with the Reskilling program</h3>
+                    <p>For college graduates seeking entry-level opportunities in the software development field in the market, Modis Academy offers a reskilling program. The reskilling program is a full-time immersive experience providing an educational opportunity and career advancement path.</p>
+                    <p>Modis will advance the payment for the Full Time Immersive course, but in this experience, candidates will not be paid during the course. Our hope is to place candidates on client assignment as soon as the course is successfully completed.</p>
                 </div>
             </div>
-            
         </div>
     )
 }

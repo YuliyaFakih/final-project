@@ -1,21 +1,51 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React from 'react'
+import React, {useEffect} from 'react'
 import Nav from './Nav'
-import styles from './Employers.module.css'
-import { NavLink } from 'react-router-dom'
+import styles from './About.module.css'
+
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
-    
+    const [state, setState] = React.useState('');
+    useEffect(() => {
+        fetch('https://reqres.in/api/users?page=1')
+        .then(res => res.json())
+        .then ((result) => {
+            setState(result)
+        })
+      }, []);
+
+    /*
+    const getUsers = async function() {
+        let request = await fetch('https://reqres.in/api/users?page=1')
+        let response = await request.json()
+        let result = response.data;
+        console.log(result)
+        let usersList = document.getElementById('main')
+        //.then(response => response.json())
+        //.then(users => console.log(users.data[1].email))
+        usersList.insertAdjacentHTML ('afterbegin', `
+            <div>
+                ${result.map(user => (
+                    <>
+                        <span> {user.first_name}</span>
+                        <span> {user.last_name}</span>
+                        <img src={user.avatar} />
+                    </>
+                ))}
+            </div>
+        `)  
+    }()       
+ */          
     return (
         <div>
-            <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
-            <div className={styles.blockOverview}>
-                <div className={styles.blockOverviewBorder}>
-                <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                <g>
-                    <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#f4f4f4"></path>
-                </g>
-                </svg>
+            <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            <div className={styles.blockLeaders}>
+                <div className={styles.blockLeadersBorder}>
+                    <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#FFFFFF"></path>
+                        </g>
+                    </svg>
                 </div>
                 <div className={styles.blockImg}>
                     <svg class="header-banner__path-svg" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="655" height="689" viewBox="0 0 655 689">
@@ -69,20 +99,19 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                         </g>
                     </svg>
                  </div>
-                 <div className={styles.blockText}>
-                     <p> Employers</p>
-                    <h1>Working Intelligence - Resources for Employers</h1>
-                    <h2>Discover the insights you need to build smarter, more efficient and more agile teams.</h2>
+                 <div className={styles.blockLeadersText}>
+                    <h1>Our Leadership Team</h1>
                  </div>
             </div>
-            <div className={styles.block2}>
-                <div className={styles.block2Text}>
-                    <p>know what to pay top talent</p>
-                    <h3>Get the most up-to-date salary data and job descriptions in our Salary Guide.</h3>
-                    <NavLink to='/salary-guide'>Request your free IT & Engineering Salary Guide</NavLink>
-                </div>
+            <div className={styles.usersListContainer}>
+                    {state && state.data.map(user => (
+                        <div className={styles.user}>
+                            <img src={user.avatar} alt="#"/>
+                            <p> {user.first_name} {user.last_name}</p>
+                        </div>
+                    
+                    ))}
             </div>
-            
         </div>
     )
 }

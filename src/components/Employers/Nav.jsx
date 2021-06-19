@@ -10,6 +10,7 @@ import Link from '@material-ui/core/Link';
 import Modal from '@material-ui/core/Modal';
 import close from '../../assets/img/close.png'
 import SignUpEmployer from '../SignUp/SignUpAsEmployer'
+import Subscribe from '../Expertise/Subscribe'
 
 const Nav = ({isLoggedIn, setIsLoggedIn}) => {
     const [open, setOpen] = React.useState(false);
@@ -23,6 +24,7 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
 
     const logOut = () => {
         setIsLoggedIn(false)
+        return (<Subscribe />)
     }
 
     return (

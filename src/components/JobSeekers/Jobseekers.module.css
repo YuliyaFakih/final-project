@@ -172,7 +172,7 @@ a:hover {
     grid-template-columns: 320px 115px auto 40px;
 }
 
-.jobDescription p, .block2Careers p, .block2Careers li, .block3Careers p, .block3Careers li, .block4Careers p {
+.jobDescription p, .block2Careers p, .block2Careers li, .block3Careers p, .block3Careers li, .block4Careers p, .blockAcademyText h3 {
     font-size: 17px;
     line-height: 1.8;
     text-shadow: 0 0 2px hsl(0deg 0% 100% / 60%);
@@ -211,13 +211,19 @@ a:hover {
     position: relative;
 }
 
-.blockSearch .blockSearchBorder, .blockCareers .blockSearchBorder {
+.blockAcademy {
+    background-image: none;
+    min-height: 500px;
+    position: relative;
+}
+
+.blockSearch .blockSearchBorder, .blockCareers .blockSearchBorder, .blockAcademy .blockSearchBorder {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-.blockSearch .blockImg svg:nth-child(2)  {
+.blockSearch .blockImg svg:nth-child(2) {
     position: absolute;
     width: 30%;
     left: 0;
@@ -227,7 +233,7 @@ a:hover {
     transform-origin: 50% 50%;
 }
 
-.blockCareers .blockImg svg:nth-child(2) {
+.blockCareers .blockImg svg:nth-child(2), .blockAcademy .blockImg svg:nth-child(2) {
     position: absolute;
     width: 30%;
     right: 0;
@@ -235,7 +241,7 @@ a:hover {
     height: auto;
 }
 
-.blockCareers .blockImg svg:nth-child(1) {
+.blockCareers .blockImg svg:nth-child(1), .blockAcademy .blockImg svg:nth-child(1) {
     position: absolute;
     width: auto;
     right: 0;
@@ -266,7 +272,7 @@ a:hover {
     left: 21%;
 }
 
-.blockSearch .blockText h1, .blockCareersText h1 {
+.blockSearch .blockText h1, .blockCareersText h1, .blockAcademyText h1 {
     text-shadow: 0 0 2px rgb(0 0 0 / 60%);
     font-size: 68px;
     line-height: 68px;
@@ -276,7 +282,7 @@ a:hover {
     margin: 0 0 28px;
 }
 
-.blockSearch .blockText p, .blockText1Container > p, .blockText2 p, .blockLocations p:nth-child(1), .blockCareersText p, .block2Careers h2, .block4Careers h2 {
+.blockSearch .blockText p, .blockText1Container > p, .blockText2 p, .blockLocations p:nth-child(1), .blockCareersText p, .block2Careers h2, .block4Careers h2, .blockAcademyText p {
     color: #ffb81c;
     font-size: 18px;
     letter-spacing: 4px;
@@ -287,7 +293,7 @@ a:hover {
     font-weight: bold;
 }
 
-.blockSearch .blockText h2, .blockCareersText h2 {
+.blockSearch .blockText h2, .blockCareersText h2, .block2Academy h4, .block3Academy h3 {
     text-shadow: 0 0 2px hsl(0deg 0% 100% / 50%);
     font-size: 24px;
     line-height: 28px;
@@ -297,6 +303,10 @@ a:hover {
     text-align: left;
 }
 
+.block2Academy h4, .block3Academy h3 {
+    color: black;
+    font-weight: 400;
+}
 .textContainer {
     text-align: left;
     background: #f4f4f4;
@@ -312,7 +322,7 @@ a:hover {
     color: #000;
 }
 
-.blockText1 p, .blockText2 h3 {
+.blockText1 p, .blockText2 h3, .block2Academy p, .block3Academy p {
     font-size: 18px;
     line-height: 1.8;
     margin: 0 0 30px;
@@ -337,7 +347,7 @@ a:hover {
     color: #373a36;
     display: inline-block;
     text-align: left;
-    width: 150px;
+    width: auto;
     border: 1px solid #ffb81c;
     border-right: 0;
     padding: 6px 25px 15px 18px;
@@ -374,7 +384,7 @@ a:hover {
     border: 1px solid #ffb81c;
     border-left: 0;
     border-bottom: 0;
-    top: -2px;
+    top: -1px;
     right: -1px;
     bottom: 0;
     width: 40px;
@@ -455,4 +465,49 @@ a:hover {
     padding: 6px 39px 15px 18px;
     width: auto;
     margin: 15px 0;
+}
+
+.blockAcademyText {
+    width: 40%;
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    text-align: left;
+}
+
+.blockAcademyText h1 {
+    font-size: 61px;
+    color: black;
+}
+
+.blockAcademyText h3 {
+    font-size: 20px;
+}
+
+.block2Academy {
+    position: relative;
+    padding: 50px 0;
+    text-align: left;
+}
+
+.block2Academy > div {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.block3AcademyContainer {
+    background: #f4f4f4;
+}
+
+.block2AcademyBorder {
+    width: 100%!important;
+    position: absolute;
+    bottom: 0;
+}
+
+.block3Academy {
+    width: 50%;
+    padding: 82px 0;
+    margin: 0 auto;
+    text-align: left;
 }

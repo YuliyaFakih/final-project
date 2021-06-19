@@ -5,11 +5,11 @@ import Nav from '../Expertise/Nav'
 import engineering from '../../assets/img/engineering.svg'
 import tech from '../../assets/img/tech.svg'
 
-const BusinessLines = () => {
+const BusinessLines = ({isLoggedIn, setIsLoggedIn}) => {
 
     return (
         <div>
-            <Nav />
+            <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div>
                 <div className={styles.block1}>
                     <div className={styles.grid}>

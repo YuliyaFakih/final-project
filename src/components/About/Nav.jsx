@@ -2,15 +2,15 @@ import React from 'react'
 import {NavLink} from 'react-router-dom'
 import logo from '../../assets/img/logo.svg'
 import iconGlobe from '../../assets/img/iconGlobe.svg'
-import styles from './Expertise.module.css'
-import classes from './style.css'
+import styles from './About.module.css'
+
 
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
 import Modal from '@material-ui/core/Modal';
 import close from '../../assets/img/close.png'
 import SignUpEmployer from '../SignUp/SignUpAsEmployer'
-import Subscribe from './Subscribe'
+import Subscribe from '../Expertise/Subscribe'
 
 const Nav = ({isLoggedIn, setIsLoggedIn}) => {
     const [open, setOpen] = React.useState(false);
@@ -78,12 +78,6 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
                 <div className={styles.blockList}>
                     <NavLink to='/home'>
                         Our expertise
-                        <ul className={styles.sectionsList}>
-                            <NavLink to='/home'> Our Vision </NavLink>
-                            <NavLink to='/client-services/what-we-do/'> Business Lines </NavLink>
-                            <NavLink to='/client-services/technology-practices/'> Technology Practices </NavLink>
-                            <NavLink to='/client-services/industries/'> Key Industries </NavLink>
-                        </ul>
                     </NavLink>
                     <NavLink to='/job-seekers'>
                         Job seekers
@@ -93,6 +87,12 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
                     </NavLink>
                     <NavLink to='/about-modis'>
                         About Modis
+                        <ul className={styles.sectionsList}>
+                            <NavLink to='/about-modis'> Overview</NavLink>
+                            <NavLink to='/diversity-and-inclusion'> Diversity and Inclusion </NavLink>
+                            <NavLink to='/internal-careers'> Internal Careers </NavLink>
+                            <NavLink to='/leadership'> Leadership </NavLink>
+                        </ul>
                     </NavLink>
                     <NavLink to='/client-services/contact'>
                         Contact
