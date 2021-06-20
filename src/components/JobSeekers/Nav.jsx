@@ -11,6 +11,9 @@ import Modal from '@material-ui/core/Modal';
 import close from '../../assets/img/close.png'
 import SignUpEmployer from '../SignUp/SignUpAsEmployer'
 import Subscribe from '../Expertise/Subscribe'
+import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const Nav = ({isLoggedIn, setIsLoggedIn}) => {
     const [open, setOpen] = React.useState(false);
@@ -23,10 +26,19 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
     }
 
     const logOut = () => {
-        debugger
         setIsLoggedIn(false)
         return (<Subscribe />)
     }
+
+        const [anchorEl, setAnchorEl] = React.useState(null);
+      
+        const handleClick = (event) => {
+          setAnchorEl(event.currentTarget);
+        };
+      
+        const handleClose = () => {
+          setAnchorEl(null);
+        };
 
     return (
         <div className={styles.container}>
@@ -115,6 +127,73 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
                         <img src={iconGlobe} alt="icon-globe" />
                         <div> USA </div>
                         <div> English </div>
+                    </div>
+                    <div className={styles.burgerMenu}>
+                        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+                            <div className={styles.MenuImg}>
+                                <div className={styles.line}></div>
+                                <div className={styles.line}></div>
+                                <div className={styles.line}></div>
+                             </div>
+                        </Button>
+                        <Menu
+                            id="simple-menu"
+                            anchorEl={anchorEl}
+                            keepMounted
+                            open={Boolean(anchorEl)}
+                            onClose={handleClose}
+                        >
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/home' className={styles.link}>
+                                    Our Vision
+                                </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/client-services/what-we-do/' className={styles.link}>
+                                    Business Lines
+                                </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/client-services/technology-practices/'> Technology Practices </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/client-services/industries/'> Key Industries </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/job-seekers'>
+                                    Job seekers
+                                </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/employers'>
+                                    Employers
+                                </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/about-modis'>
+                                    About Modis
+                                </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/client-services/contact'>
+                                    Contact
+                                </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/locations/usa'>
+                                    Locations
+                                </NavLink>
+                            </MenuItem>
+                            
+                            <MenuItem onClick={handleClose}>
+                                <div className={styles.globe} onClick={() => showList()} >
+                                    <img src={iconGlobe} alt="icon-globe" />
+                                    <div> USA </div>
+                                    <div> English </div>
+                                </div>
+                            </MenuItem>
+
+                        </Menu>
                     </div>
                 </div>
                 

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
 import Nav from './Nav'
 import styles from './Jobseekers.module.css' 

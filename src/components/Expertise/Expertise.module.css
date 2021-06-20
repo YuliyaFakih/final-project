@@ -63,6 +63,7 @@
     column-gap: 10px;
     text-transform: uppercase;
     font-size: 13px;
+    padding-right: 15px;
 }
 
 .globe img {
@@ -224,7 +225,7 @@ a:hover {
     transform-origin: 50% 50%;
     min-height: 700px;
 }
-
+/*
 .line {
     height: 100%;
     display: block;
@@ -235,7 +236,7 @@ a:hover {
     left: 0;
     z-index: 1;
 }
-
+*/
 .grid {
     height: 100%;
     display: block;
@@ -275,7 +276,7 @@ a:hover {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    padding: 65px 0;
+    padding: 80px 0;
     background-color: #f4f4f4;
 }
 
@@ -320,7 +321,7 @@ a:hover {
 
 .linksBlock {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
 }
 
@@ -624,7 +625,7 @@ a:hover {
 
 .blockOverviewBorder {
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     width: 100%;
 }
 
@@ -757,4 +758,313 @@ a:hover {
     margin: 0 0 42px;
     font-family: Roboto;
     font-weight: 500;
+}
+
+.burgerMenu {
+    height: 50px;
+    display: none;
+}
+
+.burgerMenu a {
+    color: black !important;
+    text-decoration: none;
+}
+.burgerMenu a:hover {
+    background-color: transparent;
+}
+
+.burgerMenu .line {
+    width: 35px;
+    height: 3px;
+    background-color: #f4f4f4;
+    margin: 5px 0;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+.MenuImg div:nth-child(1) {
+    top: 3px;
+    left: 15px;
+}
+
+.MenuImg div:nth-child(2) {
+    top: 12px;
+    left: 15px;
+}
+
+.MenuImg div:nth-child(3) {
+    top: 21px;
+    left: 15px;
+}
+
+.MenuImg {
+    display: block;
+}
+
+@media (max-width:1440px) {
+    .block3 div:nth-child(1) {
+        position: absolute;
+        width: 100%;
+        top: -3px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1152px) {
+    .block {
+        column-gap: 13px;
+    }
+    .sectionsList {
+        width: 700px;
+    }
+    .blockList a {
+        padding: 25px 8px;
+    }
+    .blockList > a:nth-child(1)::after {
+        right: 0;
+    }
+    .containerBlock1 {
+        min-height: 380px
+    }
+    .block1Border {
+        bottom: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .blockList > a, .globe {
+        display: none;
+    }
+    .burgerMenu {
+        display: block;
+    }
+    .blockList {
+        margin: auto 0;
+        justify-content: unset;
+        background:transparent;
+        width: 49%;
+        margin-left: auto;
+        padding-right: 16px;
+    }
+    .block {
+        column-gap: 35px;
+        justify-content: unset;
+    }
+    .block > img {
+        margin-right: auto;
+    }
+    .block a {
+        font-size: 17px;
+    }
+    .modal {
+        max-width: 35%;
+    }
+    .block1Border {
+        bottom: 20px;
+    }
+    .block3Text {
+        top: 23%;
+        left: 16%;
+    }
+    .block4Map img {
+        width: 480px;
+        height: 245px;
+    }
+    .blockImg svg:nth-child(2) {
+        width: 42%;
+        top: -7px;
+    }
+}
+
+@media (max-width: 800px) {
+    .blockList {
+        width: 70%;
+    }
+    .modal {
+        max-width: 42%;
+    }
+    .block1Border {
+        bottom: 53px;
+    }
+    .block1Text h1 {
+        font-size: 57px;
+    }
+    .linksBlock {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+        justify-items: center;
+    }
+    .block4Map img {
+        width: 300px;
+        height: 188px;
+    }
+    .card > div {
+        font-size: 50px;
+    }
+    .blockImg svg:nth-child(2) {
+        width: 53%;
+        top: -1px;
+    }
+    .blockTextKey {
+        width: 45%;
+    }
+    .blockTextKey h1 {
+        font-size: 57px;
+    }
+    .block3Container {
+        width: 90%;
+    }
+    .block3Container div {
+        width: 87%;
+    }
+}
+
+@media (max-width:768px) {
+    .block3 {
+        min-height: 450px;
+    }
+    .block3Text {
+        width: 50%;
+    }
+}
+
+@media (max-width: 425px) {
+    .block {
+        column-gap: 0;
+    }
+    .block img {
+        width: 141px;
+    }
+    .blockList {
+        width: 93%;
+    }
+    .block a {
+        font-size: 14px;
+    }
+    .modal {
+        max-width: 42%;
+        margin: 50px;
+    }
+    .message {
+        display: none;
+    }
+    .details {
+        display: none;
+    }
+    .block1Border {
+        bottom: 117px;
+    }
+    .block1Text {
+        width: 70%;
+        left: 14%;
+        top: 10%;
+    }
+    .block1Text h1 {
+        font-size: 49px;
+    }
+    .video video {
+        width: 90%;
+    }
+    .linksBlock {
+        grid-template-columns: 1fr;
+    }
+    .block3Text {
+        width: 80%;
+        top: 18%;
+        left: 17%;
+    }
+    .block4Data {
+        grid-auto-flow: unset;
+        row-gap: 20px;
+    }
+    .block4Map {
+        grid-auto-flow: unset;
+        row-gap: 30px;
+    }
+    .block2Text, .block2 {
+        width: 85%;
+    }
+    .blockImg {
+        display: none;
+    }
+    .blockTextKey {
+        width: 80%;
+    }
+    .blockOverview {
+        min-height: 350px;
+    }
+    .blockTextKey h1 {
+        font-size: 49px;
+    }
+    .block3Container div:nth-child(1) {
+        display: none;
+    }
+    .block3Container {
+        grid-template-columns: 1fr;
+        width: 95%;
+    }
+}
+
+@media (max-width: 375px) {
+    .block img {
+        width: 107px;
+    }
+    .burgerMenu .line {
+        width: 32px;
+        height: 2px;
+    }
+    .blockList {
+        padding-right: 5px;
+    }
+    .modal {
+        margin: 49px;
+        max-width: 36%;
+    }
+    .modal .button {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .blockList {
+        padding-right: 0;
+    }
+    .blockList a {
+        padding: 25px 3px;
+    }
+    .block a {
+        font-size: 14px;
+    }
+    .block img {
+        width: 88px;
+    }
+    .modal {
+        margin: 32px;
+        max-width: 80%;
+    }
+    .modal .button {
+        padding: 10px 6px;
+        font-size: 15px;
+    }
+    .block1Text h1 {
+        font-size: 43px;
+    }
+    .block3Text {
+        top: 13%;
+        left: 14%;
+    }
+    .block4Map img {
+        width: 269px;
+        height: 165px;
+    }
+    .blockTextKey h1 {
+        font-size: 43px;
+    }
 }

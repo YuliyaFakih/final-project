@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import Nav from '../Expertise/Nav'
 import styles from './SignUp.module.css'
 
-export default () => {
+export default ({isLoggedIn, setIsLoggedIn}) => {
 
     let employers = JSON.parse(localStorage.getItem('employers')) || []
     
@@ -20,12 +20,15 @@ export default () => {
         employers.push({userName, userSurname, userEmail, userPhone, userCompany, userRegion, userLink, userPassword})
         console.log(userName, userSurname, userEmail, userPhone, userCompany, userRegion, userLink, userPassword)
         localStorage.setItem('employers', JSON.stringify(employers))
-        return alert(`Account created with succes, please log in`) 
+        window.location.assign('/#/home')
+        setIsLoggedIn(true)
+        return alert(`Account was created with succes`)
+        
     }
     
     return (
         <div>
-            <Nav />
+            <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div className={styles.fillForm}>
                 <form>
                 <h3>Create account</h3>

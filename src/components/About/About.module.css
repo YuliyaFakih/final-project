@@ -63,6 +63,7 @@
     column-gap: 10px;
     text-transform: uppercase;
     font-size: 13px;
+    padding-right: 15px;
 }
 
 .globe img {
@@ -163,6 +164,14 @@ a:hover {
     position: relative;
 }
 
+.blockDiversity {
+    background-image: url('../../assets/img/diversity.jpg');
+    height: 500px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .blockAboutContainer {
     height: 400px;
     position: relative;
@@ -170,7 +179,7 @@ a:hover {
     background-repeat: no-repeat;
 }
 
-.blockLeaders .blockLeadersBorder, .blockAboutBorder {
+.blockLeaders .blockLeadersBorder, .blockAboutBorder, .blockDiversityBorder {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -199,7 +208,7 @@ a:hover {
     left: 22%;
 }
 
-.blockLeadersText h1, .blockAboutText h1 {
+.blockLeadersText h1, .blockAboutText h1, .blockDiversityText h1 {
     font-size: 57px;
     line-height: 68px;
     text-shadow: 0 0 2px rgb(0 0 0 / 60%);
@@ -238,7 +247,7 @@ a:hover {
     border-radius: 50%;
 }
 
-.user p, .block2About p {
+.user p, .block2About p, .block2Diversity p, .block3DiversityText p, .block4Forums p, .block5VeteransText p {
     font-size: 17px;
     line-height: 1.8;
     text-shadow: 0 0 2px hsl(0deg 0% 100% / 60%);
@@ -254,7 +263,7 @@ a:hover {
     left: 20%;
 }
 
-.blockAboutText p {
+.blockAboutText p, .blockDiversityText h2 {
     text-shadow: 0 0 2px rgb(0 0 0 / 60%);
     font-size: 22px;
     line-height: 28px;
@@ -274,7 +283,7 @@ a:hover {
     text-align: left;
 }
 
-.block2About h3 {
+.block2About h3, .block2Diversity h2 {
         animation: type 2s steps(60) 0s;
         animation-fill-mode: forwards;
         color: #ffb81c;
@@ -287,7 +296,7 @@ a:hover {
         font-family: 500;
 }
 
-.block2About h1 {
+.block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3 {
     transition: opacity .5s ease-out 0s;
     font-family: roboto,serif;
     font-weight: 400;
@@ -361,4 +370,259 @@ a:hover {
 
 .block2About a:hover {
     color: #fff!important;
+}
+
+.blockDiversityText {
+    width: 68%;
+    margin: auto;
+    padding-top: 5%;
+}
+
+.block2Diversity {
+    width: 60%;
+    margin: 50px auto;
+    text-align: left;
+}
+
+.block3Diversity {
+    background-image: url('../../assets/img/womenDiv.jpg');
+    background-repeat: no-repeat;
+    height: 600px;
+    background-size: cover;
+    position: relative;
+}
+
+.block3DiversityTopBorder, .block3DiversityBorderBottom, .block5VeteransTopBorder, .block5VeteransBorderBottom {
+    width: 100%;
+    position: absolute;
+}
+
+.block3DiversityBorderBottom, .block5VeteransBorderBottom {
+    bottom: 0;
+}
+
+.block3DiversityText {
+    width: 40%;
+    position: absolute;
+    top: 21%;
+    left: 17%;
+}
+
+.block3DiversityText h3, .block3DiversityText p, .block5VeteransText h3, .block5VeteransText p {
+    color: #f4f4f4;
+}
+
+.block4Container {
+    background-color: #f4f4f4;
+    padding: 30px 0;
+}
+
+.block4Forums {
+    width: 70%;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    text-align: left;
+    margin-bottom: 27px;
+}
+
+.block4Forums img {
+    float:right;
+    margin-top: -77px;
+}
+
+.block4Forums h3 {
+    margin-bottom: 22px;
+    font-size: 21px;
+    line-height: 32px;
+    margin: 0 0 42px;
+    font-family: Roboto;
+    font-weight: 400;
+    clear: both;
+}
+
+.block5Veterans {
+    background-image: url('../../assets/img/veterans.jpg');
+    background-repeat: no-repeat;
+    height: 600px;
+    background-size: cover;
+    position: relative;
+}
+
+.block5VeteransText {
+    position: absolute;
+    width: 40%;
+    top: 24%;
+    left: 13%;
+}
+
+.block6MilitaryRecognition {
+    background-color: #f4f4f4;
+    padding: 30px 0;
+}
+
+
+.burgerMenu {
+    height: 50px;
+    display: none;
+}
+
+.burgerMenu a {
+    color: black !important;
+    text-decoration: none;
+}
+.burgerMenu a:hover {
+    background-color: transparent;
+}
+
+.burgerMenu .line {
+    width: 35px;
+    height: 3px;
+    background-color: #f4f4f4;
+    margin: 5px 0;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+.MenuImg div:nth-child(1) {
+    top: 3px;
+    left: 15px;
+}
+
+.MenuImg div:nth-child(2) {
+    top: 12px;
+    left: 15px;
+}
+
+.MenuImg div:nth-child(3) {
+    top: 21px;
+    left: 15px;
+}
+
+.MenuImg {
+    display: block;
+}
+
+@media (max-width: 1280px) {
+    .block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1152px) {
+    .block {
+        column-gap: 13px;
+    }
+    .sectionsList {
+        width: 700px;
+    }
+    .blockList a {
+        padding: 25px 8px;
+    }
+    .blockList > a:nth-child(4)::after {
+        right: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .blockList > a, .globe {
+        display: none;
+    }
+    .burgerMenu {
+        display: block;
+    }
+    .blockList {
+        margin: auto 0;
+        justify-content: unset;
+        background:transparent;
+        width: 49%;
+        margin-left: auto;
+        padding-right: 16px;
+    }
+    .block {
+        column-gap: 35px;
+        justify-content: unset;
+    }
+    .block > img {
+        margin-right: auto;
+    }
+    .block a {
+        font-size: 17px;
+    }
+    .modal {
+        max-width: 35%;
+    }
+}
+
+@media (max-width: 800px) {
+    .blockList {
+        width: 70%;
+    }
+    .modal {
+        max-width: 42%;
+    }
+}
+
+@media (max-width: 425px) {
+    .block {
+        column-gap: 0;
+    }
+    .block img {
+        width: 141px;
+    }
+    .blockList {
+        width: 93%;
+    }
+    .block a {
+        font-size: 14px;
+    }
+    .modal {
+        max-width: 42%;
+        margin: 50px;
+    }
+}
+
+@media (max-width: 375px) {
+    .block img {
+        width: 107px;
+    }
+    .burgerMenu .line {
+        width: 32px;
+        height: 2px;
+    }
+    .blockList {
+        padding-right: 5px;
+    }
+    .modal {
+        margin: 49px;
+        max-width: 36%;
+    }
+    .modal .button {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .blockList {
+        padding-right: 0;
+    }
+    .blockList a {
+        padding: 25px 3px;
+    }
+    .block a {
+        font-size: 14px;
+    }
+    .block img {
+        width: 88px;
+    }
+    .modal {
+        margin: 32px;
+        max-width: 80%;
+    }
+    .modal .button {
+        padding: 10px 6px;
+        font-size: 15px;
+    }
 }

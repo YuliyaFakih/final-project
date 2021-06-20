@@ -20,7 +20,6 @@ const Login = ({isLoggedIn, setIsLoggedIn}) => {
         if(employers && employers.find(user => loginEmail === user.userEmail && loginPass === user.userPassword ) || jobSeekers && jobSeekers.find(user => loginEmail === user.userEmail && loginPass === user.userPassword )){
             hashChange()
             setIsLoggedIn(true)
-            return alert(`You've logged in`)
             
         } else {
             return alert(`Data incorrect, please verify it`)

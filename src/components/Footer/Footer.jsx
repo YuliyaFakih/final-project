@@ -50,18 +50,18 @@ const Footer = () => {
                         <span>Job Seekers</span>
                         <ul>
                             <NavLink to='/job-seekers/'>Overview</NavLink>
-                            <NavLink to='/job-seekers/search-jobs/'>Search Jobs</NavLink>
-                            <NavLink to='/about-modis/internal-careers/'>Internal Careers</NavLink>
-                            <NavLink to='/job-seekers/modis-academy-program/'>Modis Academy Program</NavLink>
+                            <NavLink to='/search-jobs/'>Search Jobs</NavLink>
+                            <NavLink to='/internal-careers/'>Internal Careers</NavLink>
+                            <NavLink to='/modis-academy-program/'>Modis Academy Program</NavLink>
                         </ul>
                     </div>
                     <div>
                         <span>Resources</span>
                         <ul>
-                            <NavLink to='/resources/employers/'>Employers</NavLink>
-                            <NavLink to='/resources/job-seekers/'>Job Seekers</NavLink>
-                            <NavLink to='/resources/salary-guide/'>Salary Guide</NavLink>
-                            <NavLink to='/resources/white-papers/'>White Papers</NavLink>
+                            <NavLink to='/employers/'>Employers</NavLink>
+                            <NavLink to='/job-seekers/'>Job Seekers</NavLink>
+                            <NavLink to='/salary-guide/'>Salary Guide</NavLink>
+                            <NavLink to='/white-papers/'>White Papers</NavLink>
                         </ul>
                     </div>
 

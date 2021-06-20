@@ -129,7 +129,7 @@
     color: #373a36;
     display: inline-block;
     text-align: left;
-    width: 218px;
+    width: 165px;
     border: 1px solid #ffb81c;
     border-right: 0;
     padding: 15px 25px 15px 18px;
@@ -158,6 +158,10 @@
     margin: 20px auto;
 }
 
+.block3Text > h3 {
+    color: #d6d5d5;
+    margin-bottom: 40px;
+}
 .block3Description {
     display: grid;
     grid-auto-flow: column;
@@ -284,4 +288,112 @@
 
 .block4Cards div span:hover {
     opacity: .2;
+}
+
+@media (max-width: 1152px) {
+    .block1Text {
+        width: 60%;
+        margin: 0;
+        position: absolute;
+        top: 26%;
+        left: 15%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .block3 {
+        height: unset;
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .block1Text {
+        width: 73%;
+        top: 29%;
+    }
+    .block3Text {
+        width: 90%;
+    }
+    .description {
+        width: 90%;
+        margin-left: 13%;
+    }
+    .block4 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .block1Text h1 {
+        font-size: 60px;
+    }
+    .block1Text h2 {
+        font-size: 22px;
+    }
+    .block1Text {
+        left: 20%;
+    }
+    .block4Cards > div {
+        width: 93%;
+    }
+}
+@media (max-width: 425px) {
+    .grid {
+        display: none;
+    }
+    .block1Text {
+        width: 90%;
+        top: 18%;
+        left: 7%;
+    }
+    .block1Text h1 {
+        font-size: 49px;
+        font-weight: 400;
+    }
+    .block3Description div:first-child{
+        display: none;
+    }
+    .block3Description {
+        grid-template-columns: 1fr;
+    }
+    .description {
+        margin-left: 0;
+        margin: 0 auto;
+    }
+    .block3Text {
+        padding: 40px 0;
+    }
+    .block3 div:nth-child(1) {
+        position: absolute;
+        width: 100%;
+        top: -2px;
+    }
+    .block4Cards {
+        grid-auto-flow: unset;
+        row-gap: 30px;
+    }
+    .block2Text {
+        width: 85%;
+    }
+}
+
+@media (max-width: 375px) {
+    .block1Text h1 {
+        line-height: 49px;
+    }
+    .block1Text {
+        left: 12%;
+        top: 20%;
+    }
+}
+
+@media (max-width: 320px) {
+    .block1Text h1 {
+        line-height: 43px;
+    }
+    .block1Text {
+        left: 8%;
+        top: 22%;
+    }
 }

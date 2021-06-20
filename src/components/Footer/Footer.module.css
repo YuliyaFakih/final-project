@@ -14,6 +14,7 @@
     grid-template-rows: 60px 60px 60px 60px;
     justify-items: left;
     align-items: center;
+    text-align: left;
 }
 
 .blockHelp img {
@@ -223,7 +224,7 @@
     list-style: none;
     display: grid;
     grid-auto-flow: column;
-    width: 50%;
+    width: 60%;
     margin: auto;
     padding-bottom: 30px;
 }
@@ -237,4 +238,95 @@
 
 .separatingBorder span {
     margin: 10px;
+}
+
+@media (max-width: 1024px) {
+    .separatingBorder ul {
+        width: 70%;
+    }
+    .blockText {
+        width: 280px;
+    }
+}
+
+@media (max-width: 800px) {
+    .blockHelp img {
+        width: 406px;
+        height: 233px;
+    }
+    .blockText {
+        align-items: start;
+    }
+    .blockText p {
+        line-height: 22px;
+    }
+    .separatingBorder ul {
+        width: 90%;
+    }
+}
+
+@media (max-width: 425px) {
+    .blockHelp {
+        grid-auto-flow: row;
+        justify-items: center;
+        row-gap: 30px;
+    }
+    .blockHelp img {
+        width: 344px;
+        height: 206px;
+    }
+    .links {
+        grid-auto-flow: row;
+        justify-items: center;
+    }
+    .sectionsLinks div:nth-child(3) {
+        display: none;
+    }
+    .sectionsLinks {
+        column-gap: 20px;
+    }
+    .socialWebSites {
+        margin: 0 auto 50px;
+        row-gap: 20px;
+    }
+    .socialWebSites ul {
+        column-gap: 10px;
+        padding-left: 15px;
+    }
+    .separatingBorder ul {
+        grid-auto-flow: row;
+        padding: 0 0 25px;
+    }
+    .separatingBorder ul span {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .blockHelp img {
+        width: 315px;
+        height: 194px;
+    }
+    .sectionsLinks > div > span {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    .blockHelp img {
+        width: 270px;
+        height: 163px;
+    }
+    .blockHelp {
+        width: 85%;
+    }
+    .sectionsLinks > div {
+        margin-left: 10px;
+    }
+    .sectionsLinks > div > span {
+        line-height: 1.6;
+    }
+    .sectionsLinks {
+        margin-left: auto;
+    }
 }

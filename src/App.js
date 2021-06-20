@@ -19,6 +19,7 @@ import SubmitOffer from './components/Employers/SubmitOffer'
 import Leadership from './components/About/Leadership'
 import About from './components/About/About'
 import SalaryGuide from './components/Employers/SalaryGuide'
+import Diversity from './components/About/Diversity'
 import uuid from 'react-uuid'
 
 function App() {
@@ -81,8 +82,12 @@ function App() {
         <Route path='/home'>
           <Expertise isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
         </Route> 
-        <Route path='/sign-up-as-employer' component={SignUpAsEmployer} />
-        <Route path='/sign-up-as-job-seeker' component={SignUpAsJobSeeker} /> 
+        <Route path='/sign-up-as-employer'>
+          <SignUpAsEmployer isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route> 
+        <Route path='/sign-up-as-job-seeker'>
+          <SignUpAsJobSeeker isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route>
         <Route path='/client-services/what-we-do/'>
             <BusinessLines isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
         </Route> 
@@ -124,6 +129,9 @@ function App() {
         </Route>  
         <Route path='/salary-guide'>
             <SalaryGuide isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route> 
+        <Route path='/diversity-and-inclusion'>
+            <Diversity isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
         </Route> 
         <Footer />
     </div>

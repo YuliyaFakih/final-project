@@ -3,7 +3,7 @@
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 400px;
+    height: 500px;
 }
 
 .block1Border {
@@ -22,16 +22,22 @@
 }
 
 .block1Grid svg:nth-child(1) {
-    top: -78px;
-    left: -49px;
+    top: -232px;
+    left: -79px;
     position: absolute;
+}
+
+.block1Grid svg:nth-child(2) {
+    position: absolute;
+    left: 0;
+    top: -207px;
 }
 
 .block1Text {
     position: absolute;
     top: 25%;
-    right: 8%;
-    width: 40%;
+    right: 5%;
+    width: 45%;
 }
 
 .block1Text h1 {
@@ -101,4 +107,98 @@
 
 .card h3, .card p {
     text-align: center!important;
+}
+
+@media (max-width: 1280px) {
+    .block1Text h1 {
+        font-size: 63px;
+    }
+    .block1Grid svg:nth-child(1) {
+        left: -143px;
+    }
+    .block1Grid svg:nth-child(2) {
+        left: -112px;
+    }
+    
+}
+
+@media (max-width: 1152px) {
+    .block1Text {
+        width: 52%;
+    }
+    .block1Grid svg:nth-child(1) {
+        left: -195px;
+    }
+    .card {
+        width: 70%;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .block1Text {
+        width: 56%;
+    }
+    .block1Text h1 {
+        font-size: 60px;
+    }
+    .block1Grid svg:nth-child(1) {
+        left: -245px;
+    }
+}
+
+@media (max-width: 800px) {
+    .block1Grid svg:nth-child(1) {
+        left: -336px;
+    }
+    .block1Grid svg:nth-child(2) {
+        left: -193px;
+    }
+    .block1Text {
+        right: -3%;
+    }
+    .block1Text h1 {
+        font-size: 57px;
+    }
+}
+
+@media (max-width: 425px) {
+    .block1Grid {
+        display: none;
+    }
+    .block1Text h1 {
+        font-size: 49px;
+    }
+    .block1Text {
+        width: 90%;
+        left: 18%;
+    }
+    .block2 {
+        width: 85%;
+    }
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 375px) {
+    .block1Text {
+        left: 12%;
+    }
+}
+
+@media (max-width: 320px) {
+    .block1Text h1 {
+        font-size: 43px;
+        line-height: 47px;
+    }
+    .block1Text {
+        left: 17%;
+    }
+    .block1 {
+        height: 400px;
+    }
+    .card p {
+        font-size: 16px;
+    }
 }

@@ -67,6 +67,7 @@ input[type="checkbox"] {
     column-gap: 10px;
     text-transform: uppercase;
     font-size: 13px;
+    padding-right: 15px;
 }
 
 .globe img {
@@ -411,4 +412,170 @@ form h3 {
 .blockGuide2 > p {
     width: 50%;
     margin: 50px auto;
+}
+
+
+.burgerMenu {
+    height: 50px;
+    display: none;
+}
+
+.burgerMenu a {
+    color: black !important;
+    text-decoration: none;
+}
+.burgerMenu a:hover {
+    background-color: transparent;
+}
+
+.burgerMenu .line {
+    width: 35px;
+    height: 3px;
+    background-color: #f4f4f4;
+    margin: 5px 0;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+.MenuImg div:nth-child(1) {
+    top: 3px;
+    left: 15px;
+}
+
+.MenuImg div:nth-child(2) {
+    top: 12px;
+    left: 15px;
+}
+
+.MenuImg div:nth-child(3) {
+    top: 21px;
+    left: 15px;
+}
+
+.MenuImg {
+    display: block;
+}
+
+@media (max-width: 1280px) {
+    .block {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1152px) {
+    .block {
+        column-gap: 13px;
+    }
+    .sectionsList {
+        width: 700px;
+    }
+    .blockList a {
+        padding: 25px 8px;
+    }
+    .blockList > a:nth-child(3)::after {
+        right: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .blockList > a, .globe {
+        display: none;
+    }
+    .burgerMenu {
+        display: block;
+    }
+    .blockList {
+        margin: auto 0;
+        justify-content: unset;
+        background:transparent;
+        width: 49%;
+        margin-left: auto;
+        padding-right: 16px;
+    }
+    .block {
+        column-gap: 35px;
+        justify-content: unset;
+    }
+    .block > img {
+        margin-right: auto;
+    }
+    .block a {
+        font-size: 17px;
+    }
+    .modal {
+        max-width: 35%;
+    }
+}
+
+@media (max-width: 800px) {
+    .blockList {
+        width: 70%;
+    }
+    .modal {
+        max-width: 42%;
+    }
+}
+
+@media (max-width: 425px) {
+    .block {
+        column-gap: 0;
+    }
+    .block img {
+        width: 141px;
+    }
+    .blockList {
+        width: 93%;
+    }
+    .block a {
+        font-size: 14px;
+    }
+    .modal {
+        max-width: 42%;
+        margin: 50px;
+    }
+}
+
+@media (max-width: 375px) {
+    .block img {
+        width: 107px;
+    }
+    .burgerMenu .line {
+        width: 32px;
+        height: 2px;
+    }
+    .blockList {
+        padding-right: 5px;
+    }
+    .modal {
+        margin: 49px;
+        max-width: 36%;
+    }
+    .modal .button {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .blockList {
+        padding-right: 0;
+    }
+    .blockList a {
+        padding: 25px 3px;
+    }
+    .block a {
+        font-size: 14px;
+    }
+    .block img {
+        width: 88px;
+    }
+    .modal {
+        margin: 32px;
+        max-width: 80%;
+    }
+    .modal .button {
+        padding: 10px 6px;
+        font-size: 15px;
+    }
 }
