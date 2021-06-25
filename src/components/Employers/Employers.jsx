@@ -79,7 +79,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                 <div className={styles.block2Text}>
                     <p>know what to pay top talent</p>
                     <h3>Get the most up-to-date salary data and job descriptions in our Salary Guide.</h3>
-                    <NavLink to='/salary-guide'>Request your free IT & Engineering Salary Guide</NavLink>
+                    <NavLink to='/salary-guide'>Request <span>your free IT & Engineering</span> Salary Guide</NavLink>
                 </div>
             </div>
             

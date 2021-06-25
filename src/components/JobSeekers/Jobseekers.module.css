@@ -220,7 +220,7 @@ a:hover {
 
 .blockSearch .blockSearchBorder, .blockCareers .blockSearchBorder, .blockAcademy .blockSearchBorder {
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     width: 100%;
 }
 
@@ -351,7 +351,7 @@ a:hover {
     width: auto;
     border: 1px solid #ffb81c;
     border-right: 0;
-    padding: 6px 25px 15px 18px;
+    padding: 6px 34px 15px 8px;
     font-size: 17px;
     font-weight: 400;
     line-height: 1.5;
@@ -409,7 +409,7 @@ a:hover {
 
 .borderBottom {
     width: 100%;
-    bottom: 0;
+    bottom: -3px;
     position: absolute;
 }
 
@@ -503,7 +503,7 @@ a:hover {
 .block2AcademyBorder {
     width: 100%!important;
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
 }
 
 .block3Academy {
@@ -559,6 +559,13 @@ a:hover {
     .block {
         width: 100%;
     }
+    .blockCareers .blockImg svg:nth-child(2), .blockAcademy .blockImg svg:nth-child(2) {
+        width: 37%;
+    }
+    .blockAcademyText {
+        width: 51%;
+        left: 15%;
+    }
 }
 
 @media (max-width: 1152px) {
@@ -574,6 +581,16 @@ a:hover {
     .blockList > a:nth-child(2)::after {
         right: 0;
     }
+    .blockSearch .blockImg svg:nth-child(2) {
+        width: 40%;
+    }
+    .blockAcademyText h1 {
+        font-size: 57px;
+    }
+    .sectionsList {
+        left: -129px;
+    }
+    
 }
 
 @media (max-width: 1024px) {
@@ -604,6 +621,36 @@ a:hover {
     .modal {
         max-width: 35%;
     }
+    .blockSearch .blockText h1, .blockCareersText h1, .blockAcademyText h1 {
+        font-size: 63px;
+    }
+    .blockSearch .blockText h2, .blockCareersText h2, .block2Academy h4, .block2Academy h3 {
+        font-size: 22px;
+    }
+    .blockCareers .blockImg svg:nth-child(2), .blockAcademy .blockImg svg:nth-child(2) {
+        width: 46%;
+    }
+    .blockCareersText {
+        width: 45%;
+        top: 21%;
+        left: 14%;
+    }
+    .block2Careers h3, .block3Careers h3,.blockText1Container h1, .block4Careers h1  {
+        font-size: 29px;
+        line-height: 39px;
+    }
+    .blockSearch .blockText p, .blockText1Container > p, .blockText2 p, .blockLocations p:nth-child(1), .blockCareersText p, .block2Careers h2, .block4Careers h2, .blockAcademyText p {
+        font-size: 15px;
+        letter-spacing: 3px;
+        margin: 0 0 11px;
+    }
+    .blockAcademyText {
+        width: 60%;
+        left: 8%;
+    }
+    .block2Academy {
+        padding-top: 0;
+    }
 }
 
 @media (max-width: 800px) {
@@ -612,6 +659,43 @@ a:hover {
     }
     .modal {
         max-width: 42%;
+    }
+    .blockSearch .blockImg svg:nth-child(2) {
+        width: 60%;
+    }
+    .blockSearch .blockText {
+        width: 50%;
+        top: 23%;
+        right: 5%;
+    }
+    .blockSearch .blockText h1, .blockCareersText h1 {
+        font-size: 57px;
+    }
+    .blockSearch .blockText p, .blockText1Container > p, .blockText2 p, .blockLocations p:nth-child(1), .blockCareersText p, .block2Careers h2, .block4Careers h2, .blockAcademyText p {
+        font-size: 13px;
+    }
+    .blockLocationsText {
+        width: 45%;
+        top: 20%;
+    }
+    .blockCareers .blockImg svg:nth-child(2), .blockAcademy .blockImg svg:nth-child(2) {
+        width: 58%;
+    }
+    .blockCareersText {
+        width: 50%;
+        top: 23%;
+        left: 10%;
+    }
+    .block2Careers h3, .block3Careers h3, .blockText1Container h1, .block4Careers h1  {
+        font-size: 26px;
+        line-height: 37px;
+    }
+    .blockAcademyText h1 {
+        line-height: 55px;
+        font-size: 52px;
+    }
+    .blockAcademyText h3 {
+        font-size: 19px;
     }
 }
 
@@ -632,6 +716,54 @@ a:hover {
         max-width: 42%;
         margin: 50px;
     }
+    .blockSearch .blockImg, .blockCareers .blockImg, .blockAcademy .blockImg {
+        display: none;
+    }
+    .blockSearch .blockText, .blockAcademyText {
+        width: 85%;
+        top: 20%;
+    }
+    .blockSearch {
+        min-height: 400px;
+    }
+    .blockSearch .blockText h1, .blockCareersText h1, .blockAcademyText h1 {
+        font-size: 49px;
+    }
+    .blockText1Container h1, .block4Careers h1 {
+        margin: 0 0 24px;
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .textContainer .blockText1Container, .textContainer .blockText2, .block2Careers, .block3Careers, .block4Careers, .block2Academy > div, .block3Academy {
+        width: 85%;
+    }
+    .blockLocationsText {
+        width: 85%;
+        top: 16%;
+        left: 10%;
+    }
+    .blockLocations {
+        min-height: 372px;
+        background-image: none;
+        background: #373a36;
+    }
+    .blockLocationsText h2, .blockLocationsText p {
+        color: #f4f4f4;
+    }
+    .blockCareersText {
+        width: 90%;
+    }
+    .blockCareersText h1 {
+        line-height: 43px;
+    }
+    .blockCareers {
+        min-height: 400px;
+    }
+    .block2Careers h3, .block3Careers h3, .blockText1Container h1, .block4Careers h1  {
+        font-size: 22px;
+        line-height: 34px;
+    }
+    
 }
 
 @media (max-width: 375px) {
@@ -652,6 +784,15 @@ a:hover {
     .modal .button {
         padding: 8px;
         font-size: 16px;
+    }
+    .blockCareersText {
+        left: 6%;
+    }
+    .blockAcademyText h1 {
+        font-size: 46px
+    }
+    .block2Academy {
+        padding-top: 30px;
     }
 }
 
@@ -675,5 +816,31 @@ a:hover {
     .modal .button {
         padding: 10px 6px;
         font-size: 15px;
+    }
+    .blockSearch .blockText h1, .blockCareersText h1 {
+        font-size: 43px;
+        line-height: 39px;
+    }
+
+    .blockSearch .blockText h2, .blockCareersText h2, .block2Academy h4, .block2Academy h3 {
+        font-size: 18px;
+    }
+    .block2Careers h3, .block3Careers h3, .blockText1Container h1, .block4Careers h1  {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .blockText2 a, .blockLocations a, .block4Careers a{
+        font-size: 14px;
+        padding: 6px 31px 10px 12px;
+    }
+    .blockAcademyText h1 {
+        font-size: 38px;
+        line-height: 40px;
+    }
+    .blockAcademyText {
+        top: 15%;
+    }
+    .block2Academy {
+        padding-top: 0;
     }
 }

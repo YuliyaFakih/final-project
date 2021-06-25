@@ -145,7 +145,7 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
                         >
                             <MenuItem onClick={handleClose}>
                                 <NavLink to='/home' className={styles.link}>
-                                    Our Vision
+                                    Our Expertise
                                 </NavLink>
                             </MenuItem>
                             <MenuItem onClick={handleClose}>
@@ -165,15 +165,37 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
                                 </NavLink>
                             </MenuItem>
                             <MenuItem onClick={handleClose}>
+                                <NavLink to='/search-jobs'> Search jobs </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/internal-careers'> Internal careers </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/modis-academy-program'> Modis Academy Program </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
                                 <NavLink to='/employers'>
                                     Employers
                                 </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/submit-offer'> Submit job offer </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/salary-guide'> Salary Guide </NavLink>
                             </MenuItem>
                             <MenuItem onClick={handleClose}>
                                 <NavLink to='/about-modis'>
                                     About Modis
                                 </NavLink>
                             </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/diversity-and-inclusion'> Diversity and Inclusion </NavLink>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                <NavLink to='/leadership'> Leadership </NavLink>
+                            </MenuItem>
+
                             <MenuItem onClick={handleClose}>
                                 <NavLink to='/client-services/contact'>
                                     Contact
@@ -184,7 +206,7 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
                                     Locations
                                 </NavLink>
                             </MenuItem>
-                            
+
                             <MenuItem onClick={handleClose}>
                                 <div className={styles.globe} onClick={() => showList()} >
                                     <img src={iconGlobe} alt="icon-globe" />

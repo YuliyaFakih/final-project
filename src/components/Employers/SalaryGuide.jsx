@@ -130,7 +130,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                 <p>Salary Guide</p>
                 <h1>Thank You</h1>
                 <h4>Thanks for requesting your copy of our 2021 IT & Engineering Salary Guide, your instant download is available below.</h4>
-                <a href="https://www-prd-mod930-com.azureedge.net/en-us/-/media/US/downloads/Modis-2021-Salary-Guide.pdf">Download the 2021 IT & Engineering Salary Guide Now!</a>
+                <a href="https://www-prd-mod930-com.azureedge.net/en-us/-/media/US/downloads/Modis-2021-Salary-Guide.pdf">Download <span>the 2021 IT & Engineering</span> Salary Guide <span>Now!</span></a>
                 <h4>Read our latest resources on IT insights, trends and more here.</h4>
             </div>
             

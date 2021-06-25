@@ -288,7 +288,7 @@ form h3 {
 
 .blockOverviewBorder, .blockGuideBorder {
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     width: 100%;
 }
 
@@ -369,7 +369,6 @@ form h3 {
 }
 
 .block2Text a {
-    width: 416px!important;
     text-decoration: none;
 }
 
@@ -461,6 +460,13 @@ form h3 {
     .block {
         width: 100%;
     }
+    .blockGuide .blockImg svg:nth-child(2) {
+        width: 50%;
+    }
+    .blockGuideText {
+        top: 16%;
+        left: 18%;
+    }
 }
 
 @media (max-width: 1152px) {
@@ -475,6 +481,23 @@ form h3 {
     }
     .blockList > a:nth-child(3)::after {
         right: 0;
+    }
+
+    .blockOverview .blockImg svg:nth-child(2) {
+        width: 40%;
+    }
+
+    .blockText{
+        width: 47%;
+        top: 9%;
+        right: 6%;
+    }
+    .sectionsList {
+        left: -238px;
+    }
+    .blockGuideText {
+        width: 52%;
+        top: 11%;
     }
 }
 
@@ -506,6 +529,28 @@ form h3 {
     .modal {
         max-width: 35%;
     }
+    .blockOverview .blockImg svg:nth-child(2) {
+        width: 46%;
+    }
+    .blockText h1, .blockGuideText h1 {
+        font-size: 57px;
+        line-height: 50px;
+    }
+    .blockText {
+        width: 49%;
+        top: 15%;
+    }
+    .block2Text h3, .guideDownloading h1 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .blockGuide .blockImg svg:nth-child(2) {
+        width: 61%;
+    }
+    .blockGuideText {
+        width: 58%;
+        left: 7%;
+    }
 }
 
 @media (max-width: 800px) {
@@ -515,6 +560,33 @@ form h3 {
     .modal {
         max-width: 42%;
     }
+    .blockOverview .blockImg svg:nth-child(2) {
+        width: 62%;
+        left: -67px;
+    }
+    .blockText {
+        width: 62%;
+        top: 18%;
+        right: 2%;
+    }
+    .blockText h1, .blockGuideText h1 {
+        font-size: 55px;
+        line-height: 49px;
+    }
+    .block2Text a span {
+        display: none;
+    }
+    form h3 {
+        text-transform: unset;
+    }
+    .blockGuide .blockImg svg:nth-child(2) {
+        width: 79%;
+        right: 0px;
+    }
+    .blockGuide2 > p, .blockGuide2 form, .guideDownloading {
+        width: 60%;
+    }
+    
 }
 
 @media (max-width: 425px) {
@@ -534,6 +606,43 @@ form h3 {
         max-width: 42%;
         margin: 50px;
     }
+    .blockOverview .blockImg, .blockGuide .blockImg, .guideDownloading a span  {
+        display: none;
+    }
+    .blockText h1, .blockGuideText h1 {
+        font-size: 49px;
+        line-height: 45px;
+    }
+    .blockText {
+        width: 87%;
+        top: 13%;
+        right: 4%;
+    }
+    .blockText h2, .blockGuideText h2 {
+        font-size: 22px;
+    }
+    .block2Text, form, .guideDownloading, .blockGuide2 h3, .blockGuide2 form, .blockGuide2 > p {
+        width: 85%;
+    }
+    .block2Text h3, .guideDownloading h1 {
+        font-size: 27px;
+        line-height: 35px;
+    }
+    .blockText p, .block2Text p, .guideDownloading p, .blockGuideText p {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+    form .buttons2 {
+        justify-items: baseline;
+    }
+    .blockGuideText {
+        width: 88%;
+        left: 6%;
+    }
+    .blockGuide2 h3 {
+        margin: auto;
+    }
+    
 }
 
 @media (max-width: 375px) {
@@ -554,6 +663,10 @@ form h3 {
     .modal .button {
         padding: 8px;
         font-size: 16px;
+    }
+    .blockGuideText {
+        top: 8%;
+        left: 11%;
     }
 }
 
@@ -577,5 +690,35 @@ form h3 {
     .modal .button {
         padding: 10px 6px;
         font-size: 15px;
+    }
+    .blockText h1, .blockGuideText h1 {
+        font-size: 43px;
+    }
+    .blockText {
+        right: 2%;
+    }
+    .block2Text h3, .guideDownloading h1 {
+        font-size: 26px;
+    }
+    form input {
+        font-size: 16px;
+    }
+    .buttons2 button, .block2Text a, .guideDownloading a, .blockGuide2 button{
+        padding: 8px 32px 8px 11px;
+    }
+    form .buttons2 {
+        grid-auto-flow: row;
+        row-gap: 10px;
+        justify-items: center;
+    }
+    form .buttons2 button:nth-child(2) {
+        padding: 8px 36px 8px 19px;
+    }
+    .blockGuideText {
+        top: 5%;
+        left: 10%;
+    }
+    .blockGuide2 form input, .blockGuide2 form select {
+        width: inherit;
     }
 }

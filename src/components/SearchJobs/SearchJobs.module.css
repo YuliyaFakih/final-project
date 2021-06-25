@@ -7,7 +7,7 @@
 
 .blockSearchBorder {
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     width: 100%;
 }
 
@@ -102,4 +102,113 @@ input[placeholder] {
 .jobDescription > img {
     width: 30px;
     border: 2px solid black;
+}
+
+@media (max-width: 1280px) {
+    .blockSearch .blockImg svg:nth-child(2) {
+        width: 35%;
+    }
+}
+
+@media (max-width: 1152px) {
+    .blockSearch .blockImg svg:nth-child(2) {
+        width: 40%;
+    }
+    .blockText {
+        width: 54%;
+        top: 16%;
+        left: 11%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .blockSearch .blockImg svg:nth-child(2) {
+        width: 45%;
+    }
+    .blockText h1 {
+        font-size: 63px;
+    }
+    .blockText input {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 800px) {
+    .blockSearch .blockImg svg:nth-child(2) {
+        width: 58%;
+    }
+    .blockText h1 {
+        font-size: 57px;
+    }
+    .blockText input {
+        font-size: 40px;
+        width: 40%;
+    }
+    .blockText {
+        width: 65%;
+        top: 16%;
+        left: 7%;
+    }
+}
+
+@media (max-width: 800px) {
+    .blockSearch .blockImg {
+        display: none;
+    }
+    .blockText {
+        width: 90%;
+        top: 18%;
+        left: 17%;
+    }
+    .blockText h1 {
+        font-size: 49px;
+        line-height: 52px;
+    }
+    .blockText input { 
+        font-size: 34px;
+    }
+    .blockSearch {
+        min-height: 400px;
+    }
+    .jobList {
+        width: 90%;
+    }
+    .jobDescription {
+        grid-template-columns: 160px 77px auto 32px;
+    }
+}
+
+@media (max-width: 425px) {
+    .jobDescription {
+        grid-auto-flow: row;
+        grid-template-rows: 1fr 1fr auto 50px;
+        row-gap: 20px;
+        grid-template-columns: unset;
+    }
+    .jobDescription > img {
+        margin: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .blockText {
+        left: 14%;
+    }
+    .blockText input {
+        width: 47%;
+    }
+}
+
+@media (max-width: 320px) {
+    .blockText h1 {
+        font-size: 43px;
+        line-height: 47px;
+    }
+    .blockText input {
+        width: 52%;
+        font-size: 32px;
+    }
+    .blockSearch {
+        min-height: 350px;
+    }
 }

@@ -181,7 +181,7 @@ a:hover {
 
 .blockLeaders .blockLeadersBorder, .blockAboutBorder, .blockDiversityBorder {
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     width: 100%;
 }
 
@@ -272,11 +272,11 @@ a:hover {
     text-align: left;
     color: #f4f4f4;
 }
-
+/*
 .blockAboutText h1 {
     font-size: 48px !important;
 }
-
+*/
 .block2About{
     width: 60%;
     margin: 50px auto;
@@ -397,8 +397,12 @@ a:hover {
     position: absolute;
 }
 
+.block3DiversityTopBorder, .block5VeteransTopBorder {
+    top: -3px;
+}
+
 .block3DiversityBorderBottom, .block5VeteransBorderBottom {
-    bottom: 0;
+    bottom: -3px;
 }
 
 .block3DiversityText {
@@ -503,10 +507,41 @@ a:hover {
 .MenuImg {
     display: block;
 }
-
+@media (max-width:1440px) {
+    .usersListContainer {
+        width: 90%;
+    }
+}
 @media (max-width: 1280px) {
     .block {
         width: 100%;
+    }
+    .blockLeaders .blockImg svg:nth-child(2), .blockAboutContainer .blockImg svg:nth-child(2) {
+        width: 38%;
+    }
+    .blockAboutText {
+        width: 53%;
+        top: 10%;
+        left: 18%;
+    }
+    .usersListContainer {
+        grid-auto-flow: unset;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        row-gap: 20px;
+        width: 80%;
+    }
+    .blockDiversityText h1 {
+        line-height: 52px;
+    }
+    .blockDiversityText {
+        left: 17%;
+        position: absolute;
+        width: 45%;
+    }
+    .block3DiversityText, .block5VeteransText {
+        width: 43%;
+        top: 20%;
     }
 }
 
@@ -516,12 +551,33 @@ a:hover {
     }
     .sectionsList {
         width: 700px;
+        left: -339px;
     }
     .blockList a {
         padding: 25px 8px;
     }
     .blockList > a:nth-child(4)::after {
         right: 0;
+    }
+    .blockAboutText {
+        width: 58%;
+        top: 9%;
+        left: 16%;
+    }
+    .usersListContainer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .blockLeaders .blockLeadersText {
+        width: 42%;
+        top: 24%;
+        left: 19%;
+    }
+    .blockDiversityText {
+        left: 19%;
+        width: 52%;
+    }
+    .block3DiversityText, .block5VeteransText {
+        width: 48%;
     }
 }
 
@@ -553,6 +609,33 @@ a:hover {
     .modal {
         max-width: 35%;
     }
+    .blockLeadersText h1, .blockAboutText h1, .blockDiversityText h1 {
+        line-height: 52px;
+    }
+    .blockAboutText {
+        width: 58%;
+        top: 9%;
+        left: 9%;
+    }
+    .blockLeaders .blockImg svg:nth-child(2), .blockAboutContainer .blockImg svg:nth-child(2) {
+        width: 48%;
+    }
+    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3 {
+        font-size: 32px;
+    }
+    .blockDiversityText {
+        left: 13%;
+        width: 78%;
+        top: 9%;
+    }
+    .block3DiversityText, .block5VeteransText {
+        width: 55%;
+        top: 19%;
+        left: 6%;
+    }
+    .block5Veterans {
+        height: 550px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -561,6 +644,59 @@ a:hover {
     }
     .modal {
         max-width: 42%;
+    }
+    .blockLeaders .blockImg svg:nth-child(2), .blockAboutContainer .blockImg svg:nth-child(2) {
+        width: 59%;
+    }
+    .blockAboutText {
+        width: 60%;
+        top: 10%;
+        left: 7%;
+    }
+    .blockLeadersText h1, .blockAboutText h1, .blockDiversityText h1 {
+        line-height: 43px;
+        font-size: 45px;
+    }
+    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3 {
+        font-size: 31px;
+        line-height: 36px;
+    }
+    .block2About h3, .block2Diversity h2 {
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+    .usersListContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .blockLeaders .blockLeadersText {
+        width: 48%;
+        top: 33%;
+        left: 9%;
+    }
+    .block3DiversityText, .block5VeteransText {
+        top: 12%;
+        left: 10%;
+    }
+    .block4Forums {
+        display: grid;
+    }
+    .block4Forums img {
+        margin-top: 0;
+        float: unset;
+        margin: 25px auto;
+    }
+    .block4Forums h3{
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .block5VeteransText {
+        top: 18%;
+    }
+}
+@media (max-width: 768px) {
+    .blockDiversityText {
+        left: 13%;
+        width: 77%;
     }
 }
 
@@ -580,6 +716,67 @@ a:hover {
     .modal {
         max-width: 42%;
         margin: 50px;
+    }
+    .blockLeaders .blockImg, .blockAboutContainer .blockImg {
+        display: none;
+    }
+    .blockLeadersText h1, .blockAboutText h1, .blockDiversityText h1 {
+        font-size: 47px;
+    }
+    .blockAboutText {
+        width: 85%;
+        top: 12%;
+        left: 8%;
+    }
+    .block2About, .block2Diversity, .block3DiversityText, .block4Forums, .block5VeteransText {
+        width: 85%;
+    }
+    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3 {
+        font-size: 29px;
+        line-height: 34px;
+    }
+    .block2About .block2AboutDescription {
+        column-count: 1;
+    }
+    .usersListContainer {
+        grid-auto-flow: row;
+        grid-template-columns: unset;
+    }
+    .blockLeaders {
+        min-height: 350px;
+    }
+    .blockLeaders .blockLeadersText {
+        width: 85%;
+        top: 27%;
+        left: 6%;
+    }
+    .blockLeaders .blockLeadersText h1 {
+        line-height: 49px;
+        text-align: center;
+    }
+    .blockDiversityText h1 {
+        line-height: 41px;
+    }
+    .blockDiversityText {
+        top: 4%;
+        left: 14%;
+    }
+    .block3DiversityText, .block5VeteransText {
+        top: 7%;
+        left: 8%;
+        text-align: left;
+    }
+    .block4Forums img {
+        width: inherit;
+    }
+    .block5Veterans {
+        height: 488px;
+        background-image: none;
+        background: #373a36;
+    }
+    .block5VeteransText {
+        top: 11%;
+        left: 9%;
     }
 }
 
@@ -601,6 +798,22 @@ a:hover {
     .modal .button {
         padding: 8px;
         font-size: 16px;
+    }
+    .block2About a .removeItem {
+        display: none;
+    }
+    .block2About a span {
+        text-transform: uppercase;
+    }
+    .blockDiversityText h1 {
+        font-size: 41px;
+        line-height: 40px;
+    }
+    .block3DiversityText, .block5VeteransText {
+        top: 4%;
+    }
+    .block5VeteransText h3 {
+        margin: 16px 0 13px;
     }
 }
 
@@ -624,5 +837,33 @@ a:hover {
     .modal .button {
         padding: 10px 6px;
         font-size: 15px;
+    }
+    .blockLeadersText h1, .blockAboutText h1, .blockDiversityText h1 {
+        font-size: 41px;
+        line-height: 39px;
+    }
+    .blockAboutText {
+        top: 11%;
+        left: 7%;
+    }
+    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3 {
+        font-size: 27px;
+    }
+    .block2About h3, .block2Diversity h2 {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .blockDiversityText {
+        width: 85%;
+        left: 9%;
+    }
+    .block3DiversityText h3 {
+        margin: 11px 0 8px;
+    }
+    .block3DiversityText p {
+        line-height: 1.6;
+    }
+    .block5Veterans {
+        height: 510px;
     }
 }

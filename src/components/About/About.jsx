@@ -93,14 +93,14 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                     <h3>Join our team</h3>
                     <h1>Careers at Modis</h1>
                     <p>Connect the smartest IT and engineering people with the brightest businesses while exploring opportunities to thrive as the global leader in IT and engineering staffing and services.  </p>
-                    <NavLink to='/internal-careers/'>Learn more about joining our team</NavLink>
+                    <NavLink to='/internal-careers/'><span className={styles.removeItem}>Learn more about</span> <span>j</span>oining our team</NavLink>
                 </div>
                 <hr/>
                 <div>
                     <h3>Diversity & Inclusion</h3>
                     <h1>We believe diversity fuels Innovation, and we're doing more than ever to achieve it.</h1>
                     <p>A diverse workforce isn't a luxury - it's a necessity. That's why we're doing more than ever to partner with leading diversity partners to recruit, hire and source more diverse talent pipelines. </p>
-                    <NavLink to='/diversity-and-inclusion'>Learn about our diversity initiatives</NavLink>
+                    <NavLink to='/diversity-and-inclusion'><span className={styles.removeItem}>Learn about </span><span>o</span>ur diversity initiatives</NavLink>
                 </div>
             </div>
 

@@ -111,7 +111,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                     <p>Modis engaged Hirepurpose in 2019 to ensure we are reaching more Veteran candidates than ever for our clients. Hirepurpose serves over 50,000 transitioning service members and veterans to support over 100 Fortune 1000, small and medium sized businesses.</p>
                 </div>
                 <div className={styles.block4Forums}>
-                    <h3>Microsoft Software and Systems Academy</h3>
+                    <h3>Microsoft Software and SA </h3>
                     <img src={microsoft}/>
                     <p>Microsoft Software and Systems Academy works with a diverse pool of veteran talent being trained in MSSA (Microsoft Software and Systems Academy) and the hundreds of companies benefiting from hiring these transitioning service members. With learning paths including Cybersecurity, Cloud App Dev, and Server & Cloud Admin, and a goal of 1000 graduates annually, MSSA works with companies of all sizes to help align our graduates with meaningful roles as they transition from the military. MSSA also partners with IT staffing firms to discuss MSSA, best hiring practices, and how MSSA can partner to ensure our participants and our partners continue to thrive.</p>
                 </div>

@@ -35,7 +35,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                 <div className={styles.blockSearchBorder}>
                     <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
                         <g>
-                            <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#FFFFFF"></path>
+                            <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#f4f4f4"></path>
                         </g>
                     </svg>
                 </div>

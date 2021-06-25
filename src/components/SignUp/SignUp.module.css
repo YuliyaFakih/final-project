@@ -34,10 +34,10 @@
     color: #373a36;
     display: inline-block;
     text-align: left;
-    width: 150px;
+    width: auto;
     border: 1px solid #ffb81c;
     border-right: 0;
-    padding: 6px 25px 15px 18px;
+    padding: 8px 34px 8px 18px;
     font-size: 17px;
     font-weight: 400;
     line-height: 1.5;
@@ -71,7 +71,7 @@
     border: 1px solid #ffb81c;
     border-left: 0;
     border-bottom: 0;
-    top: -2px;
+    top: -1px;
     right: -1px;
     bottom: 0;
     width: 40px;
@@ -103,4 +103,50 @@
 form h3 {
     text-transform: uppercase;
     font-size: 22px;
+}
+
+@media (max-width: 1152px) {
+    .fillForm form, .loginForm form {
+        width: 50%;
+    }
+    form h3 {
+        text-transform: unset;
+    }
+}
+
+@media (max-width: 800px) {
+    form h3 {
+        text-transform: unset;
+    }
+}
+
+@media (max-width: 425px) {
+    .fillForm form, .loginForm form {
+        width: 85%;
+    }
+    form .buttons, form .buttons2 {
+        justify-items: baseline;
+    }
+
+}
+
+@media (max-width: 320px) {
+    form input {
+        font-size: 16px;
+    }
+    .buttons button , form .buttons2 button {
+        padding: 8px 32px 8px 11px;
+    }
+    form .buttons, form .buttons2  {
+        grid-auto-flow: row;
+        row-gap: 10px;
+        justify-items: center;
+    }
+    form .buttons button:nth-child(2) {
+        padding: 8px 36px 8px 19px;
+    }
+    form .buttons2 button:nth-child(2) {
+        padding: 8px 34px 8px 14px;
+    }
+   
 }
