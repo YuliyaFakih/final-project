@@ -555,6 +555,14 @@ a:hover {
     display: block;
 }
 
+@media (max-width:1440px) {
+    .menuAccount {
+        display: grid;
+        grid-template-rows: 35px 35px;
+        align-items: center;
+    }
+}
+
 @media (max-width: 1280px) {
     .block {
         width: 100%;
@@ -763,7 +771,11 @@ a:hover {
         font-size: 22px;
         line-height: 34px;
     }
-    
+    .menuAccount {
+        display: grid;
+        grid-template-rows: 40px 40px;
+        align-items: center;
+    }
 }
 
 @media (max-width: 375px) {

@@ -59,3 +59,40 @@
 .jobDescription > img {
     width: 30px;
 }
+
+@media (max-width: 1024px) {
+    .card {
+        width: 50%;
+    }
+    .jobDescription {
+        grid-template-columns: 149px 111px auto 38px;
+    }
+}
+
+@media (max-width: 800px) {
+    .jobDescription {
+        grid-template-columns: 91px 64px auto 38px;
+    }
+    .card {
+        width: 60%;
+    }
+}
+
+@media (max-width: 425px) {
+    .card {
+        width: 85%;
+        padding: 7px;
+    }
+    .jobDescription {
+        grid-template-columns: unset;
+        grid-auto-flow: row;
+        grid-template-rows: 1fr 1fr auto 50px;
+        grid-row-gap: 20px;
+    }
+    .jobDescription img {
+        margin: auto;
+    }
+    .profile {
+        padding: 30px 0 0;
+    }
+}

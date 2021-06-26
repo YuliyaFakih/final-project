@@ -114,7 +114,7 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
                         Locations
                     </NavLink>
                     {isLoggedIn ? 
-                    <div>
+                    <div className={styles.menuAccount}>
                         <NavLink to='/account' onClick={() => setIsLoggedIn(true)}> My account </NavLink> 
                         <NavLink to='/home' onClick={() => logOut()}> Log out </NavLink>
                     </div> :

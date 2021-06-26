@@ -537,6 +537,11 @@ a:hover {
     .separatingBorder span {
         margin: 25px;
     }
+    .menuAccount {
+        display: grid;
+        grid-template-rows: 35px 35px;
+        align-items: center;
+    }
 }
 @media (max-width: 1280px) {
     .block {
@@ -814,6 +819,11 @@ a:hover {
         float: unset;
         margin: 20px auto;
         display: block;
+    }
+    .menuAccount {
+        display: grid;
+        grid-template-rows: 40px 40px;
+        align-items: center;
     }
 }
 
