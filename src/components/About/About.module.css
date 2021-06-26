@@ -245,9 +245,16 @@ a:hover {
 
 .user img {
     border-radius: 50%;
+    transition: 1s ease-out;
+}
+.user img:hover {
+    transform: scale(2);
+    z-index: 1;
+    padding-top: 20px;
+    border-radius: 0;
 }
 
-.user p, .block2About p, .block2Diversity p, .block3DiversityText p, .block4Forums p, .block5VeteransText p {
+.user p, .block2About p, .block2Diversity p, .block3DiversityText p, .block4Forums p, .block5VeteransText p, .blockCorona p {
     font-size: 17px;
     line-height: 1.8;
     text-shadow: 0 0 2px hsl(0deg 0% 100% / 60%);
@@ -296,7 +303,7 @@ a:hover {
         font-family: 500;
 }
 
-.block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3 {
+.block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3, .blockCorona h1 {
     transition: opacity .5s ease-out 0s;
     font-family: roboto,serif;
     font-weight: 400;
@@ -461,7 +468,7 @@ a:hover {
 }
 
 .block6MilitaryRecognition {
-    background-color: #f4f4f4;
+    background-color: linear-gradient(180deg, rgba(244,244,244,1) 35%, rgba(255,255,255,1) 100%);
     padding: 30px 0;
 }
 
@@ -507,9 +514,28 @@ a:hover {
 .MenuImg {
     display: block;
 }
+.blockCorona {
+    width: 60%;
+    margin: 50px auto;
+    text-align: left;
+}
+.blockCorona img {
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.blockCorona span {
+    margin-right: 40px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
 @media (max-width:1440px) {
     .usersListContainer {
         width: 90%;
+    }
+    .separatingBorder span {
+        margin: 25px;
     }
 }
 @media (max-width: 1280px) {
@@ -542,6 +568,9 @@ a:hover {
     .block3DiversityText, .block5VeteransText {
         width: 43%;
         top: 20%;
+    }
+    .separatingBorder span {
+        margin: 16px;
     }
 }
 
@@ -578,6 +607,9 @@ a:hover {
     }
     .block3DiversityText, .block5VeteransText {
         width: 48%;
+    }
+    .separatingBorder span {
+        margin: 8px;
     }
 }
 
@@ -620,7 +652,7 @@ a:hover {
     .blockLeaders .blockImg svg:nth-child(2), .blockAboutContainer .blockImg svg:nth-child(2) {
         width: 48%;
     }
-    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3 {
+    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3, .blockCorona h1 {
         font-size: 32px;
     }
     .blockDiversityText {
@@ -657,7 +689,7 @@ a:hover {
         line-height: 43px;
         font-size: 45px;
     }
-    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3 {
+    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3, .blockCorona h1 {
         font-size: 31px;
         line-height: 36px;
     }
@@ -728,10 +760,10 @@ a:hover {
         top: 12%;
         left: 8%;
     }
-    .block2About, .block2Diversity, .block3DiversityText, .block4Forums, .block5VeteransText {
+    .block2About, .block2Diversity, .block3DiversityText, .block4Forums, .block5VeteransText, .blockCorona {
         width: 85%;
     }
-    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3 {
+    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3, .blockCorona h1 {
         font-size: 29px;
         line-height: 34px;
     }
@@ -778,6 +810,11 @@ a:hover {
         top: 11%;
         left: 9%;
     }
+    .blockCorona img {
+        float: unset;
+        margin: 20px auto;
+        display: block;
+    }
 }
 
 @media (max-width: 375px) {
@@ -812,7 +849,7 @@ a:hover {
     .block3DiversityText, .block5VeteransText {
         top: 4%;
     }
-    .block5VeteransText h3 {
+    .block5VeteransText h3, .blockCorona h1 {
         margin: 16px 0 13px;
     }
 }
@@ -846,7 +883,7 @@ a:hover {
         top: 11%;
         left: 7%;
     }
-    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3 {
+    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3, .blockCorona h1 {
         font-size: 27px;
     }
     .block2About h3, .block2Diversity h2 {

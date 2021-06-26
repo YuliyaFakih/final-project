@@ -2,6 +2,7 @@
 import React from 'react'
 import Nav from './Nav'
 import styles from './Jobseekers.module.css' 
+import {NavLink} from 'react-router-dom'
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
     return (
@@ -131,7 +132,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                 <h2>Training & Development</h2>
                 <h1>We empower our colleagues to take control of their career development.</h1>
                 <p>Our programs, camps and ongoing training resources give you the tools you need to thrive in the fast-paced world of technology and engineering recruitment.</p>
-                <a href="/modis-academy-program">Explore our programs</a>
+                <NavLink to="/modis-academy-program">Explore our programs</NavLink>
             </div>
         </div>
     )

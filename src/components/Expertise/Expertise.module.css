@@ -187,7 +187,7 @@ a:hover {
     background: transparent;
 }
 
-.containerBlock1 {
+.containerBlock1, .locationsBlock1 {
     background-color: #373A36;
     background-image: url('./../../assets/img/visionBg.jpg');
     background-repeat: no-repeat;
@@ -195,6 +195,14 @@ a:hover {
     min-height: 470px;
     z-index: 1;
     position: relative;
+}
+.locationsBlock1 .details svg:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.locationsBlock1 {
+    background-image: none;
 }
 
 .block1Border {
@@ -254,14 +262,14 @@ a:hover {
     z-index: 7;
 }
 
-.block1Text {
+.block1Text, .locationsBlock1 h1 {
     width: 35%;
     position: absolute;    
     right: 16%;
     top: 19%;
 }
 
-.block1Text h1 {
+.block1Text h1, .locationsBlock1 h1, .terms h1 {
     font-family: Open Sans,serif;
     color: #f4f4f4;
     line-height: 1.5;
@@ -271,7 +279,10 @@ a:hover {
     font-weight: smaller;
 }
 
-
+.terms h1 {
+    color: black;
+    font-weight: 300;
+}
 .video {
     width: 100%;
     height: auto;
@@ -294,7 +305,7 @@ a:hover {
     padding: 0 0 40px 0;
 }
 
-.block2Text h3 {
+.block2Text h3, .contactBlock > div h2, .terms h2 {
     transition: opacity .5s ease-out 0s;
     font-size: 20px;
     font-family: roboto,serif;
@@ -305,7 +316,7 @@ a:hover {
     text-align: left;
 }
 
-.block2Text p, .block2Text ul li {
+.block2Text p, .block2Text ul li, .contactBlock > div span, .formSubmitted h3, .locationsAccordion h4, .terms p {
     text-align: left;
     font-size: 18px;
     line-height: 1.8;
@@ -342,12 +353,18 @@ a:hover {
     transition: box-shadow .3s linear;
 }
 
-.linkBlock h3 {
+.linkBlock h3, .locationsAccordion h3, .terms h4 {
     font-size: 24px;
     line-height: 28px;
     font-family: roboto,serif;
     color: #373a36;
     font-weight: 300;
+}
+.terms h4 {
+    margin: 40px 0 30px;
+}
+.locationsAccordion h3 {
+    text-align: left;
 }
 
 .linkBlock span {
@@ -437,16 +454,16 @@ a:hover {
     font-family: Roboto,sans-serif;
 }
 
-.block3Text a {
+.block3Text a, .contactBlock form button {
     background: #ffb81c;
     transition-duration: .25s;
     color: #373a36;
     display: inline-block;
     text-align: left;
-    width: 218px;
+    width: auto;
     border: 1px solid #ffb81c;
     border-right: 0;
-    padding: 15px 25px 15px 18px;
+    padding: 15px 37px 15px 18px;
     font-size: 17px;
     font-weight: 400;
     line-height: 1.5;
@@ -456,7 +473,7 @@ a:hover {
     position: relative;
 }
 
-.block3Text a::before{
+.block3Text a::before, .contactBlock form button::before {
     width: 0;
     height: 0;
     border-top: 5px solid transparent;
@@ -473,7 +490,7 @@ a:hover {
     z-index: 1;
 }
 
-.block3Text a::after {
+.block3Text a::after, .contactBlock form button::after {
     content: "";
     position: absolute;
     display: block;
@@ -500,8 +517,8 @@ a:hover {
 }
 
 .block4Wrapper {
-    background-color: #f4f4f4;
-    padding: 50px 0 0 0;
+    background: linear-gradient(180deg, rgba(244,244,244,1) 35%, rgba(255,255,255,1) 100%);
+    padding: 50px 0 50px;
 }
 
 .block4Data {
@@ -697,7 +714,7 @@ a:hover {
     text-align: left;
 }
 
-.block2 h3 {
+.block2 h3, .contactBlock form h1, .formSubmitted h1 {
     font-family: roboto,serif;
     font-weight: 400;
     margin: 30px 0 35px;
@@ -801,6 +818,68 @@ a:hover {
 .MenuImg {
     display: block;
 }
+.contactBlock {
+    background-image: url('../../assets/img/contactBg.jpg');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding: 30px 0;
+}
+.contactBlock form {
+    row-gap: 20px;
+}
+.contactBlock form h1 {
+    margin: 16px 0 10px;
+}
+.contactCheckBoxes {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 20px;
+    grid-template-columns: 20px auto;
+}
+.contactBlock form label {
+    margin-bottom: -17px;
+}
+.contactBlock form button {
+    margin: auto;
+}
+.contactBlock > div h2 {
+    text-align: unset;
+}
+.contactBlock .contacts {
+    width: 52%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: left;
+    text-align: left;
+    column-gap: 20px;
+}
+.formSubmitted {
+    width: 50%;
+    margin: 50px auto;
+    text-align: left;
+}
+.formSubmitted h3 {
+    margin: 0 0 15px;
+}
+.locationsAccordion {
+    width: 60%;
+    margin: 70px auto;
+}
+.locationAddresses {
+    display: grid;
+    grid-template-rows: 50px 30px 30px 30px;
+    justify-items: left;
+}
+.locationsAccordion hr {
+    width: 822px;
+}
+.terms {
+    width: 60%;
+    margin: 50px auto;
+    text-align: left;
+}
 
 @media (max-width:1440px) {
     .block3 div:nth-child(1) {
@@ -834,6 +913,12 @@ a:hover {
     }
     .block1Border {
         bottom: 0;
+    }
+    .formSubmitted {
+        width: 60%;
+    }
+    .locationsAccordion {
+        width: 74%;
     }
 }
 
@@ -880,6 +965,12 @@ a:hover {
         width: 42%;
         top: -7px;
     }
+    .contactBlock .contacts {
+        width: 60%;
+    }
+    .locationsAccordion hr {
+        width: 725px;
+    }
 }
 
 @media (max-width: 800px) {
@@ -892,7 +983,7 @@ a:hover {
     .block1Border {
         bottom: 53px;
     }
-    .block1Text h1 {
+    .block1Text h1, .locationsBlock1 h1 {
         font-size: 57px;
     }
     .linksBlock {
@@ -922,6 +1013,20 @@ a:hover {
     }
     .block3Container div {
         width: 87%;
+    }
+    .formSubmitted {
+        width: 77%;
+    }
+    .locationsBlock1 h1 {
+        width: 40%;
+        top: 24%;
+        right: 7%;
+    }
+    .locationsAccordion hr {
+        width: 561px;
+    }
+    .locationAddresses {
+        grid-template-rows: 60px 30px 30px 65px;
     }
 }
 
@@ -960,12 +1065,12 @@ a:hover {
     .block1Border {
         bottom: 117px;
     }
-    .block1Text {
+    .block1Text, .locationsBlock1 h1 {
         width: 70%;
         left: 14%;
         top: 10%;
     }
-    .block1Text h1 {
+    .block1Text h1, .locationsBlock1 h1 {
         font-size: 49px;
     }
     .video video {
@@ -987,7 +1092,7 @@ a:hover {
         grid-auto-flow: unset;
         row-gap: 30px;
     }
-    .block2Text, .block2 {
+    .block2Text, .block2, .formSubmitted, .contactBlock .contacts, .locationsAccordion, .terms {
         width: 85%;
     }
     .blockImg {
@@ -1009,6 +1114,25 @@ a:hover {
         grid-template-columns: 1fr;
         width: 95%;
     }
+    .contactBlock {
+        background-image: none;
+    }
+    .contactBlock .contacts {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+    .locationsBlock1 h1 {
+        top: 19%;
+    }
+    .locationsAccordion hr {
+        width: 328px;
+    }
+    .locationAddresses {
+        grid-template-rows: 60px 30px 30px 100px;
+    }
+    .terms h1 {
+        font-size: 58px;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1029,6 +1153,21 @@ a:hover {
     .modal .button {
         padding: 8px;
         font-size: 16px;
+    }
+    .locationsAccordion hr {
+        width: 284px;
+    }
+    .locationAddresses {
+        grid-template-rows: 60px 30px 30px 100px;
+    }
+    .locationsAccordion hr {
+        width: 286px;
+    }
+    .terms h1 {
+        font-size: 53px;
+    }
+    .terms h4 {
+        font-size: 23px;
     }
 }
 
@@ -1053,7 +1192,7 @@ a:hover {
         padding: 10px 6px;
         font-size: 15px;
     }
-    .block1Text h1 {
+    .block1Text h1, .locationsBlock1 h1 {
         font-size: 43px;
     }
     .block3Text {
@@ -1066,5 +1205,24 @@ a:hover {
     }
     .blockTextKey h1 {
         font-size: 43px;
+    }
+    .contactBlock form input, .contactCheckBoxes, .contactBlock form select, .contactBlock form textarea {
+        width: 100%;
+    }
+    .locationsBlock1 h1 {
+        width: 75%;
+        left: 13%;
+    }
+    .locationsAccordion hr {
+        width: 240px;
+    }
+    .locationAddresses {
+        grid-template-rows: 53px 30px 30px 136px;
+    }
+    .terms h1 {
+        font-size: 45px;
+    }
+    .terms h4 {
+        font-size: 22px;
     }
 }

@@ -1,31 +1,49 @@
-import styles from './BusinessLines.module.css'
+/* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
-import {NavLink} from 'react-router-dom'
-import Nav from '../Expertise/Nav'
-import engineering from '../../assets/img/engineering.svg'
-import tech from '../../assets/img/tech.svg'
+import Nav from './Nav'
+import styles from './Expertise.module.css'
+import { NavLink } from 'react-router-dom'
+import { makeStyles } from '@material-ui/core/styles';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import Typography from '@material-ui/core/Typography';
 
-const BusinessLines = ({isLoggedIn, setIsLoggedIn}) => {
-
+export default ({isLoggedIn, setIsLoggedIn}) => {
+    const useStyles = makeStyles((theme) => ({
+        root: {
+          width: '100%',
+        },
+        heading: {
+          fontSize: theme.typography.pxToRem(15),
+          fontWeight: theme.typography.fontWeightRegular,
+        },
+      }));
+      const classes = useStyles();
     return (
         <div>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
-            <div>
-                <div className={styles.block1}>
-                    <div className={styles.grid}>
-                        <div className={styles.gridSvgLine}>
-                            <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="655" height="689" viewBox="0 0 655 689">
-                                <g fill="none" fill-rule="evenodd">
-                                    <path stroke="#FFB81C" stroke-linecap="square" stroke-width="3" d="M659.148438,260.949219 L655,260.949219 L592.75293,360.819336 L466.825195,357.828125 C453.746092,379.459225 443.412107,395.2561 435.823242,405.21875 C432.453177,409.642965 421.884493,423.253968 404.117188,446.051758 L81.9140625,434.470703">
-                                    </path>
-                                    <polyline stroke="#FFB81C" stroke-linecap="square" stroke-width="3" points="663.651 407.731 623.28 410.096 592.988 360.719 655 260.898 591.125 177.104 528.971 91.433"></polyline>
-                                    <circle class="circle1" cx="82" cy="434" r="5" fill="#FFB81C"></circle>
-                                    <circle class="circle2" cx="529" cy="91" r="5" fill="#FFB81C"></circle>
-                                    <polygon fill="#FFB81C" points="653.647 261.108 591 361.416 620.615 410.472 659.133 410.472 659.133 260" opacity=".348"></polygon>
-                                </g>
-                            </svg>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="655" height="689" viewBox="0 0 655 689">
+            <div className={styles.locationsBlock1}>
+                <div className={styles.block1Border}>
+                    <svg viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#FFFFFF"></path>
+                        </g>
+                    </svg>
+                </div>
+                <div className={styles.detailsWrapper}>
+                    <div className={styles.details}>
+                        <svg className={styles.line} preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="655" height="689" viewBox="0 0 655 689">
+                            <g fill="none" fill-rule="evenodd">
+                                <path stroke="#FFB81C" stroke-linecap="square" stroke-width="3" d="M659.148438,260.949219 L655,260.949219 L592.75293,360.819336 L466.825195,357.828125 C453.746092,379.459225 443.412107,395.2561 435.823242,405.21875 C432.453177,409.642965 421.884493,423.253968 404.117188,446.051758 L81.9140625,434.470703">
+                                </path>
+                                <polyline stroke="#FFB81C" stroke-linecap="square" stroke-width="3" points="663.651 407.731 623.28 410.096 592.988 360.719 655 260.898 591.125 177.104 528.971 91.433"></polyline>
+                                <circle class="circle1" cx="82" cy="434" r="5" fill="#FFB81C"></circle>
+                                <circle class="circle2" cx="529" cy="91" r="5" fill="#FFB81C"></circle>
+                                <polygon fill="#FFB81C" points="653.647 261.108 591 361.416 620.615 410.472 659.133 410.472 659.133 260" opacity=".348"></polygon>
+                            </g>
+                        </svg>
+                        <svg className={styles.grid} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="655" height="689" viewBox="0 0 655 689">
                             <g fill="none" fill-rule="evenodd" stroke="#AAA" stroke-width=".5" transform="translate(90 -105)">
                                 <path d="M564.9069 188.0138C575.2739 201.2638 585.7319 214.4298 596.2619 227.5498 607.0199 209.7168 617.3839 191.6668 627.6239 173.5348 606.7989 178.8498 585.9649 183.7148 564.9069 188.0138zM502.2006 196.8797C512.4936 210.8057 522.9406 224.5697 533.5526 238.2537 544.3416 221.7197 554.7946 204.9697 564.9066 188.0137 544.0846 191.7687 523.3026 195.1007 502.2006 196.8797zM439.4943 196.8803C449.5753 212.4133 460.0253 227.7043 470.8463 242.7303 481.6663 227.7023 492.1223 212.4133 502.2003 196.8803 481.2093 198.6483 460.4853 198.6493 439.4943 196.8803zM376.7762 188.0146C386.8852 204.9706 397.3382 221.7226 408.1282 238.2546 418.7452 224.5716 429.1952 210.8036 439.4942 196.8806 418.3902 195.1006 397.6032 191.7706 376.7762 188.0146z"></path>
                                 <path d="M314.0506 173.5344C324.2936 191.6674 334.6556 209.7164 345.4156 227.5484 355.9486 214.4294 366.4076 201.2644 376.7766 188.0144 355.7146 183.7134 334.8786 178.8494 314.0506 173.5344zM251.3488 155.9355C261.6278 175.0165 272.0698 193.9945 282.7048 212.8805 293.1638 199.7745 303.6248 186.6665 314.0498 173.5345 293.0788 167.9015 272.2008 161.9935 251.3488 155.9355zM188.6395 137.7001C198.9675 157.3691 209.4135 176.9671 219.9915 196.5021 230.4055 182.9481 240.8655 169.4341 251.3485 155.9341 230.4575 149.8091 209.5685 143.6881 188.6395 137.7001zM125.9303 121.3158C136.3123 141.1408 146.7553 160.9298 157.2813 180.6758 167.6573 166.2918 178.1103 151.9718 188.6393 137.6988 167.8063 131.9068 146.9453 126.4068 125.9303 121.3158zM63.2164 109.2731C73.6724 128.7351 84.1144 148.2051 94.5744 167.6651 104.8604 152.1031 115.3214 136.6591 125.9304 121.3151 105.1254 116.6671 84.3234 112.3441 63.2164 109.2731zM.5013 104.0598C11.0783 122.5468 21.4853 141.1288 31.8643 159.7258 42.1283 142.7948 52.5923 125.9828 63.2163 109.2718 42.4433 106.2608 21.4923 104.4038.5013 104.0598zM596.2614 227.5498C585.7304 214.4308 575.2734 201.2658 564.9064 188.0138 554.7954 204.9688 544.3424 221.7198 533.5524 238.2528 554.6224 235.5608 575.4404 231.7018 596.2614 227.5498z"></path>
@@ -65,100 +83,116 @@ const BusinessLines = ({isLoggedIn, setIsLoggedIn}) => {
                                 <path d="M314.0506,748.7283 C325.3016,759.0993 335.8266,770.2573 345.4156,782.1853 C355.1826,762.5943 365.2056,743.2573 376.7766,724.6513 C355.4976,731.9063 334.7546,739.9673 314.0506,748.7283 Z"></path>
                             </g>
                         </svg>
-                    </div>
-                    <div className={styles.block1Border}>
-                        <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                            <g>
-                                <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#f4f4f4"></path>
-                            </g>
-                        </svg>
-                    </div>
-                    <div className={styles.block1Text}>
-                        <h1>Our Business Lines</h1>
-                        <h2>Tech Consulting | Tech Talent Services | Tech Academy</h2>
+
                     </div>
                 </div>
-                <div className={styles.block2}>
-                    <div className={styles.block2Text}>
-                        <hr/>
-                        <p>Modis offers end-to-end services and a complete line of Smart Industry offerings by delivering cross-industry expertise in technology and digital engineering consulting, talent services, and skilling. We support our clients by providing talent and technology at every stage of the Smart Industry implementation.</p>
+                <h1>Find your local Modis branch.</h1>
+            </div>
+            <div className={styles.locationsAccordion}>
+                <Accordion>
+                    <AccordionSummary
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                    <Typography className={classes.heading}>Arizona</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                    <Typography>
+                        <div className={styles.locationAddresses}>
+                            <h3><b>Arizona - Modis Phoenix</b></h3>
+                            <h4>T:602-749-9800</h4>
+                            <h4>A:2201 E. Camelback Road, Ste. 300 Phoenix Arizona United States 85016</h4>
+                        </div>
+                    </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                    <AccordionSummary
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                    >
+                    <Typography className={classes.heading}>California</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                    <Typography>
+                        <div className={styles.locationAddresses}>
+                            <h3><b>California - Modis Burbank</b></h3>
+                            <h4>E:glendale@modis.com</h4>
+                            <h4>T:818-546-2848</h4>
+                            <h4>A: 2600 W. Olive Ave, Ste. 1000 Burbank California United States 91505</h4>
+                        </div>
                         <hr />
-                        <h2>Tech Consulting</h2>
-                        <p>
-                        Modis delivers value added end-to-end solutions by leveraging technology and digital engineering expertise across industries with a deep understanding of our clients’ businesses.
-                        </p>
-                        <NavLink to='/client-services/technology-practices/' className={styles.links}> Learn more </NavLink>
-                        <hr/>
-                        <h2>Tech Talent Services</h2>
-                        <p>Modis delivers flexible and scalable talent services to help clients realize their mission-critical technology and digital engineering projects.</p>
-                        <NavLink to='/diversity-and-inclusion' className={styles.links}> Learn more </NavLink>
-                        <hr/>
-                        <h2>Tech Academy</h2>
-                        <p>Modis closes the essential skills gap by delivering cutting edge up-skilling and re-skilling to progress digital transformation, future-proof organizations’ talent, and drive performance.</p>
-                        <NavLink to='/modis-academy-program' className={styles.links}> Learn more </NavLink>
-                    </div>
-                </div>
-                <div className={styles.block3}>
-                    <div className={styles.block3Border}>
-                        <svg width="100%" viewBox="0 0 1600 147" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                            <g><path id="wedge" d="m0,0 l 0,87 l 1600,-87 l -1600,0z" stroke="" fill="#f4f4f4"></path></g>
-                        </svg>
-                    </div>
-                    <div className={styles.block3Text}>
-                        <h3>More about our services</h3>
-                        <div className={styles.block3Description}>
-                            <div>
-                                <ul>
-                                <li>Tech Consulting</li>
-                                <li>Tech Talent Services</li>
-                                <li>Tech Academy</li>
-                                </ul>
-                            </div>
-                            
-                            <div className={styles.description}>
-                                <h3>Tech Consulting</h3>
-                                <p>Regardless of size or industry type, the rate at which digital disruptions are transforming the technology landscape and the complexity of business operations is rapidly expanding. Successful organizations are looking to adopt fail fast and fail early approach in their journey to outpace competition. Modis combines technology and digital expertise across industries with a deep understanding of clients’ businesses to deliver end-to-end projects and solutions from ideation to realization at an exponentially rapid pace.</p>
-                                <h3>Tech Talent Services</h3>
-                                <p>The rise of vertical talent pools, fast-growing startups, and gig economy are creating barriers in finding the right skilled engineers and consultants for their Smart Industry requirements. Modis with its expertise in technical temporary staffing, right-to-hire, and staff augmentation services across the globe to fulfill our customers technology talent requirements. Our Talent Services offer extensive network of specialists with combination of technical expertise and industry knowledge in the Smart Industry / Digital fields.</p>
-                                <h3>Tech Academy</h3>
-                                <p>The types of skills needed are quite different from those we have today. Modis Academy established with a mandate to advance employment opportunities, build talent pools in areas of skills scarcity, and support candidates to the next level of their careers. Through Modis academy we upskill and reskill candidates in STEM and Smart Industry related fields to increase talent availability and employability and to create a supply of in-demand candidates for our clients.</p>
-                            </div>
+                        <div className={styles.locationAddresses}>
+                            <h3><b>California - Modis El Segundo</b></h3>
+                            <h4>E:elsegundo@modis.com</h4>
+                            <h4>T:310-414-3300</h4>
+                            <h4>A: 222 N. Pacific Coast Hwy Ste 1950 El Segundo California United States 90245</h4>
                         </div>
-                    </div>
-                    <div className={styles.block3BorderBottom}>
-                        <svg width="100%" viewBox="0 0 1600 137" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg" >
-                            <g>
-                                <path id="wedge" d="m0,50 l 1600,87 l -1600,0 l 0,-87z" stroke="" fill="#FFFFFF"></path>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-                <div className={styles.block4Bg}> 
-                    <div className={styles.block4}>
-                        <h3>Explore our sectors</h3>
-                        <div className={styles.block4Cards}>
-                            <div>
-                                <img src={engineering} alt="#" />
-                                <h4>Engineering</h4>
-                                <span></span>
-                                <h6>Innovate. Develop. Manufacture.</h6>
-                                <p>We're there throughout your entire product lifecycle—from innovation to prototyping and manufacturing. Our network of over 18,000 consultants with expertise covering all engineering domains, are here to help you innovate, disrupt, design and produce the goods and services of the future.</p>
-                                <NavLink to='/client-services/what-we-do/engineering/'>Learn more </NavLink>
-                            </div>
-                            <div>
-                                <img src={tech} alt="#" />
-                                <h4>Information Technology</h4>
-                                <span></span>
-                                <h6>Design. Develop. Optimize</h6>
-                                <p>Let's embrace this digitally-transformed world together—by connecting talent and technology to deliver optimized IT processes, best-in-class digital solutions and true innovation.</p>
-                                <NavLink to='/client-services/what-we-do/information-technology/'> Learn more </NavLink>
-                            </div>
+                        <hr />
+                        <div className={styles.locationAddresses}>
+                            <h3><b>California - Modis Irvine.</b></h3>
+                            <h4>E:irvine@modis.com</h4>
+                            <h4>T:949-864-2360</h4>
+                            <h4>A: 2302 Martin, Ste. 150 Irvine California United States 92612</h4>
                         </div>
-                    </div>
-                </div>
+                    </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                    <AccordionSummary
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                    >
+                    <Typography className={classes.heading}>Florida</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                    <Typography>
+                        <div className={styles.locationAddresses}>
+                            <h3><b>Florida - Modis Fort Lauderdale</b></h3>
+                            <h4>E:fortlauderdale@modis.com</h4>
+                            <h4>T:954-759-0070</h4>
+                            <h4>A: 550 W Cypress Creek Road, Suite 150 Fort Lauderdale Florida United States 33309</h4>
+                        </div>
+                    </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                    <AccordionSummary
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                    <Typography className={classes.heading}>New York</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                    <Typography>
+                        <div className={styles.locationAddresses}>
+                            <h3><b>New York - Modis Rochester</b></h3>
+                            <h4>E:rochester@modis.com</h4>
+                            <h4>T:585-760-2210</h4>
+                            <h4>A: 200 Meridian Centre Blvd. Rochester New York United States 14618</h4>
+                        </div>
+                    </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                    <AccordionSummary
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    >
+                    <Typography className={classes.heading}>Texas</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                    <Typography>
+                        <div className={styles.locationAddresses}>
+                            <h3><b>Texas - Modis Austin</b></h3>
+                            <h4>E:austin@modis.com</h4>
+                            <h4>T:512-263-9065</h4>
+                            <h4>A: 9442 N. Capital of Texas Hwy. Plaza 1, Ste. 600 Austin Texas United States 78759</h4>
+                        </div>
+                    </Typography>
+                    </AccordionDetails>
+                </Accordion>
             </div>
         </div>
     )
 }
-
-export default BusinessLines

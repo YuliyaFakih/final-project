@@ -21,6 +21,10 @@ import About from './components/About/About'
 import SalaryGuide from './components/Employers/SalaryGuide'
 import Diversity from './components/About/Diversity'
 import uuid from 'react-uuid'
+import Contact from './components/Expertise/Contact'
+import Locations from './components/Expertise/Locations'
+import Terms from './components/Expertise/Terms'
+import Coronavirus from './components/About/Coronavirus'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(false)
@@ -132,6 +136,18 @@ function App() {
         </Route> 
         <Route path='/diversity-and-inclusion'>
             <Diversity isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route> 
+        <Route path='/client-services/contact'>
+            <Contact isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route> 
+        <Route path='/locations/usa'>
+            <Locations isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route> 
+        <Route path='/terms/'>
+            <Terms isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
+        </Route> 
+        <Route path='/coronavirus/'>
+            <Coronavirus isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
         </Route> 
         <Footer />
     </div>

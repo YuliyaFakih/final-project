@@ -142,7 +142,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                 <div className={styles.borderBottom}>
                     <svg width="100%" viewBox="0 0 1600 127" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
                             <g>
-                                <path id="wedge" d="m1600,40 l -1600,87 l 1600,0 l 0,-87z" stroke="" fill="#f4f4f4"></path>
+                                <path id="wedge" d="m1600,40 l -1600,87 l 1600,0 l 0,-87z" stroke="" fill="#ffffff"></path>
                             </g>
                         </svg>
                 </div>

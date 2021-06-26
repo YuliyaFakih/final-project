@@ -1,5 +1,5 @@
 .profile {
-    background: rgb(244 244 244);
+    background: linear-gradient(180deg, rgba(244,244,244,1) 35%, rgba(255,255,255,1) 100%);
     padding: 30px;
 }
 

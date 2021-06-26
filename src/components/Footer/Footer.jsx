@@ -14,7 +14,7 @@ const Footer = () => {
         <div className={styles.footerWrapper}>
                 <div className={styles.BorderTop}>
                     <svg width="100%" viewBox="0 0 1600 156" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                        <g><path id="wedge" d="m1600,66 l -421,-66 l  -1179,106 l 0, -106 l 1600,0z" stroke="" fill="#f4f4f4"></path></g>
+                        <g><path id="wedge" d="m1600,66 l -421,-66 l  -1179,106 l 0, -106 l 1600,0z" stroke="" fill="white"></path></g>
                     </svg>
                 </div>
                     <div className={styles.blockHelp}>
@@ -22,7 +22,7 @@ const Footer = () => {
                             <h4> Start a Conversation </h4>
                             <p>Our global experts are ready to help your business.</p>
                             <span> Get in touch with a local representative today.</span>
-                            <a role="button" href="/client-services/contact/">Contact us</a>
+                            <NavLink to="/client-services/contact">Contact us</NavLink>
                         </div>
                         <div className={styles.blockMap}>
                             <h4>We are Global Leaders</h4>
@@ -40,7 +40,7 @@ const Footer = () => {
                     <div>
                         <span>Our Expertise</span>
                         <ul>
-                            <NavLink to='/'>Our Vision</NavLink>
+                            <NavLink to='/home'>Our Vision</NavLink>
                             <NavLink to='/client-services/what-we-do/'>Business Lines</NavLink>
                             <NavLink to='/client-services/technology-practices/'>Technology Practices</NavLink>
                             <NavLink to='/client-services/industries/'>Key Industries</NavLink>
@@ -49,7 +49,6 @@ const Footer = () => {
                     <div>
                         <span>Job Seekers</span>
                         <ul>
-                            <NavLink to='/job-seekers/'>Overview</NavLink>
                             <NavLink to='/search-jobs/'>Search Jobs</NavLink>
                             <NavLink to='/internal-careers/'>Internal Careers</NavLink>
                             <NavLink to='/modis-academy-program/'>Modis Academy Program</NavLink>
@@ -61,7 +60,6 @@ const Footer = () => {
                             <NavLink to='/employers/'>Employers</NavLink>
                             <NavLink to='/job-seekers/'>Job Seekers</NavLink>
                             <NavLink to='/salary-guide/'>Salary Guide</NavLink>
-                            <NavLink to='/white-papers/'>White Papers</NavLink>
                         </ul>
                     </div>
 

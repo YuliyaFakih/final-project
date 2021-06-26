@@ -15,14 +15,14 @@ const Expertise = ({isLoggedIn, setIsLoggedIn}) => {
             <div className={styles.message}>
                 <div className={styles.covid}>
                     <p>A message to our clients, consultants and employees about Coronavirus (COVID-19).</p>
-                    <a href="/about-modis/coronavirus/">Our commitment to health &gt;</a>
+                    <NavLink to="/coronavirus/">Our commitment to health &gt;</NavLink>
                 </div>
             </div>
             <div className={styles.containerBlock1}>
                 <div className={styles.block1Border}>
                     <svg viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
                         <g>
-                            <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#FFFFFF"></path>
+                            <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#f4f4f4"></path>
                         </g>
                     </svg>
                 </div>
@@ -137,7 +137,7 @@ const Expertise = ({isLoggedIn, setIsLoggedIn}) => {
                         <h4>Find your next job</h4>
                         <h2>Opportunities are waiting.</h2>
                         <p>With new jobs added daily, Modis is the number one location to take your career to the next level.</p>
-                        <a role="button" href="/search-jobs">Job search</a>
+                        <NavLink to="/search-jobs">Job search</NavLink>
                     </div>
                     <div className={styles.block3BorderBottom}>
                         <svg width="100%" viewBox="0 0 1600 118" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
