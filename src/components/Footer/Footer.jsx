@@ -28,7 +28,7 @@ const Footer = () => {
                             <h4>We are Global Leaders</h4>
                             <img src={localOffices} alt="Modis Global Map"/>
                             <span>We operate around the world. Find your local office.</span>
-                            <a href="/locations/usa">Find U.S. offices</a>
+                            <NavLink to='/locations/usa'>Find U.S. offices</NavLink>
                         </div>
                     </div>
                     <div className={styles.blockBorderBottom}>

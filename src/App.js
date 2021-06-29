@@ -80,7 +80,10 @@ function App() {
 
   const [addedState, setAddedState] = React.useState(false)
 
-  localStorage.setItem('jobOffers', JSON.stringify(jobOffers))
+  React.useEffect(() => {
+    localStorage.setItem('jobOffers', JSON.stringify(jobOffers))
+  }, [])
+  
   return (
     <div className="App">
         <Route path='/home'>

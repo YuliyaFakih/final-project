@@ -22,33 +22,40 @@ export default ({isLoggedIn, setIsLoggedIn, setAddedState, addedState}) => {
         if (!searchJob) {
             setJobData(jobOffers)
             setIsFilter(false)
-            
         }
         setIsFilter(true)
         setJobData(jobData.filter(item => item.position.toLowerCase().includes(searchJob.toLowerCase())))
-        
     }
 
-    const favoriteJobs = []
+    //const favoriteJobs = []
+    const [favoriteJobsState, setFavoriteJobsState] = React.useState([])
+    
     const AddToFavorites = (id) => {
         if (isLoggedIn) {
-            
-            if(!favoriteJobs.find(item => item.id === id)){
-                favoriteJobs.push(jobOffers.find(item => item.id === id))
-                console.log(favoriteJobs)
-                localStorage.setItem('favoriteJobs', JSON.stringify(favoriteJobs))
+            if(favoriteJobsState && !favoriteJobsState.find(item => item && item.id === id)){
+                debugger
+                setFavoriteJobsState([...favoriteJobsState, jobOffers.find(item => item.id === id)])
+                console.log(favoriteJobsState)
+                localStorage.setItem('favoriteJobs', JSON.stringify([...favoriteJobsState, jobOffers.find(item => item.id === id)]))
                 alert('Added to favorite list, you can view it in My account')
+                //setAddedState({...jobOffers, added:true})
                 setAddedState(true)
-            } else if (favoriteJobs.find(item => item.id === id)) {
+            } else if (favoriteJobsState && favoriteJobsState.find(item => item && item.id === id)) {
                 alert(`You've already added this offer to the favorite list`)
             }
-            
         } else {
             alert('You should sign in to be able to add favorite offers to the list')
         }
         
     }
-
+    /*
+    React.useEffect((id) => {
+        debugger
+        const jobs = favoriteJobsState && favoriteJobsState.find(item => item.id === id ? {...item, added:true} : item)
+        setAddedState(jobs)
+        console.log(addedState)
+    }, [favoriteJobsState])
+    */
     return(
         <div>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
