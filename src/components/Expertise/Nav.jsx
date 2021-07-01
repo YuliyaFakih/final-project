@@ -119,7 +119,7 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
                         <NavLink to='/home' onClick={() => logOut()}> Log out </NavLink>
                     </div> :
                     <div>
-                        <NavLink to='/home' onClick={() => setOpen(true)}> Sign up </NavLink>
+                        <a className={styles.SignUpLink} onClick={() => setOpen(true)}> Sign up </a>
                         <NavLink to='/log-in'> Log in </NavLink>
                     </div>
                     }

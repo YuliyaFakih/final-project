@@ -27,19 +27,18 @@ export default ({isLoggedIn, setIsLoggedIn, setAddedState, addedState}) => {
         setJobData(jobData.filter(item => item.position.toLowerCase().includes(searchJob.toLowerCase())))
     }
 
-    //const favoriteJobs = []
     const [favoriteJobsState, setFavoriteJobsState] = React.useState([])
     
     const AddToFavorites = (id) => {
         if (isLoggedIn) {
             if(favoriteJobsState && !favoriteJobsState.find(item => item && item.id === id)){
-                debugger
+                
                 setFavoriteJobsState([...favoriteJobsState, jobOffers.find(item => item.id === id)])
                 console.log(favoriteJobsState)
                 localStorage.setItem('favoriteJobs', JSON.stringify([...favoriteJobsState, jobOffers.find(item => item.id === id)]))
                 alert('Added to favorite list, you can view it in My account')
                 //setAddedState({...jobOffers, added:true})
-                setAddedState(true)
+                setAddedState([{added: true}])
             } else if (favoriteJobsState && favoriteJobsState.find(item => item && item.id === id)) {
                 alert(`You've already added this offer to the favorite list`)
             }

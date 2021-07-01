@@ -32,7 +32,10 @@
     padding: 15px 0;
 }
 
-.block a {
+.SignUpLink {
+    cursor: pointer;
+}
+.block a, .SignUpLink {
     list-style: none;
     text-decoration: none;
     color: #9e9e9e;
@@ -640,7 +643,7 @@ a:hover {
     .block > img {
         margin-right: auto;
     }
-    .block a {
+    .block a, .SignUpLink {
         font-size: 17px;
     }
     .modal {
@@ -747,7 +750,7 @@ a:hover {
     .blockList {
         width: 93%;
     }
-    .block a {
+    .block a, .SignUpLink {
         font-size: 14px;
     }
     .modal {
@@ -871,7 +874,7 @@ a:hover {
     .blockList a {
         padding: 25px 3px;
     }
-    .block a {
+    .block a, .SignUpLink {
         font-size: 14px;
     }
     .block img {

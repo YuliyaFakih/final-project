@@ -78,7 +78,7 @@ function App() {
     {id: uuid(), position: 'UX/UI designer', title: 'Product Designer (UX/UI)', salary: '$120,000 a year', city: 'Denver', company:'Artifact Uprising', description:` As a product designer, you’ll create human-centered product experiences that solve our customers’ most meaningful problems, while delivering delight. Focusing on the digital experience, you’ll collaborate with product managers, engineers, and others across the business, while leading design efforts end-to-end. You believe design excellence helps drive sustained business impact.`, added: false}
 ]
 
-  const [addedState, setAddedState] = React.useState(false)
+  const [addedState, setAddedState] = React.useState([{added: false}])
 
   React.useEffect(() => {
     localStorage.setItem('jobOffers', JSON.stringify(jobOffers))
