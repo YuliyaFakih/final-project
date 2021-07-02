@@ -5,7 +5,7 @@ import styles from './SearchJobs.module.css'
 import star from './../../assets/img/icon-star.svg'
 
 
-export default ({isLoggedIn, setIsLoggedIn, setAddedState, addedState}) => {
+export default ({isLoggedIn, setIsLoggedIn}) => {
     const jobOffers = JSON.parse(localStorage.getItem('jobOffers')) || [];
     console.log(jobOffers)
     const [jobData, setJobData] = React.useState(jobOffers)
@@ -38,7 +38,7 @@ export default ({isLoggedIn, setIsLoggedIn, setAddedState, addedState}) => {
                 localStorage.setItem('favoriteJobs', JSON.stringify([...favoriteJobsState, jobOffers.find(item => item.id === id)]))
                 alert('Added to favorite list, you can view it in My account')
                 //setAddedState({...jobOffers, added:true})
-                setAddedState([{added: true}])
+                //setAddedState([{added: true}])
             } else if (favoriteJobsState && favoriteJobsState.find(item => item && item.id === id)) {
                 alert(`You've already added this offer to the favorite list`)
             }
@@ -49,7 +49,6 @@ export default ({isLoggedIn, setIsLoggedIn, setAddedState, addedState}) => {
     }
     /*
     React.useEffect((id) => {
-        debugger
         const jobs = favoriteJobsState && favoriteJobsState.find(item => item.id === id ? {...item, added:true} : item)
         setAddedState(jobs)
         console.log(addedState)
@@ -139,7 +138,7 @@ export default ({isLoggedIn, setIsLoggedIn, setAddedState, addedState}) => {
                                 <p> {item.company}</p>
                             </div>
                             <p>{item.description}</p>
-                            <img class="star" src={star} alt="star" onClick={() => AddToFavorites(item.id)} style={{backgroundColor: addedState ? '#ffb81c' : 'none'}}/>
+                            <img class="star" src={star} alt="star" onClick={() => AddToFavorites(item.id)} style={{backgroundColor: (favoriteJobsState && favoriteJobsState.find(element => element && element.id === item.id)) ? '#ffb81c' : 'none'}}/>
                         </div>
                     ))}
                  </div>

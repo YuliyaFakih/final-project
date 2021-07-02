@@ -4,7 +4,7 @@ import styles from './Account.module.css'
 import star from './../../assets/img/icon-star.svg'
 
 
-const Account = ({isLoggedIn, setIsLoggedIn, setAddedState, addedState}) => {
+const Account = ({isLoggedIn, setIsLoggedIn}) => {
     
     let employers = JSON.parse(localStorage.getItem('employers')) || []
     let jobSeekers = JSON.parse(localStorage.getItem('jobSeekers')) || []
@@ -24,12 +24,11 @@ const Account = ({isLoggedIn, setIsLoggedIn, setAddedState, addedState}) => {
     
 
     const DeleteFromList = (id) => {
-        setAddedState(false)
+        //setAddedState(false)
         favoriteJobs = favoriteJobs.filter(item => item.id !== id);
         setStateJobs(favoriteJobs)
         //return favoriteJobs.filter(item => item.id !== id)
-         localStorage.setItem('favoriteJobs', JSON.stringify(favoriteJobs))
-         
+        localStorage.setItem('favoriteJobs', JSON.stringify(favoriteJobs))
     }
  
     if(employer && !jobseeker) {
@@ -86,7 +85,7 @@ const Account = ({isLoggedIn, setIsLoggedIn, setAddedState, addedState}) => {
                                 <p> {item.company}</p>
                             </div>
                             <p>{item.description}</p>
-                            <img src={star} alt="star" onClick={() => DeleteFromList(item.id)} style={{backgroundColor: addedState ? '#ffb81c' : 'none'}}/>
+                            <img src={star} alt="star" onClick={() => DeleteFromList(item.id)} style={{backgroundColor: '#ffb81c'}}/>
                         </div>
                     ))}
                 </div>
@@ -159,7 +158,7 @@ const Account = ({isLoggedIn, setIsLoggedIn, setAddedState, addedState}) => {
                                         <p> {item.company}</p>
                                     </div>
                                     <p>{item.description}</p>
-                                    <img src={star} alt="star" onClick={() => DeleteFromList(item.id)} style={{backgroundColor: addedState ? '#ffb81c' : 'none'}}/>
+                                    <img src={star} alt="star" onClick={() => DeleteFromList(item.id)} style={{backgroundColor: '#ffb81c'}}/>
                                 </div>
                             ))}
                         </div>

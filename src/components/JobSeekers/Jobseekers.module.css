@@ -858,4 +858,9 @@ a:hover {
     .block2Academy {
         padding-top: 0;
     }
+    .blockLocations div:nth-child(1) {
+        position: absolute;
+        width: 100%;
+        top: -3px;
+    }
 }

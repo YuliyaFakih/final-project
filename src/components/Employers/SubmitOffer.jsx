@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
 import Nav from './Nav'
 import styles from './Employers.module.css'
@@ -19,6 +20,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
             submitedOffers.push ({position, title, salary, city, company, description})
             localStorage.setItem('submitedOffers', JSON.stringify(submitedOffers))
             alert('Your job offer was submitted. All your job offers are available in My account.')
+            window.location.assign('/#/account')
         } else {
             event.preventDefault()
             alert('You should sign in before submit a job offer.')

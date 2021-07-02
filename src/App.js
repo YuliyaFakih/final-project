@@ -78,8 +78,6 @@ function App() {
     {id: uuid(), position: 'UX/UI designer', title: 'Product Designer (UX/UI)', salary: '$120,000 a year', city: 'Denver', company:'Artifact Uprising', description:` As a product designer, you’ll create human-centered product experiences that solve our customers’ most meaningful problems, while delivering delight. Focusing on the digital experience, you’ll collaborate with product managers, engineers, and others across the business, while leading design efforts end-to-end. You believe design excellence helps drive sustained business impact.`, added: false}
 ]
 
-  const [addedState, setAddedState] = React.useState([{added: false}])
-
   React.useEffect(() => {
     localStorage.setItem('jobOffers', JSON.stringify(jobOffers))
   }, [])
@@ -102,7 +100,7 @@ function App() {
             <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
         </Route>
         <Route path='/account'>
-            <Account isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setAddedState={setAddedState} addedState={addedState}/>
+            <Account isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         </Route>  
         <Route path='/client-services/technology-practices'>
             <TechnologyPractices isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
@@ -111,7 +109,7 @@ function App() {
             <JobSeekers isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         </Route>  
         <Route path='/search-jobs'>
-            <SearchJobs isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setAddedState={setAddedState} addedState={addedState}/>
+            <SearchJobs isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         </Route>  
         <Route path='/employers'>
             <Employers isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
