@@ -21,7 +21,7 @@ const Account = ({isLoggedIn, setIsLoggedIn}) => {
     let favoriteJobs = JSON.parse(localStorage.getItem('favoriteJobs')) || []
     const [stateJobs, setStateJobs] = React.useState(favoriteJobs) 
     let submitedOffers = JSON.parse(localStorage.getItem('submitedOffers')) || []
-    
+    const [stateOffers, setStateOffers] = React.useState(submitedOffers) 
 
     const DeleteFromList = (id) => {
         //setAddedState(false)
@@ -30,9 +30,15 @@ const Account = ({isLoggedIn, setIsLoggedIn}) => {
         //return favoriteJobs.filter(item => item.id !== id)
         localStorage.setItem('favoriteJobs', JSON.stringify(favoriteJobs))
     }
+    const DeleteOffer = (id) => {
+        submitedOffers = submitedOffers.filter(item => item.id !== id);
+        setStateOffers(submitedOffers)
+        localStorage.setItem('submitedOffers', JSON.stringify(submitedOffers))
+    }
  
     if(employer && !jobseeker) {
         console.log(employer)
+        jobSeekers = []
         return (
         <div>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
@@ -103,13 +109,14 @@ const Account = ({isLoggedIn, setIsLoggedIn}) => {
                                 <p> {item.company}</p>
                             </div>
                             <p>{item.description}</p>
-                            
+                            <img src={star} alt="star" onClick={() => DeleteOffer(item.id)} style={{backgroundColor: '#ffb81c'}}/>
                         </div>
                     ))}
                 </div>
                 </div>
         )
         } else if (jobseeker && !employer) {
+            employers = []
             return (
                 <div>
                     <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>

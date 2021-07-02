@@ -5,7 +5,9 @@ import styles from './Employers.module.css'
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
     let jobOffers = JSON.parse(localStorage.getItem('jobOffers')) || []
-    let submitedOffers = []
+    let submitedOffers = JSON.parse(localStorage.getItem('submitedOffers')) || []
+    const [submitOffersState, setSubmitOffersState] = React.useState([])
+
     const formSubmit = (event) => {
         if(isLoggedIn) {
             event.preventDefault()
@@ -15,18 +17,22 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
             let city = document.querySelectorAll('form input')[3].value;
             let company = document.querySelectorAll('form input')[4].value;
             let description = document.querySelectorAll('form input')[5].value;
+
+setSubmitOffersState([...submitOffersState, {position, title, salary, city, company, description}])
+localStorage.setItem('submitedOffers', JSON.stringify([...submitOffersState, {position, title, salary, city, company, description}]))
             jobOffers.push({position, title, salary, city, company, description})
             localStorage.setItem('jobOffers', JSON.stringify(jobOffers))
-            submitedOffers.push ({position, title, salary, city, company, description})
-            localStorage.setItem('submitedOffers', JSON.stringify(submitedOffers))
+            //submitedOffers.push ({position, title, salary, city, company, description})
+            //localStorage.setItem('submitedOffers', JSON.stringify(submitedOffers))
             alert('Your job offer was submitted. All your job offers are available in My account.')
             window.location.assign('/#/account')
         } else {
             event.preventDefault()
             alert('You should sign in before submit a job offer.')
         }
-        
     }
+
+
     return (
         <div>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>

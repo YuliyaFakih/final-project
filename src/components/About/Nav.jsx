@@ -27,6 +27,8 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
 
     const logOut = () => {
         setIsLoggedIn(false)
+        localStorage.setItem('favoriteJobs', JSON.stringify([]))
+        localStorage.setItem('submitedOffers', JSON.stringify([]))
         return (<Subscribe />)
     }
 

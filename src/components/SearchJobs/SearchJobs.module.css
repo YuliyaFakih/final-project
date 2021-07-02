@@ -76,6 +76,7 @@ input[placeholder] {
     text-align: left;
     align-items: center;
     grid-template-columns: 320px 115px auto 40px;
+    overflow-wrap: anywhere;
 }
 
 .jobDescription p {
