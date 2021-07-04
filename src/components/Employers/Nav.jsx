@@ -4,16 +4,10 @@ import logo from '../../assets/img/logo.svg'
 import iconGlobe from '../../assets/img/iconGlobe.svg'
 import styles from './Employers.module.css'
 
-
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
 import Modal from '@material-ui/core/Modal';
 import close from '../../assets/img/close.png'
-import SignUpEmployer from '../SignUp/SignUpAsEmployer'
 import Subscribe from '../Expertise/Subscribe'
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 
 const Nav = ({isLoggedIn, setIsLoggedIn}) => {
     const [open, setOpen] = React.useState(false);
@@ -32,15 +26,12 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
         return (<Subscribe />)
     }
 
-        const [anchorEl, setAnchorEl] = React.useState(null);
-      
-        const handleClick = (event) => {
-          setAnchorEl(event.currentTarget);
-        };
-      
-        const handleClose = () => {
-          setAnchorEl(null);
-        };
+    const OpenMenu =() => {
+        document.querySelector('.MenuItemList').style.display = 'block'
+    }
+    const hideMenu = () => {
+        document.querySelector('.MenuItemList').style.display = 'none'
+    }
 
     return (
         <div className={styles.container}>
@@ -120,110 +111,25 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
                         <NavLink to='/account' onClick={() => setIsLoggedIn(true)}> My account </NavLink> 
                         <NavLink to='/home' onClick={() => logOut()}> Log out </NavLink>
                     </div> :
-                    <div>
+                    <div className={styles.MenuBtn}>
                         <a className={styles.SignUpLink} onClick={() => setOpen(true)}> Sign up </a>
                         <NavLink to='/log-in'> Log in </NavLink>
                     </div>
                     }
+                    <div className={styles.burgerMenu} onClick={() => OpenMenu()}>
+                        <div className={styles.MenuImg}>
+                            <div className={styles.line}></div>
+                            <div className={styles.line}></div>
+                            <div className={styles.line}></div>
+                        </div>
+                    </div>
                     <div className={styles.globe} onClick={() => showList()} >
                         <img src={iconGlobe} alt="icon-globe" />
                         <div> USA </div>
                         <div> English </div>
                     </div>
-                    <div className={styles.burgerMenu}>
-                        <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-                            <div className={styles.MenuImg}>
-                                <div className={styles.line}></div>
-                                <div className={styles.line}></div>
-                                <div className={styles.line}></div>
-                             </div>
-                        </Button>
-                        <Menu
-                            id="simple-menu"
-                            anchorEl={anchorEl}
-                            keepMounted
-                            open={Boolean(anchorEl)}
-                            onClose={handleClose}
-                        >
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/home' className={styles.link}>
-                                    Our Expertise
-                                </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/client-services/what-we-do/' className={styles.link}>
-                                    Business Lines
-                                </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/client-services/technology-practices/'> Technology Practices </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/client-services/industries/'> Key Industries </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/job-seekers'>
-                                    Job seekers
-                                </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/search-jobs'> Search jobs </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/internal-careers'> Internal careers </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/modis-academy-program'> Modis Academy Program </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/employers'>
-                                    Employers
-                                </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/submit-offer'> Submit job offer </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/salary-guide'> Salary Guide </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/about-modis'>
-                                    About Modis
-                                </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/diversity-and-inclusion'> Diversity and Inclusion </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/leadership'> Leadership </NavLink>
-                            </MenuItem>
-
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/client-services/contact'>
-                                    Contact
-                                </NavLink>
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>
-                                <NavLink to='/locations/usa'>
-                                    Locations
-                                </NavLink>
-                            </MenuItem>
-
-                            <MenuItem onClick={handleClose}>
-                                <div className={styles.globe} onClick={() => showList()} >
-                                    <img src={iconGlobe} alt="icon-globe" />
-                                    <div> USA </div>
-                                    <div> English </div>
-                                </div>
-                            </MenuItem>
-
-                        </Menu>
-                    </div>
                 </div>
-                
-                
             </div>
-            
             
             <Modal
                 open={open}
@@ -231,12 +137,34 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
                 aria-labelledby="simple-modal-title"
                 aria-describedby="simple-modal-description"
             > 
-            <div className={styles.modal}>
-                <NavLink className={styles.button} to='/sign-up-as-employer'> Sign up as an employer</NavLink>
-                <NavLink className={styles.button} to='/sign-up-as-job-seeker'> Sign up as a job seeker</NavLink>
-            </div>
-        
+                <div className={styles.modal}>
+                    <NavLink className={styles.button} to='/sign-up-as-employer'> Sign up as an employer</NavLink>
+                    <NavLink className={styles.button} to='/sign-up-as-job-seeker'> Sign up as a job seeker</NavLink>
+                </div>
             </Modal>
+            <div class="MenuItemList">
+                <div class="MenuList">
+                        <div class="LinkList">
+                            <NavLink to='/home' className={styles.link}> Our Expertise</NavLink>
+                            <NavLink to='/client-services/what-we-do/' className={styles.link}>Business Lines</NavLink>
+                            <NavLink to='/client-services/technology-practices/'> Technology Practices </NavLink>
+                            <NavLink to='/client-services/industries/'> Key Industries </NavLink>
+                            <NavLink to='/job-seekers'>Job seekers </NavLink>
+                            <NavLink to='/search-jobs'> Search jobs </NavLink>
+                            <NavLink to='/internal-careers'> Internal careers </NavLink>
+                            <NavLink to='/modis-academy-program'> Modis Academy Program </NavLink>
+                            <NavLink to='/employers'>Employers</NavLink>
+                            <NavLink to='/submit-offer'> Submit job offer </NavLink>
+                            <NavLink to='/salary-guide'> Salary Guide </NavLink>
+                            <NavLink to='/about-modis'>About Modis</NavLink>
+                            <NavLink to='/diversity-and-inclusion'> Diversity and Inclusion </NavLink>
+                            <NavLink to='/leadership'> Leadership </NavLink>
+                            <NavLink to='/client-services/contact'>Contact</NavLink>
+                            <NavLink to='/locations/usa'>Locations</NavLink>
+                        </div> 
+                        <div class="close" onClick={() => hideMenu()}> <img src={close} alt="#"/> </div>
+                    </div>   
+            </div>
             
         </div>
     )

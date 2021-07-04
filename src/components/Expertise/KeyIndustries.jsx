@@ -4,7 +4,7 @@ import Nav from './Nav'
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
     return (
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             <div>
             <div className={styles.blockOverview}>

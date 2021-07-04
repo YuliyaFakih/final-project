@@ -5,7 +5,7 @@ import classes from './classes.css'
 
 const TechnologyPractices = ({isLoggedIn, setIsLoggedIn}) => {
     return (
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             <div className={styles.block1}>
                 <div className={styles.block1Border}>

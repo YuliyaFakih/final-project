@@ -6,7 +6,13 @@ import star from './../../assets/img/icon-star.svg'
 
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
-    const jobOffers = JSON.parse(localStorage.getItem('jobOffers')) || [];
+    let jobOffers = JSON.parse(localStorage.getItem('jobOffers')) || [];
+    /*let submite = JSON.parse(localStorage.getItem('submitedOffers')) || []
+    React.useEffect(() => {
+        jobOffers = [...jobOffers, ...submite]
+        localStorage.setItem('jobOffers', JSON.stringify(jobOffers))
+    })
+*/
     console.log(jobOffers)
     const [jobData, setJobData] = React.useState(jobOffers)
     const [isFilter, setIsFilter] = React.useState(false)
@@ -55,7 +61,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
     }, [favoriteJobsState])
     */
     return(
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div className={styles.blockSearch}>
                 <div className={styles.blockSearchBorder}>
@@ -121,8 +127,6 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                     <h1>Explore the brightest opportunities.</h1>
                     <input type="text" placeholder="Category" onChange={search}/>
                  </div>
-                 
-                
             </div>
 
             <div className={styles.jobList}>

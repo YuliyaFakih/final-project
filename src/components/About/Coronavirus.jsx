@@ -5,7 +5,7 @@ import doctor from './../../assets/img/doctor.jpg'
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
     return (
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div className={styles.blockCorona}>
                 <h1>An Important Update Regarding the Coronavirus (COVID-19)</h1>

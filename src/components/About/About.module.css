@@ -471,14 +471,16 @@ a:hover {
 }
 
 .block6MilitaryRecognition {
-    background-color: linear-gradient(180deg, rgba(244,244,244,1) 35%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(180deg, rgba(244,244,244,1) 35%, rgba(255,255,255,1) 100%);
+    
     padding: 30px 0;
 }
 
-
 .burgerMenu {
-    height: 50px;
+    height: 38px;
     display: none;
+    position: relative;
+    width: 63px;
 }
 
 .burgerMenu a {
@@ -532,7 +534,9 @@ a:hover {
     margin-bottom: 20px;
     display: inline-block;
 }
-
+.mainBlock {
+    overflow-x: hidden;
+}
 @media (max-width:1440px) {
     .usersListContainer {
         width: 90%;
@@ -740,6 +744,95 @@ a:hover {
     }
 }
 
+@media (max-width: 600px) {
+    .blockList {
+        width: 85%;
+    }
+    .blockLeaders .blockImg svg:nth-child(2), .blockAboutContainer .blockImg svg:nth-child(2) {
+        width: 80%;
+    }
+    .blockLeaders .blockImg svg:nth-child(1), .blockAboutContainer .blockImg svg:nth-child(1) {
+        right: -27px;
+    }
+    .usersListContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .block3DiversityText, .block5VeteransText {
+        top: 10%;
+        left: 7%;
+        text-align: left;
+        width: 67%;
+    }
+}
+@media (max-width: 570px) {
+    .blockList {
+        width: 96%;
+    }
+    .blockLeaders .blockImg svg:nth-child(1), .blockAboutContainer .blockImg svg:nth-child(1) {
+        display: none;
+    }
+    .block4Forums img {
+        width: inherit;
+    }
+}
+@media (max-width: 505px) {
+    .blockList {
+        width: 100%;
+    }
+    .modal {
+        max-width: 66%;
+    }
+    .blockAboutText {
+        width: 70%;
+        left: 9%;
+    }
+    .blockLeaders .blockImg svg:nth-child(2), .blockAboutContainer .blockImg svg:nth-child(2) {
+        width: 95%;
+        right: -78px;
+    }
+    .block2About {
+        width: 70%;
+    }
+    .block2Diversity {
+        width: 70%;
+    }
+    .block3DiversityText, .block5VeteransText {
+        top: 6%;
+        left: 14%;
+        width: 73%;
+    }
+}
+
+@media (max-width: 483px) {
+    .blockList a {
+        padding: 25px 3px;
+    }
+    .block {
+        column-gap: 0px;
+    }
+    .usersListContainer {
+        grid-auto-flow: row;
+        grid-template-columns: unset;
+    }
+    .blockDiversityText {
+        top: 3%;
+    }
+}
+@media (max-width: 455px) {
+    .modal {
+        width: 75%;
+    }
+    .blockDiversityText {
+        left: 10%;
+        width: 81%;
+    }
+}
+@media (max-width: 428px) {
+    .blockList a {
+        padding: 25px 3px;
+    }
+}
+
 @media (max-width: 425px) {
     .block {
         column-gap: 0;
@@ -754,7 +847,7 @@ a:hover {
         font-size: 14px;
     }
     .modal {
-        max-width: 42%;
+        max-width: 75%;
         margin: 50px;
     }
     .blockLeaders .blockImg, .blockAboutContainer .blockImg {
@@ -778,10 +871,7 @@ a:hover {
     .block2About .block2AboutDescription {
         column-count: 1;
     }
-    .usersListContainer {
-        grid-auto-flow: row;
-        grid-template-columns: unset;
-    }
+    
     .blockLeaders {
         min-height: 350px;
     }
@@ -806,9 +896,6 @@ a:hover {
         left: 8%;
         text-align: left;
     }
-    .block4Forums img {
-        width: inherit;
-    }
     .block5Veterans {
         height: 488px;
         background-image: none;
@@ -829,6 +916,27 @@ a:hover {
         align-items: center;
     }
 }
+@media (max-width:410px) {
+    .block5VeteransText h3 {
+        line-height: 30px;
+        margin: 9px 0 18px;
+    }
+}
+@media (max-width: 389px) {
+    .block {
+        grid-template-columns: 145px auto;
+    }
+    .modal .button {
+        padding: 9px;
+    }
+    .modal {
+        max-width: 90%;
+        margin: 38px;
+    }
+    .blockList a {
+        padding: 25px 2px;
+    }
+}
 
 @media (max-width: 375px) {
     .block img {
@@ -842,12 +950,11 @@ a:hover {
         padding-right: 5px;
     }
     .modal {
-        margin: 49px;
-        max-width: 36%;
+        margin: 40px;
     }
     .modal .button {
-        padding: 8px;
         font-size: 16px;
+        padding: 13px;
     }
     .block2About a .removeItem {
         display: none;
@@ -866,7 +973,58 @@ a:hover {
         margin: 16px 0 13px;
     }
 }
-
+@media (max-width: 365px) {
+    .blockList {
+        width: 100%;
+    }
+    .modal .button {
+        padding: 8px;
+        font-size: 15px;
+    }
+    .blockLeadersText h1, .blockAboutText h1, .blockDiversityText h1 {
+        font-size: 44px;
+    }
+    .blockAboutText {
+        width: 88%;
+        top: 9%;
+        left: 7%;
+    }
+}
+@media (max-width: 350px) {
+    .blockList {
+        column-gap: 20px;
+        grid-template-columns: 2fr 1fr;
+    }
+    .blockList .MenuBtn {
+        display: grid;
+        grid-template-rows: 35px 35px;
+        align-items: center;
+        justify-items: end;
+    }
+    .modal .button {
+        padding: 8px;
+        text-align: center;
+    }
+    .modal {
+        margin: 50px auto;
+        max-width: 60%;
+    }
+    .blockDiversityText {
+        top: 1%;
+        left: 11%;
+    }
+    .blockDiversityText h1 {
+        line-height: 36px;
+    }
+    .block2About h1, .block2Diversity h3, .block3DiversityText h3, .block5VeteransText h3, .blockCorona h1 {
+        margin: 20px 0 19px;
+        line-height: 30px;
+    }
+    .block5VeteransText {
+        width: 90%;
+        left: 5%;
+    }
+}
 @media (max-width: 320px) {
     .blockList {
         padding-right: 0;

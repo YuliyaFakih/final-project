@@ -23,7 +23,7 @@
 
 .block1Grid svg:nth-child(1) {
     top: -232px;
-    left: -79px;
+    left: -54px;
     position: absolute;
 }
 
@@ -107,6 +107,9 @@
 .card h3, .card p {
     text-align: center!important;
 }
+.mainBlock {
+    overflow-x: hidden;
+}
 
 @media (max-width: 1280px) {
     .block1Text h1 {
@@ -160,7 +163,37 @@
         font-size: 57px;
     }
 }
-
+@media (max-width: 600px) {
+    .block1Grid svg:nth-child(1) {
+        left: -408px;
+    }
+}
+@media (max-width: 580px) {
+    .block1Grid svg:nth-child(2){
+        top: -171px;
+        left: -272px;
+    }
+    .block1Text {
+        right: 2%;
+    }
+}
+@media (max-width:570px) {
+    .block1Grid svg:nth-child(1) {
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    .block1Grid svg:nth-child(2){
+        top: -171px;
+        left: -272px;
+    }
+    .block1Text {
+        right: 8%;
+    }
+    .block1Grid svg:nth-child(1){
+        display: none;
+    }
+}
 @media (max-width: 425px) {
     .block1Grid {
         display: none;
@@ -183,6 +216,11 @@
 @media (max-width: 375px) {
     .block1Text {
         left: 12%;
+    }
+}
+@media (max-width: 350px) {
+    .block1Text {
+        left: 6%;
     }
 }
 

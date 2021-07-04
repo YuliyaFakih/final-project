@@ -10,7 +10,7 @@ import map from '../../assets/img/map.gif'
 
 const Expertise = ({isLoggedIn, setIsLoggedIn}) => {
     return (
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div className={styles.message}>
                 <div className={styles.covid}>
@@ -19,16 +19,8 @@ const Expertise = ({isLoggedIn, setIsLoggedIn}) => {
                 </div>
             </div>
             <div className={styles.containerBlock1}>
-                <div className={styles.block1Border}>
-                    <svg viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                            <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#f4f4f4"></path>
-                        </g>
-                    </svg>
-                </div>
-                <div className={styles.detailsWrapper}>
-                    <div className={styles.details}>
-                        <svg className={styles.line} preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="655" height="689" viewBox="0 0 655 689">
+                    <div className={styles.detailsExpertise}>
+                        <svg className={styles.lineExpertise} preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="655" height="689" viewBox="0 0 655 689">
                             <g fill="none" fill-rule="evenodd">
                                 <path stroke="#FFB81C" stroke-linecap="square" stroke-width="3" d="M659.148438,260.949219 L655,260.949219 L592.75293,360.819336 L466.825195,357.828125 C453.746092,379.459225 443.412107,395.2561 435.823242,405.21875 C432.453177,409.642965 421.884493,423.253968 404.117188,446.051758 L81.9140625,434.470703">
                                 </path>
@@ -38,7 +30,7 @@ const Expertise = ({isLoggedIn, setIsLoggedIn}) => {
                                 <polygon fill="#FFB81C" points="653.647 261.108 591 361.416 620.615 410.472 659.133 410.472 659.133 260" opacity=".348"></polygon>
                             </g>
                         </svg>
-                        <svg className={styles.grid} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="655" height="689" viewBox="0 0 655 689">
+                        <svg className={styles.gridExpertise} xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="655" height="689" viewBox="0 0 655 689">
                             <g fill="none" fill-rule="evenodd" stroke="#AAA" stroke-width=".5" transform="translate(90 -105)">
                                 <path d="M564.9069 188.0138C575.2739 201.2638 585.7319 214.4298 596.2619 227.5498 607.0199 209.7168 617.3839 191.6668 627.6239 173.5348 606.7989 178.8498 585.9649 183.7148 564.9069 188.0138zM502.2006 196.8797C512.4936 210.8057 522.9406 224.5697 533.5526 238.2537 544.3416 221.7197 554.7946 204.9697 564.9066 188.0137 544.0846 191.7687 523.3026 195.1007 502.2006 196.8797zM439.4943 196.8803C449.5753 212.4133 460.0253 227.7043 470.8463 242.7303 481.6663 227.7023 492.1223 212.4133 502.2003 196.8803 481.2093 198.6483 460.4853 198.6493 439.4943 196.8803zM376.7762 188.0146C386.8852 204.9706 397.3382 221.7226 408.1282 238.2546 418.7452 224.5716 429.1952 210.8036 439.4942 196.8806 418.3902 195.1006 397.6032 191.7706 376.7762 188.0146z"></path>
                                 <path d="M314.0506 173.5344C324.2936 191.6674 334.6556 209.7164 345.4156 227.5484 355.9486 214.4294 366.4076 201.2644 376.7766 188.0144 355.7146 183.7134 334.8786 178.8494 314.0506 173.5344zM251.3488 155.9355C261.6278 175.0165 272.0698 193.9945 282.7048 212.8805 293.1638 199.7745 303.6248 186.6665 314.0498 173.5345 293.0788 167.9015 272.2008 161.9935 251.3488 155.9355zM188.6395 137.7001C198.9675 157.3691 209.4135 176.9671 219.9915 196.5021 230.4055 182.9481 240.8655 169.4341 251.3485 155.9341 230.4575 149.8091 209.5685 143.6881 188.6395 137.7001zM125.9303 121.3158C136.3123 141.1408 146.7553 160.9298 157.2813 180.6758 167.6573 166.2918 178.1103 151.9718 188.6393 137.6988 167.8063 131.9068 146.9453 126.4068 125.9303 121.3158zM63.2164 109.2731C73.6724 128.7351 84.1144 148.2051 94.5744 167.6651 104.8604 152.1031 115.3214 136.6591 125.9304 121.3151 105.1254 116.6671 84.3234 112.3441 63.2164 109.2731zM.5013 104.0598C11.0783 122.5468 21.4853 141.1288 31.8643 159.7258 42.1283 142.7948 52.5923 125.9828 63.2163 109.2718 42.4433 106.2608 21.4923 104.4038.5013 104.0598zM596.2614 227.5498C585.7304 214.4308 575.2734 201.2658 564.9064 188.0138 554.7954 204.9688 544.3424 221.7198 533.5524 238.2528 554.6224 235.5608 575.4404 231.7018 596.2614 227.5498z"></path>
@@ -80,9 +72,16 @@ const Expertise = ({isLoggedIn, setIsLoggedIn}) => {
                         </svg>
 
                     </div>
-                </div>
+                
                 <div className={styles.block1Text}>
                     <h1>Engineering a Smarter Future</h1>
+                </div>
+                <div className={styles.block1Border}>
+                    <svg width="100%" viewBox="0 0 1600 223" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path id="wedge" d="m0,40 l 391,132 l 870,-55 l 339, 106 l -1600,0 l 0,-183z" stroke="" fill="#f4f4f4"></path>
+                        </g>
+                    </svg>
                 </div>
             </div>
             <div className={styles.video}>

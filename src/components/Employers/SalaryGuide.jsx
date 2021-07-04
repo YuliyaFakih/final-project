@@ -13,7 +13,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
     
     if(guideState === false) {
         return (
-            <div>
+            <div className={styles.mainBlock}>
                 <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
                     <div className={styles.blockGuide}>
                         <div className={styles.blockGuideBorder}>
@@ -124,7 +124,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
           )
     } else if(guideState === true) {
         return (
-            <div>
+            <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             <div className={styles.guideDownloading}>
                 <p>Salary Guide</p>

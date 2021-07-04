@@ -29,7 +29,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
     }
 
     return(
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div className={styles.blockSearch}>
                 <div className={styles.blockSearchBorder}>

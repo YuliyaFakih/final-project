@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom'
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
     return (
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div className={styles.blockCareers}>
                 <div className={styles.blockSearchBorder}>

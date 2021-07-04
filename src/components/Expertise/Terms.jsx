@@ -5,7 +5,7 @@ import styles from './Expertise.module.css'
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
     return (
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div className={styles.terms}>
                 <h1>Terms of Use</h1>

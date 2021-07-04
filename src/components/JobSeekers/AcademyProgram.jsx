@@ -4,7 +4,7 @@ import styles from './Jobseekers.module.css'
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
     return (
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div className={styles.blockAcademy}>
                 <div className={styles.blockSearchBorder}>

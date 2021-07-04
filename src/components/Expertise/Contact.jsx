@@ -12,7 +12,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
     }
     if(submitState === false) {
         return (
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div className={styles.contactBlock}>
                 <form>

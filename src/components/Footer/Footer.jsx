@@ -10,7 +10,7 @@ import youtube from '../../assets/img/youtube.png'
 
 const Footer = () => {
     return (
-        <div>
+        <div className={styles.mainBlock}>
         <div className={styles.footerWrapper}>
                 <div className={styles.BorderTop}>
                     <svg width="100%" viewBox="0 0 1600 156" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg">

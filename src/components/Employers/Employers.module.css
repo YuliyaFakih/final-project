@@ -418,14 +418,12 @@ form h3 {
 
 
 .burgerMenu {
-    height: 50px;
+    height: 38px;
     display: none;
+    position: relative;
+    width: 63px;
 }
 
-.burgerMenu a {
-    color: black !important;
-    text-decoration: none;
-}
 .burgerMenu a:hover {
     background-color: transparent;
 }
@@ -458,6 +456,11 @@ form h3 {
 .MenuImg {
     display: block;
 }
+
+.mainBlock {
+    overflow-x: hidden;
+}
+
 @media (max-width:1440px) {
     .menuAccount {
         display: grid;
@@ -598,6 +601,119 @@ form h3 {
     
 }
 
+@media (max-width: 600px) {
+    .blockList {
+        width: 85%;
+    }    
+    .blockOverview .blockImg svg:nth-child(2) {
+        width: 82%;
+    }
+    .blockOverview .blockImg svg:nth-child(1) {
+        left: -21px;
+    }
+    .blockText {
+        top: 11%;
+    }
+    .blockGuide .blockImg svg:nth-child(2) {
+        width: 106%;
+    }
+    .blockGuide .blockImg svg:nth-child(1) {
+        right: -20px;
+    }
+    .blockGuideText {
+        width: 75%;
+        top: 9%;
+    }
+}
+@media (max-width: 570px) {
+    .blockList {
+        width: 96%;
+    }
+    .blockOverview .blockImg svg:nth-child(1), .blockGuide .blockImg svg:nth-child(1) {
+        display: none;
+    }
+    form {
+        width: 70%;
+    }
+    .blockGuide .blockImg svg:nth-child(2) {
+        right: -51px;
+    }
+    .blockGuideText {
+        width: 80%;
+    }
+}
+@media (max-width: 530px) {
+    .block2Text, form, .guideDownloading, .blockGuide2 h3, .blockGuide2 form, .blockGuide2 > p {
+        width: 70%;
+    }
+}
+@media (max-width: 505px) {
+    .blockList {
+        width: 100%;
+    }
+    .modal {
+        max-width: 66%;
+    }
+    .blockOverview .blockImg svg:nth-child(2) {
+        width: 100%;
+    }
+    .blockText {
+        top: 10%;
+        width: 69%;
+        right: 4%;
+    }
+    .block2Text {
+        width: 60%;
+    }
+    .blockGuideText {
+        width: 90%;
+    }
+    .blockGuide .blockImg svg:nth-child(2) {
+        width: 126%;
+        right: -103px;
+    }
+}
+@media (max-width: 483px) {
+    .blockList a {
+        padding: 25px 3px;
+    }
+    .block {
+        column-gap: 0px;
+    }
+}
+@media (max-width: 455px) {
+    .modal {
+        width: 75%;
+    }
+    .blockOverview .blockImg svg:nth-child(2) {
+        width: 112%;
+    }
+    .blockText {
+        width: 72%;
+    }
+    .blockText h1, .blockGuideText h1 {
+        font-size: 53px;
+        line-height: 46px;
+        margin: 0 0 19px;
+    }
+    .blockGuideText {
+        top: 4%;
+    }
+    .blockGuide .blockImg svg:nth-child(2) {
+        width: 141%;
+        right: -146px;
+    }
+    .block2Text, form, .guideDownloading, .blockGuide2 h3, .blockGuide2 form, .blockGuide2 > p {
+        width: 85%;
+    }
+}
+
+@media (max-width: 428px) {
+    .blockList a {
+        padding: 25px 3px;
+    }
+}
+
 @media (max-width: 425px) {
     .block {
         column-gap: 0;
@@ -612,7 +728,7 @@ form h3 {
         font-size: 14px;
     }
     .modal {
-        max-width: 42%;
+        max-width: 75%;
         margin: 50px;
     }
     .blockOverview .blockImg, .blockGuide .blockImg, .guideDownloading a span  {
@@ -629,9 +745,6 @@ form h3 {
     }
     .blockText h2, .blockGuideText h2 {
         font-size: 22px;
-    }
-    .block2Text, form, .guideDownloading, .blockGuide2 h3, .blockGuide2 form, .blockGuide2 > p {
-        width: 85%;
     }
     .block2Text h3, .guideDownloading h1 {
         font-size: 27px;
@@ -657,6 +770,21 @@ form h3 {
         align-items: center;
     }
 }
+@media (max-width: 389px) {
+    .block {
+        grid-template-columns: 145px auto;
+    }
+    .modal .button {
+        padding: 9px;
+    }
+    .modal {
+        max-width: 90%;
+        margin: 38px;
+    }
+    .blockList a {
+        padding: 25px 2px;
+    }
+}
 
 @media (max-width: 375px) {
     .block img {
@@ -670,16 +798,53 @@ form h3 {
         padding-right: 5px;
     }
     .modal {
-        margin: 49px;
-        max-width: 36%;
+        margin: 40px;
     }
     .modal .button {
-        padding: 8px;
         font-size: 16px;
+        padding: 13px;
     }
     .blockGuideText {
         top: 8%;
         left: 11%;
+    }
+}
+@media (max-width: 365px) {
+    .blockList {
+        width: 100%;
+    }
+    .modal .button {
+        padding: 8px;
+        font-size: 15px;
+    }
+    .blockGuide2 form input, .blockGuide2 form select {
+        width: inherit;
+    }
+}
+@media (max-width: 350px) {
+    .blockList {
+        column-gap: 20px;
+        grid-template-columns: 2fr 1fr;
+    }
+    .blockList .MenuBtn {
+        display: grid;
+        grid-template-rows: 35px 35px;
+        align-items: center;
+        justify-items: end;
+    }
+    .modal .button {
+        padding: 8px;
+        text-align: center;
+    }
+    .modal {
+        margin: 50px auto;
+        max-width: 60%;
+    }
+    .buttons2 button, .block2Text a, .guideDownloading a, .blockGuide2 button{
+        padding: 8px 33px 6px 8px;
+    }
+    .blockGuideText {
+        left: 6%;
     }
 }
 
@@ -731,7 +896,5 @@ form h3 {
         top: 5%;
         left: 10%;
     }
-    .blockGuide2 form input, .blockGuide2 form select {
-        width: inherit;
-    }
+    
 }

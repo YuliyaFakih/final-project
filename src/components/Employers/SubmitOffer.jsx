@@ -20,7 +20,10 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
 
 setSubmitOffersState([...submitOffersState, {position, title, salary, city, company, description}])
 localStorage.setItem('submitedOffers', JSON.stringify([...submitOffersState, {position, title, salary, city, company, description}]))
-            jobOffers.push({position, title, salary, city, company, description})
+            //jobOffers.push({position, title, salary, city, company, description})
+            
+            let submite = JSON.parse(localStorage.getItem('submitedOffers'))
+            jobOffers = [...jobOffers, ...submite]
             localStorage.setItem('jobOffers', JSON.stringify(jobOffers))
             //submitedOffers.push ({position, title, salary, city, company, description})
             //localStorage.setItem('submitedOffers', JSON.stringify(submitedOffers))
@@ -34,7 +37,7 @@ localStorage.setItem('submitedOffers', JSON.stringify([...submitOffersState, {po
 
 
     return (
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div className={styles.formContainer}>
                 <form>

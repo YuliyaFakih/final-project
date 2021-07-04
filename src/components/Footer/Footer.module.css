@@ -253,6 +253,9 @@
 .separatingBorder span {
     margin: 10px;
 }
+.mainBlock {
+    overflow-x: hidden;
+}
 
 @media (max-width: 1024px) {
     .separatingBorder ul {
@@ -279,7 +282,70 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
+    .blockHelp img {
+        width: 245px;
+        height: 167px;
+    }
+    .sectionsLinks {
+        width: 95%;
+        margin-left: 9%;
+    }
+    .socialWebsites {
+        width: 200px;
+    }
+    .separatingBorder span {
+        margin: 4px;
+    }
+    .separatingBorder ul {
+        width: 100%;
+    }
+}
+@media (max-width: 570px) {
+    .blockHelp img {
+        width: 145px;
+        height: 119px;
+    }
+}
+@media (max-width: 520px) {
+    .separatingBorder ul {
+        grid-auto-flow: row;
+        padding: 0 0 25px;
+    }
+    .separatingBorder ul span {
+        display: none;
+    }
+    .sectionsLinks div:nth-child(3) {
+        display: none;
+    }
+    .sectionsLinks {
+        column-gap: 20px;
+    }
+    .socialWebSites {
+        width: 215px;
+    }
+}
+@media (max-width: 505px) {
+    .sectionsLinks {
+        margin-left: 14%;
+    }
+}
+@media (max-width: 472px) {
+    .blockHelp {
+        width: 87%;
+    }
+}
+@media (max-width: 455px) {
+    .blockText {
+        width: 248px;
+    }
+    .sectionsLinks {
+        margin-left: 22%;
+    }
+    .blockMap img {
+        width: 219px;
+        height: 141px;
+    }
     .blockHelp {
         grid-auto-flow: row;
         justify-items: center;
@@ -293,28 +359,18 @@
         grid-auto-flow: row;
         justify-items: center;
     }
-    .sectionsLinks div:nth-child(3) {
-        display: none;
-    }
-    .sectionsLinks {
-        column-gap: 20px;
-    }
+
     .socialWebSites {
         margin: 0 auto 50px;
         row-gap: 20px;
+        width: 225px;
     }
     .socialWebSites ul {
         column-gap: 10px;
         padding-left: 15px;
     }
-    .separatingBorder ul {
-        grid-auto-flow: row;
-        padding: 0 0 25px;
-    }
-    .separatingBorder ul span {
-        display: none;
-    }
 }
+
 
 @media (max-width: 375px) {
     .blockHelp img {
@@ -323,6 +379,26 @@
     }
     .sectionsLinks > div > span {
         margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 365px) {
+    .sectionsLinks {
+        margin-left: 50px;
+        grid-auto-flow: row;
+    }
+    .sectionsLinks div {
+        margin-left: 15%;
+    }
+    .socialWebSites {
+        width: 245px;
+    }
+}
+
+@media (max-width: 340px) {
+    .blockHelp img {
+        width: 284px;
+        height: 180px;
     }
 }
 
@@ -341,6 +417,6 @@
         line-height: 1.6;
     }
     .sectionsLinks {
-        margin-left: auto;
+        margin-left: 30%;
     }
 }

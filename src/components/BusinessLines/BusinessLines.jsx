@@ -8,7 +8,7 @@ import tech from '../../assets/img/tech.svg'
 const BusinessLines = ({isLoggedIn, setIsLoggedIn}) => {
 
     return (
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div>
                 <div className={styles.block1}>

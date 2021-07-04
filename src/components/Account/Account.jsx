@@ -40,7 +40,7 @@ const Account = ({isLoggedIn, setIsLoggedIn}) => {
         console.log(employer)
         jobSeekers = []
         return (
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
                 <div className={styles.profile} onLoad={getCookie}>
                     <div className={styles.card}>

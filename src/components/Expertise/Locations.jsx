@@ -21,7 +21,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
       }));
       const classes = useStyles();
     return (
-        <div>
+        <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
             <div className={styles.locationsBlock1}>
                 <div className={styles.block1Border}>
@@ -31,8 +31,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                         </g>
                     </svg>
                 </div>
-                <div className={styles.detailsWrapper}>
-                    <div className={styles.details}>
+                <div className={styles.details}>
                         <svg className={styles.line} preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" width="655" height="689" viewBox="0 0 655 689">
                             <g fill="none" fill-rule="evenodd">
                                 <path stroke="#FFB81C" stroke-linecap="square" stroke-width="3" d="M659.148438,260.949219 L655,260.949219 L592.75293,360.819336 L466.825195,357.828125 C453.746092,379.459225 443.412107,395.2561 435.823242,405.21875 C432.453177,409.642965 421.884493,423.253968 404.117188,446.051758 L81.9140625,434.470703">
@@ -85,7 +84,6 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                         </svg>
 
                     </div>
-                </div>
                 <h1>Find your local Modis branch.</h1>
             </div>
             <div className={styles.locationsAccordion}>

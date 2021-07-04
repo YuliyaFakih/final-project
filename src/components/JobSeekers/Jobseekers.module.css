@@ -286,6 +286,12 @@ a:hover {
     margin: 0 0 28px;
 }
 
+.blockLocations div:nth-child(1) {
+    position: absolute;
+    width: 100%;
+    top: -3px;
+}
+
 .blockSearch .blockText p, .blockText1Container > p, .blockText2 p, .blockLocations p:nth-child(1), .blockCareersText p, .block2Careers h2, .block4Careers h2, .blockAcademyText p {
     color: #ffb81c;
     font-size: 18px;
@@ -448,12 +454,26 @@ a:hover {
     background-color: #373A36;
     margin-bottom: 50px;
     color: #f4f4f4;
+    position: relative;
+}
+.block3CareersContainer > div:nth-child(1) {
+    position: absolute;
+    top: -3px;
+    width: 100%;
 }
 
 .block3Careers, .block4Careers {
     width: 60%;
     margin: 0 auto;
     text-align: left;
+}
+.block3Careers {
+    padding: 60px 0;
+}
+.block3CareersContainer > div:nth-child(3) {
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
 }
 
 .block4Careers h1 {
@@ -517,8 +537,10 @@ a:hover {
 }
 
 .burgerMenu {
-    height: 50px;
+    height: 38px;
     display: none;
+    position: relative;
+    width: 63px;
 }
 
 .burgerMenu a {
@@ -556,6 +578,10 @@ a:hover {
 
 .MenuImg {
     display: block;
+}
+
+.mainBlock {
+    overflow-x: hidden;
 }
 
 @media (max-width:1440px) {
@@ -709,7 +735,109 @@ a:hover {
         font-size: 19px;
     }
 }
+@media (max-width: 600px) {
+    .blockList {
+        width: 85%;
+    }
+    .blockSearch .blockImg svg:nth-child(2) {
+        left: -75px;
+        width: 86%;
+    }
+    .blockSearch .blockImg svg:nth-child(1) {
+        left: -32px;
+    }
+    .blockCareers .blockImg svg:nth-child(2), .blockAcademy .blockImg svg:nth-child(2) {
+        width: 80%;
+        right: -64px;
+    }
+    .blockCareers .blockImg svg:nth-child(1), .blockAcademy .blockImg svg:nth-child(1) {
+        right: -30px;
+    }
+    .blockAcademyText {
+        top: 8%;
+    }
+}
 
+@media (max-width: 570px) {
+    .blockList {
+        width: 96%;
+    }
+    .blockSearch .blockImg svg:nth-child(1),.blockCareers .blockImg svg:nth-child(1), .blockAcademy .blockImg svg:nth-child(1) {
+        display: none;
+    }
+    .blockLocationsText {
+        top: 13%;
+    }
+    .blockCareers .blockImg svg:nth-child(2), .blockAcademy .blockImg svg:nth-child(2) {
+        width: 85%;
+        right: -82px;
+    }
+    /*.blockCareers {
+        overflow-x: hidden;
+    }
+    .blockCareers .blockSearchBorder {
+        bottom: -40px;
+    }*/
+}
+@media (max-width: 505px) {
+    .blockList {
+        width: 100%;
+    }
+    .modal {
+        max-width: 66%;
+    }
+    .blockSearch .blockText{
+        top: 15%;
+    }
+    .blockSearch .blockImg svg:nth-child(2) {
+        left: -112px;
+        width: 100%;
+    }
+    .blockCareers .blockImg svg:nth-child(2), .blockAcademy .blockImg svg:nth-child(2) {
+        width: 100%;
+    }
+    .block4Careers a {
+        padding: 6px 33px 6px 6px;
+    }
+    .blockAcademyText {
+        top: 8%;
+        width: 70%;
+    }
+}
+@media (max-width: 483px) {
+    .blockList a {
+        padding: 25px 3px;
+    }
+    .block {
+        column-gap: 0px;
+    }
+    .blockLocationsText {
+        width: 54%;
+        top: 15%;
+    }
+    .block4Careers a {
+        width: 80%;
+    }
+}
+@media (max-width: 455px) {
+    .modal {
+        width: 75%;
+    }
+    .blockSearch .blockImg svg:nth-child(2) {
+        width: 112%;
+    }
+    .blockAcademyText {
+        width: 80%;
+    }
+    .block2Academy > div, .block3Academy {
+        width: 65%;
+    }
+}
+@media (max-width: 428px) {
+    .blockList a {
+        padding: 25px 3px;
+    }
+}
 @media (max-width: 425px) {
     .block {
         column-gap: 0;
@@ -724,7 +852,7 @@ a:hover {
         font-size: 14px;
     }
     .modal {
-        max-width: 42%;
+        max-width: 75%;
         margin: 50px;
     }
     .blockSearch .blockImg, .blockCareers .blockImg, .blockAcademy .blockImg {
@@ -736,6 +864,9 @@ a:hover {
     }
     .blockSearch {
         min-height: 400px;
+    }
+    .block4Careers a {
+        width: auto;
     }
     .blockSearch .blockText h1, .blockCareersText h1, .blockAcademyText h1 {
         font-size: 49px;
@@ -779,6 +910,32 @@ a:hover {
         grid-template-rows: 40px 40px;
         align-items: center;
     }
+    .menuAccount {
+        display: grid;
+        grid-template-rows: 40px 40px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 389px) {
+    .block {
+        grid-template-columns: 145px auto;
+    }
+    .modal .button {
+        padding: 9px;
+    }
+    .modal {
+        max-width: 90%;
+        margin: 38px;
+    }
+    .blockList a {
+        padding: 25px 2px;
+    }
+}
+@media (max-width: 400px) {
+    .blockAcademyText {
+        top: 8%;
+    }
 }
 
 @media (max-width: 375px) {
@@ -793,12 +950,11 @@ a:hover {
         padding-right: 5px;
     }
     .modal {
-        margin: 49px;
-        max-width: 36%;
+        margin: 40px;
     }
     .modal .button {
-        padding: 8px;
         font-size: 16px;
+        padding: 13px;
     }
     .blockCareersText {
         left: 6%;
@@ -808,6 +964,39 @@ a:hover {
     }
     .block2Academy {
         padding-top: 30px;
+    }
+}
+
+@media (max-width: 365px) {
+    .blockList {
+        width: 100%;
+    }
+    .modal .button {
+        padding: 8px;
+        font-size: 15px;
+    }
+    .blockSearch .blockText, .blockAcademyText {
+        top: 10%;
+    }
+}
+@media (max-width: 350px) {
+    .blockList {
+        column-gap: 20px;
+        grid-template-columns: 2fr 1fr;
+    }
+    .blockList .MenuBtn {
+        display: grid;
+        grid-template-rows: 35px 35px;
+        align-items: center;
+        justify-items: end;
+    }
+    .modal .button {
+        padding: 8px;
+        text-align: center;
+    }
+    .modal {
+        margin: 50px auto;
+        max-width: 60%;
     }
 }
 
@@ -858,9 +1047,5 @@ a:hover {
     .block2Academy {
         padding-top: 0;
     }
-    .blockLocations div:nth-child(1) {
-        position: absolute;
-        width: 100%;
-        top: -3px;
-    }
+    
 }
