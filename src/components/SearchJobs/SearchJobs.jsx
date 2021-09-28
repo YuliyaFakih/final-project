@@ -7,13 +7,6 @@ import star from './../../assets/img/icon-star.svg'
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
     let jobOffers = JSON.parse(localStorage.getItem('jobOffers')) || [];
-    /*let submite = JSON.parse(localStorage.getItem('submitedOffers')) || []
-    React.useEffect(() => {
-        jobOffers = [...jobOffers, ...submite]
-        localStorage.setItem('jobOffers', JSON.stringify(jobOffers))
-    })
-*/
-    console.log(jobOffers)
     const [jobData, setJobData] = React.useState(jobOffers)
     const [isFilter, setIsFilter] = React.useState(false)
 
@@ -33,6 +26,14 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
         setJobData(jobData.filter(item => item.position.toLowerCase().includes(searchJob.toLowerCase())))
     }
 
+    const searchClear = (event) => {
+        const key = event.key; 
+        if (key === "Backspace" || key === "Delete") {
+            setIsFilter(false)
+            setJobData(jobOffers)
+        }
+    }
+
     const [favoriteJobsState, setFavoriteJobsState] = React.useState([])
     
     const AddToFavorites = (id) => {
@@ -43,23 +44,14 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                 console.log(favoriteJobsState)
                 localStorage.setItem('favoriteJobs', JSON.stringify([...favoriteJobsState, jobOffers.find(item => item.id === id)]))
                 alert('Added to favorite list, you can view it in My account')
-                //setAddedState({...jobOffers, added:true})
-                //setAddedState([{added: true}])
             } else if (favoriteJobsState && favoriteJobsState.find(item => item && item.id === id)) {
                 alert(`You've already added this offer to the favorite list`)
             }
         } else {
             alert('You should sign in to be able to add favorite offers to the list')
         }
-        
     }
-    /*
-    React.useEffect((id) => {
-        const jobs = favoriteJobsState && favoriteJobsState.find(item => item.id === id ? {...item, added:true} : item)
-        setAddedState(jobs)
-        console.log(addedState)
-    }, [favoriteJobsState])
-    */
+
     return(
         <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
@@ -125,7 +117,7 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                  </div>
                  <div className={styles.blockText}>
                     <h1>Explore the brightest opportunities.</h1>
-                    <input type="text" placeholder="Category" onChange={search}/>
+                    <input type="text" placeholder="Category" onChange={search} onKeyDown={(event) => searchClear(event)}/>
                  </div>
             </div>
 

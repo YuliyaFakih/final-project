@@ -14,28 +14,6 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
         })
       }, []);
 
-    /*
-    const getUsers = async function() {
-        let request = await fetch('https://reqres.in/api/users?page=1')
-        let response = await request.json()
-        let result = response.data;
-        console.log(result)
-        let usersList = document.getElementById('main')
-        //.then(response => response.json())
-        //.then(users => console.log(users.data[1].email))
-        usersList.insertAdjacentHTML ('afterbegin', `
-            <div>
-                ${result.map(user => (
-                    <>
-                        <span> {user.first_name}</span>
-                        <span> {user.last_name}</span>
-                        <img src={user.avatar} />
-                    </>
-                ))}
-            </div>
-        `)  
-    }()       
- */          
     return (
         <div className={styles.mainBlock}>
             <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />

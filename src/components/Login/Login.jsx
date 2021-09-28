@@ -40,8 +40,6 @@ const Login = ({isLoggedIn, setIsLoggedIn}) => {
                 </div>
             </form>
         </div>
-        
-        
     )
 }
 

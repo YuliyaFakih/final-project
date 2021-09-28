@@ -6,8 +6,6 @@ import videoPoster from '../../assets/img/videoPoster.JPG'
 import { NavLink } from 'react-router-dom'
 import map from '../../assets/img/map.gif'
 
-
-
 const Expertise = ({isLoggedIn, setIsLoggedIn}) => {
     return (
         <div className={styles.mainBlock}>
@@ -172,7 +170,6 @@ const Expertise = ({isLoggedIn, setIsLoggedIn}) => {
                     </div>
                 </div>
             </div>
-            
         </div>
     )
 }

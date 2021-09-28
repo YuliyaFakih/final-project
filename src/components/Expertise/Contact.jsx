@@ -72,9 +72,9 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
                     </div>
                 </div>
             </div>
-            
         </div>
         )
+        
     } else if (submitState === true){
         return (
         <div>
@@ -88,5 +88,4 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
         </div>
         )
     }
-    
 }

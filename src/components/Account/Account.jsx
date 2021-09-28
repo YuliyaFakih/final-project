@@ -8,7 +8,6 @@ const Account = ({isLoggedIn, setIsLoggedIn}) => {
     
     let employers = JSON.parse(localStorage.getItem('employers')) || []
     let jobSeekers = JSON.parse(localStorage.getItem('jobSeekers')) || []
-    //let email = document.cookie.match('login')[1];
     function getCookie(name) {
         let matches = document.cookie.match(new RegExp(
           "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
@@ -22,18 +21,19 @@ const Account = ({isLoggedIn, setIsLoggedIn}) => {
     const [stateJobs, setStateJobs] = React.useState(favoriteJobs) 
     let submitedOffers = JSON.parse(localStorage.getItem('submitedOffers')) || []
     const [stateOffers, setStateOffers] = React.useState(submitedOffers) 
+    let jobOffers = JSON.parse(localStorage.getItem('jobOffers')) || []
 
     const DeleteFromList = (id) => {
-        //setAddedState(false)
         favoriteJobs = favoriteJobs.filter(item => item.id !== id);
         setStateJobs(favoriteJobs)
-        //return favoriteJobs.filter(item => item.id !== id)
         localStorage.setItem('favoriteJobs', JSON.stringify(favoriteJobs))
     }
     const DeleteOffer = (id) => {
         submitedOffers = submitedOffers.filter(item => item.id !== id);
         setStateOffers(submitedOffers)
         localStorage.setItem('submitedOffers', JSON.stringify(submitedOffers))
+        jobOffers = jobOffers.filter(item => item.id !== id);
+        localStorage.setItem('jobOffers', JSON.stringify(jobOffers))
     }
  
     if(employer && !jobseeker) {
@@ -170,10 +170,7 @@ const Account = ({isLoggedIn, setIsLoggedIn}) => {
                             ))}
                         </div>
                     </div>
-                
     )}     
-     
-    
 }
 
 export default Account 

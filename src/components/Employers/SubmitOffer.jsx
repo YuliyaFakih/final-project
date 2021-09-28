@@ -1,12 +1,13 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
 import Nav from './Nav'
+import uuid from 'react-uuid'
 import styles from './Employers.module.css'
 
 export default ({isLoggedIn, setIsLoggedIn}) => {
     let jobOffers = JSON.parse(localStorage.getItem('jobOffers')) || []
     let submitedOffers = JSON.parse(localStorage.getItem('submitedOffers')) || []
-    const [submitOffersState, setSubmitOffersState] = React.useState([])
+    const [submitOffersState, setSubmitOffersState] = React.useState(submitedOffers)
 
     const formSubmit = (event) => {
         if(isLoggedIn) {
@@ -18,15 +19,12 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
             let company = document.querySelectorAll('form input')[4].value;
             let description = document.querySelectorAll('form input')[5].value;
 
-setSubmitOffersState([...submitOffersState, {position, title, salary, city, company, description}])
-localStorage.setItem('submitedOffers', JSON.stringify([...submitOffersState, {position, title, salary, city, company, description}]))
-            //jobOffers.push({position, title, salary, city, company, description})
-            
+            setSubmitOffersState([...submitOffersState, { id: uuid(), position, title, salary, city, company, description}])
+            localStorage.setItem('submitedOffers', JSON.stringify([...submitOffersState, {id: uuid(), position, title, salary, city, company, description}]))
+                        
             let submite = JSON.parse(localStorage.getItem('submitedOffers'))
             jobOffers = [...jobOffers, ...submite]
             localStorage.setItem('jobOffers', JSON.stringify(jobOffers))
-            //submitedOffers.push ({position, title, salary, city, company, description})
-            //localStorage.setItem('submitedOffers', JSON.stringify(submitedOffers))
             alert('Your job offer was submitted. All your job offers are available in My account.')
             window.location.assign('/#/account')
         } else {
@@ -34,7 +32,6 @@ localStorage.setItem('submitedOffers', JSON.stringify([...submitOffersState, {po
             alert('You should sign in before submit a job offer.')
         }
     }
-
 
     return (
         <div className={styles.mainBlock}>

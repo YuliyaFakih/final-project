@@ -25,7 +25,6 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
         } else {
             alert('You should sign in to be able to add favorite offers to the list')
         }
-        
     }
 
     return(

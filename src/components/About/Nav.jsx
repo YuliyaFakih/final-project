@@ -171,16 +171,3 @@ const Nav = ({isLoggedIn, setIsLoggedIn}) => {
 
 export default Nav
 
-/*
-<div className={styles.breadcrumb}>
-                <Breadcrumbs aria-label="breadcrumb">
-                    <Link color="inherit" href="/">
-                        Modis
-                    </Link>
-                    <Link color="inherit" href={document.location.hash}>
-                    
-                    {document.location.hash.split('#/')[1]}
-                    </Link>
-                </Breadcrumbs>
-            </div>
-*/

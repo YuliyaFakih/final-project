@@ -21,7 +21,6 @@ export default ({isLoggedIn, setIsLoggedIn}) => {
         console.log(userName, userSurname, userEmail, userPhone, userCompany, userRegion, userLink, userPassword)
         localStorage.setItem('employers', JSON.stringify(employers))
         window.location.assign('/#/home')
-        //setIsLoggedIn(true)
         return alert(`Account was created with success, you should sign in`)
         
     }
